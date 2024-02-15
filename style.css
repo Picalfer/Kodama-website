@@ -1,8 +1,8 @@
 @font-face {
     font-family: "QuinqueFive";
     src: url("fonts/QuinqueFive.woff2")format("woff2"),
-    url("fonts/QuinqueFive.woff")format("woff"),
-    url("fonts/QuinqueFive.ttf")format("ttf");
+        url("fonts/QuinqueFive.woff")format("woff"),
+        url("fonts/QuinqueFive.ttf")format("ttf");
 }
 
 * {
@@ -78,10 +78,6 @@ header {
     font-size: 20px;
 }
 
-.start-section img {
-    
-}
-
 #main-btn {
     max-width: 100%;
     max-height: 300px;
@@ -102,7 +98,97 @@ header {
     color: #E769E4;
 }
 
+#mountains {
+    position: absolute;
+    background-image: url(res/mountains.png);
+    width: 30%;
+    height: 30vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 0;
+    bottom: 7vh;
+}
+
+#right-tree {
+    position: absolute;
+    background-image: url(res/right-tree.png);
+    width: 10%;
+    height: 30vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 7%;
+    bottom: 4vh;
+}
+
 #ground {
-    position: relative;
+    position: absolute;
     bottom: 0;
+    width: 100%;
+    background-image: url(res/ground.png);
+    height: 10vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#left-cloud {
+    position: absolute;
+    background-image: url(res/left_cloud.png);
+    width: 15%;
+    height: 20vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 0;
+    top: 20vh;
+}
+
+#right-cloud {
+    position: absolute;
+    background-image: url(res/right-cloud.png);
+    width: 15%;
+    height: 18vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 0;
+    top: 35vh;
+}
+
+#mashroom {
+    position: absolute;
+    background-image: url(res/mashroom.png);
+    width: 10%;
+    height: 27vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 30%;
+    bottom: 4vh;
+}
+
+#hearts {
+    position: absolute;
+    background-image: url(res/hearts.png);
+    width: 15%;
+    height: 15vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    left: 2vh;
+    top: 6vh;
+}
+
+#stars {
+    position: absolute;
+    background-image: url(res/stars.png);
+    width: 15%;
+    height: 15vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    right: 2vh;
+    top: 6vh;
 }
