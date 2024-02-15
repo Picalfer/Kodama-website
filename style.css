@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "QuinqueFive";
+    src: url("fonts/QuinqueFive.woff2")format("woff2"),
+    url("fonts/QuinqueFive.woff")format("woff"),
+    url("fonts/QuinqueFive.ttf")format("ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -93,4 +100,9 @@ header {
 
 .purple-letter {
     color: #E769E4;
+}
+
+#ground {
+    position: relative;
+    bottom: 0;
 }
