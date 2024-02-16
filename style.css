@@ -13,10 +13,12 @@
 
 body {
     font-family: "QuinqueFive", sans-serif;
+    color: white;
+    line-height: 1.5;
 }
 
 header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -191,4 +193,20 @@ header {
     background-position: right;
     right: 2vh;
     top: 6vh;
+}
+
+.landing-section {
+    height: 300vh;
+    width: 100%;
+    background-image: linear-gradient(100deg, #1E7B9D, #400A68);
+    padding-top: 10vh;
+}
+
+.title-text {
+    text-align: center;
+}
+
+section {
+    padding-left: 5%;
+    padding-right: 5%;
 }
