@@ -286,3 +286,74 @@ header {
     right: 0;
     top: 10vh;
 } */
+
+.about-section {
+    text-align: center;
+    max-height: 200vh;
+    color: white;
+    display: relative;
+}
+
+.about-content {
+    position: relative;
+}
+
+#top_decor {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-image: url(res/top_decor.png);
+    height: 25vh;
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: contain;
+}
+
+.flex-section {
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    flex: 1;
+    margin-top: 23vh;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-bottom: 24vh;
+}
+
+.left h2 {
+    color: #400D69;
+    font-size: 38px;
+    text-align: start;
+}
+
+.left p {
+    margin-top: 20px;
+    color: black;
+    font-size: 33px;
+    text-align: start;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+}
+
+.right img {
+    max-width: 50%;
+}
+
+#bottom_decor {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-image: url(res/bottom_decor.png);
+    height: 25vh;
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: contain;
+}
