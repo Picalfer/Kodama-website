@@ -328,16 +328,13 @@ header {
 .courses-section {
     text-align: center;
     max-height: 150vh;
-    color: white;
+    color: rgb(221, 245, 255);
     display: relative;
 }
 
 .courses-content {
-    position: relative;
-}
-
-.courses-content {
     padding-top: 30vh;
+    position: relative;
 }
 
 .courses-container {
@@ -357,20 +354,22 @@ header {
     margin: 70px;
     /* Отступ между карточками */
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #FDFDFD;
     border-radius: 20px;
     box-shadow: 0 10px 8px #410E6A;
     transition: 1s;
     z-index: 1;
+    border: #f7b63d 3px solid;
 }
 
-.course-card:hover  {
+.course-card:hover {
     background-color: #612c8b;
     color: white;
     box-shadow: 7px 15px 8px #410E6A;
     animation-name: flying;
     animation-duration: 1s;
     animation-iteration-count: infinite;
+    border: #f7873d 4px solid;
 }
 
 .course-card:hover img {
@@ -416,24 +415,35 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     z-index: 0;
+    animation-name: cloud_flying;
+    animation-duration: var(--duration, 7s);
+    animation-iteration-count: infinite;
 }
 
+/* Облако справа вверху */
 #cloud-right-top {
+    --duration: 5s; /* Задержка анимации */
     right: 5vh;
     top: 25vh;
 }
 
+/* Облако справа внизу */
 #cloud-right-bottom {
+    --duration: 10s; /* Задержка анимации */
     right: 9vh;
     bottom: 20vh;
 }
 
+/* Среднее облако */
 #cloud-middle {
+    --duration: 8s; /* Задержка анимации */
     left: 40%;
     top: 50vh;
 }
 
+/* Облако слева внизу */
 #cloud-left-bottom {
+    --duration: 6s; /* Задержка анимации */
     left: 5vh;
     bottom: 35vh;
 }
@@ -447,27 +457,51 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     z-index: 0;
+    animation-name: cloud_flying;
+    animation-duration: var(--duration, 7s);
+    --duration: 2s; /* Задержка анимации */
+    animation-iteration-count: infinite;
 }
 
+/* Верхнее облако из двух */
 #two-clouds-top {
+    --duration: 7s; /* Задержка анимации */
     left: 5%;
     top: 10vh;
 }
 
+/* Нижнее облако из двух */
 #two-clouds-bottom {
-   bottom: 0;
-   left: 35%; 
+    --duration: 9s; /* Задержка анимации */
+    bottom: 0;
+    left: 35%;
 }
 
 @keyframes flying {
     0% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-10px);
     }
+
     100% {
         transform: translateY(0);
+    }
+}
+
+@keyframes cloud_flying {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(-30px);
+    }
+
+    100% {
+        transform: translateX(0);
     }
 }
 
@@ -475,9 +509,11 @@ header {
     0% {
         filter: brightness(1);
     }
+
     50% {
         filter: brightness(1.4);
     }
+
     100% {
         filter: brightness(1);
     }
