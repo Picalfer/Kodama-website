@@ -255,6 +255,7 @@ header {
     background-repeat: repeat-x;
     background-position: center;
     background-size: contain;
+    z-index: 1;
 }
 
 .flex-section {
@@ -303,6 +304,7 @@ header {
     background-repeat: repeat-x;
     background-position: center;
     background-size: contain;
+    z-index: 1;
 }
 
 #between-decor-purple {
@@ -336,8 +338,6 @@ header {
 
 .courses-content {
     padding-top: 30vh;
-
-
 }
 
 .courses-container {
@@ -361,6 +361,7 @@ header {
     border-radius: 20px;
     box-shadow: 0 10px 8px #410E6A;
     transition: 1s;
+    z-index: 1;
 }
 
 .course-card:hover  {
@@ -404,6 +405,58 @@ header {
     font-size: 25px;
     font-style: italic;
     text-align: right;
+}
+
+.cloud {
+    position: absolute;
+    background-image: url(res/cloud.png);
+    width: 15%;
+    height: 18vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0;
+}
+
+#cloud-right-top {
+    right: 5vh;
+    top: 25vh;
+}
+
+#cloud-right-bottom {
+    right: 9vh;
+    bottom: 20vh;
+}
+
+#cloud-middle {
+    left: 40%;
+    top: 50vh;
+}
+
+#cloud-left-bottom {
+    left: 5vh;
+    bottom: 35vh;
+}
+
+.two-clouds {
+    position: absolute;
+    background-image: url(res/two_clouds.png);
+    width: 25%;
+    height: 20vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0;
+}
+
+#two-clouds-top {
+    left: 5%;
+    top: 10vh;
+}
+
+#two-clouds-bottom {
+   bottom: 0;
+   left: 35%; 
 }
 
 @keyframes flying {
