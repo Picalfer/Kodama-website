@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
+
 @font-face {
     font-family: "QuinqueFive";
     src: url("fonts/QuinqueFive.woff2")format("woff2"),
@@ -286,7 +288,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20vh;
 }
 
 .right img {
@@ -331,6 +332,102 @@ header {
 
 .courses-content {
     position: relative;
+}
+
+.courses-content {
+    padding-top: 30vh;
+
+
+}
+
+.courses-container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* Разрешаем перенос элементов на новую строку */
+    justify-content: center;
+    /* Выравниваем элементы по центру */
+    color: black;
+}
+
+.course-card {
+    width: 35%;
+    /* Ширина каждой карточки */
+    margin: 70px;
+    /* Отступ между карточками */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 0 10px 8px #410E6A;
+    transition: 1s;
+}
+
+.course-card:hover  {
+    background-color: #612c8b;
+    color: white;
+    box-shadow: 7px 15px 8px #410E6A;
+    animation-name: flying;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.course-card:hover img {
+    animation-name: bright;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.course-card img {
+    max-width: 30%;
+    height: auto;
+    transform: translateY(-35%);
+    transition: transform 0.3s;
+}
+
+.course-card-text {
+    width: 55%;
+    margin: 0 auto;
+    transform: translateY(-35%);
+}
+
+.course-card-text h3 {
+    font-family: "Sansita", sans-serif;
+    font-style: bold;
+    text-align: right;
+    font-size: 33px;
+}
+
+.course-card-text p {
+    font-family: "Sansita", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    font-style: italic;
+    text-align: right;
+}
+
+@keyframes flying {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bright {
+    0% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.4);
+    }
+    100% {
+        filter: brightness(1);
+    }
 }
 
 
@@ -383,5 +480,17 @@ header {
 
     .courses-section h3 {
         font-size: 5vw;
+    }
+
+    .courses-content {
+        flex-direction: column;
+        /* Располагаем карточки вертикально на мобильных устройствах */
+        align-items: center;
+        /* Выравниваем карточки по центру */
+    }
+
+    .course-card {
+        width: 80%;
+        /* Уменьшаем ширину карточек для мобильных устройств */
     }
 }
