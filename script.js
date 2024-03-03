@@ -27,3 +27,16 @@ selectCourseButton.addEventListener('click', function(event) {
     // Прокручиваем страницу к этому элементу с плавной анимацией
     targetElement.scrollIntoView({ behavior: 'smooth' });
 });
+
+document.addEventListener('mousemove', function(event) {
+  const squares = document.querySelectorAll('.square');
+
+  squares.forEach(function(square) {
+      const speed = parseInt(square.getAttribute('data-speed'));
+      const x = (window.innerWidth - event.pageX * speed) / 100;
+      const y = (window.innerHeight - event.pageY * speed) / 100;
+
+      square.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+  });
+});
+

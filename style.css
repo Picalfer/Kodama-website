@@ -446,28 +446,32 @@ header {
 
 /* Облако справа вверху */
 #cloud-right-top {
-    --duration: 5s; /* Задержка анимации */
+    --duration: 5s;
+    /* Задержка анимации */
     right: 5vh;
     top: 25vh;
 }
 
 /* Облако справа внизу */
 #cloud-right-bottom {
-    --duration: 10s; /* Задержка анимации */
+    --duration: 10s;
+    /* Задержка анимации */
     right: 9vh;
     bottom: 20vh;
 }
 
 /* Среднее облако */
 #cloud-middle {
-    --duration: 8s; /* Задержка анимации */
+    --duration: 8s;
+    /* Задержка анимации */
     left: 40%;
     top: 50vh;
 }
 
 /* Облако слева внизу */
 #cloud-left-bottom {
-    --duration: 6s; /* Задержка анимации */
+    --duration: 6s;
+    /* Задержка анимации */
     left: 5vh;
     bottom: 35vh;
 }
@@ -483,20 +487,23 @@ header {
     z-index: 0;
     animation-name: cloud_flying;
     animation-duration: var(--duration, 7s);
-    --duration: 2s; /* Задержка анимации */
+    --duration: 2s;
+    /* Задержка анимации */
     animation-iteration-count: infinite;
 }
 
 /* Верхнее облако из двух */
 #two-clouds-top {
-    --duration: 7s; /* Задержка анимации */
+    --duration: 7s;
+    /* Задержка анимации */
     left: 5%;
     top: 10vh;
 }
 
 /* Нижнее облако из двух */
 #two-clouds-bottom {
-    --duration: 9s; /* Задержка анимации */
+    --duration: 9s;
+    /* Задержка анимации */
     bottom: 0;
     left: 35%;
 }
@@ -522,6 +529,7 @@ header {
 #students-section div {
     padding: 2%;
     display: flex;
+    height: max-content;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
@@ -535,10 +543,190 @@ header {
     width: 23%;
     height: auto;
     padding: 10%;
+    transition: 0.6s;
 }
 
 .student-card img {
     width: 100%;
+    transition: 1s;
+}
+
+.student-card:hover img {
+    transform: scale(1.3);
+}
+
+.student-card:hover {
+    transform: scale(0.9);
+}
+
+.guide-school-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: #410E6A;
+}
+
+.square {
+    position: absolute;
+    background-color: #E769E4;
+    z-index: 0;
+}
+
+#guide-school-video {
+    width: 60%;
+    height: 71%;
+    border: #E769E4 6px solid;
+    border-radius: 7px;
+    z-index: 1;
+}
+
+
+
+#square1 {
+    top: 10%;
+    left: 10%;
+    width: 20px;
+    height: 20px;
+}
+
+#square2 {
+    top: 25%;
+    left: 25%;
+    width: 25px;
+    height: 25px;
+}
+
+#square3 {
+    top: 80%;
+    left: 40%;
+    width: 30px;
+    height: 30px;
+}
+
+#square4 {
+    top: 85%;
+    left: 55%;
+    width: 35px;
+    height: 35px;
+}
+
+#square5 {
+    top: 70%;
+    left: 70%;
+    width: 40px;
+    height: 40px;
+}
+
+#square6 {
+    top: 15%;
+    left: 75%;
+    width: 22px;
+    height: 22px;
+}
+
+#square7 {
+    top: 30%;
+    left: 90%;
+    width: 28px;
+    height: 28px;
+}
+
+#square8 {
+    top: 45%;
+    left: 5%;
+    width: 32px;
+    height: 32px;
+}
+
+#square9 {
+    top: 60%;
+    left: 20%;
+    width: 18px;
+    height: 18px;
+}
+
+#square10 {
+    top: 75%;
+    left: 35%;
+    width: 23px;
+    height: 23px;
+}
+
+#square11 {
+    top: 10%;
+    left: 50%;
+    width: 27px;
+    height: 27px;
+}
+
+#square12 {
+    top: 25%;
+    left: 65%;
+    width: 33px;
+    height: 33px;
+}
+
+#square13 {
+    top: 40%;
+    left: 80%;
+    width: 19px;
+    height: 19px;
+}
+
+#square14 {
+    top: 55%;
+    left: 95%;
+    width: 21px;
+    height: 21px;
+}
+
+#square15 {
+    top: 15%;
+    left: 15%;
+    width: 26px;
+    height: 26px;
+}
+
+#square16 {
+    top: 30%;
+    left: 30%;
+    width: 29px;
+    height: 29px;
+}
+
+#square17 {
+    top: 93%;
+    left: 45%;
+    width: 36px;
+    height: 36px;
+}
+
+#square18 {
+    top: 70%;
+    left: 60%;
+    width: 39px;
+    height: 39px;
+}
+
+#square19 {
+    top: 75%;
+    left: 75%;
+    width: 24px;
+    height: 24px;
+}
+
+#square20 {
+    top: 20%;
+    left: 85%;
+    width: 31px;
+    height: 31px;
 }
 
 @keyframes flying {
