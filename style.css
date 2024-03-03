@@ -20,7 +20,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 body {
@@ -28,6 +27,33 @@ body {
     color: white;
     line-height: 1.5;
 }
+
+
+.start-section {
+    overflow-x: hidden;
+    position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 0;
+    padding-top: 8vh;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(90deg, #1E7B9D, #400A68);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-section .content {
+    text-align: center;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 
 header {
     position: absolute;
@@ -67,29 +93,6 @@ header {
 
 .header-items a:hover {
     color: #A4FFDE;
-}
-
-.start-section {
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-top: 0;
-    padding-top: 8vh;
-    height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(90deg, #1E7B9D, #400A68);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.start-section .content {
-    text-align: center;
-    height: 100%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .start-section h1 {
@@ -496,6 +499,46 @@ header {
     --duration: 9s; /* Задержка анимации */
     bottom: 0;
     left: 35%;
+}
+
+#students-section {
+    margin-top: 12vh;
+    height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(90deg, #1E7B9D, #400A68);
+    font-size: 44px;
+    letter-spacing: 3;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#students-section h3 {
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+}
+
+#students-section div {
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.student-card {
+    background-image: url(res/student_bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 23%;
+    height: auto;
+    padding: 10%;
+}
+
+.student-card img {
+    width: 100%;
 }
 
 @keyframes flying {
