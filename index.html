@@ -38,7 +38,7 @@
     <header>
         <img class="logo" src="res/logo.png">
         <div class="header-items">
-            <a href="#top_decor">О школе</a>
+            <a href="#top-decor">О школе</a>
             <a href="#courses">Курсы</a>
             <a href="#">Отзывы</a>
             <a href="#">Контакты</a>
@@ -46,7 +46,7 @@
     </header>
     <section class="about-section">
         <div class="about-content">
-            <div id="top_decor"></div>
+            <div id="top-decor"></div>
             <div class="flex-section">
                 <div class="left">
                     <h2>Добро пожаловать в мир школы программирования Kodama</h2>
@@ -66,7 +66,7 @@
                     <img src="res/right_image_about.png">
                 </div>
             </div>
-            <div id="bottom_decor"></div>
+            <div id="bottom-decor"></div>
         </div>
     </section>
 
@@ -76,7 +76,7 @@
 
     <section class="courses-section" id="courses">
         <div class="courses-content">
-            <div id="top_decor"></div>
+            <div id="top-decor"></div>
             <div class="two-clouds" id="two-clouds-top"></div>
             <div class="two-clouds" id="two-clouds-bottom"></div>
             <div class="cloud" id="cloud-right-top"></div>
@@ -123,13 +123,13 @@
                 <img src="res/student1.png">
             </div>
             <div class="student-card">
-                <img src="res/student1.png">
+                <img src="res/student2.png">
             </div>
             <div class="student-card">
-                <img src="res/student1.png">
+                <img src="res/student3.jpg">
             </div>
             <div class="student-card">
-                <img src="res/student1.png">
+                <img src="res/student4.jpg">
             </div>
         </div>
     </section>
@@ -163,7 +163,13 @@
     </section>
 
     <section id="questions-section">
-        <div id="top_decor"></div>
+        <div id="top-decor-without-bubbles"></div>
+        <div class="bubble" style="left: 10%; animation-duration: 10s;"></div>
+        <div class="bubble" style="left: 30%; animation-duration: 8s;"></div>
+        <div class="bubble" style="left: 50%; animation-duration: 12s;"></div>
+        <div class="bubble" style="left: 70%; animation-duration: 9s;"></div>
+        <div class="bubble" style="left: 90%; animation-duration: 11s;"></div>
+        <div class="bubble" style="left: 110%; animation-duration: 7s;"></div>
         <div id="questions-content">
             <h2>Пожилые вопросики</h2>
             <div id="fabs">
@@ -188,8 +194,17 @@
                     <div class="faq-item" onclick="toggleAnswer('faq-answer6')">Вопрос</div>
                     <div class="faq-answer" id="faq-answer6">Ответ</div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-
+    <section id="submit-app-section">
+        <div id="submit-app-content">
+            <h2>Оставьте заявку</h2>
+            <div id="submit-app-form">
+                <input type="text" placeholder="Ваше имя">
+                <input type="text" placeholder="Ваш телефон">
+                <input type="submit" value="Отправить">
             </div>
         </div>
     </section>

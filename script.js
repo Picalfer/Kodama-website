@@ -49,3 +49,14 @@ function toggleAnswer(id) {
   }
 }
 
+const bubbles = document.querySelectorAll('.bubble');
+
+    // Проходимся по каждому пузырьку
+    bubbles.forEach(bubble => {
+        // Генерируем случайный размер от 20px до 100px
+        const size = Math.floor(Math.random() * 60) + 20;
+        // Применяем случайный размер
+        bubble.style.width = size + 'px';
+        bubble.style.height = size + 'px';
+    });
+
