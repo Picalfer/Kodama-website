@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
 
 @font-face {
-    font-family: "QuinqueFive";
-    src: url("fonts/QuinqueFive.woff2")format("woff2"),
-        url("fonts/QuinqueFive.woff")format("woff"),
-        url("fonts/QuinqueFive.ttf")format("ttf");
-}
-
-@font-face {
     font-family: "SuperMario";
     src: url("fonts/SuperMario286/SuperMario286.woff")format("woff"),
         url("fonts/SuperMario286/SuperMario286.ttf")format("ttf"),
@@ -79,16 +72,17 @@ header {
 
 .header-items {
     height: 100%;
-    width: 60%;
+    padding-right: 1%;
+    width: 50%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
 .header-items a {
     color: white;
     text-decoration: none;
-    font-size: 37px;
+    font-size: 2vw;
     transition: 0.5s;
 }
 
@@ -97,13 +91,13 @@ header {
 }
 
 .start-content h1 {
-    font-size: 140px;
+    font-size: 7vw;
     text-shadow: 0px 5px 10px rgb(49, 49, 49);
 }
 
 .start-section h2 {
     margin-bottom: 10px;
-    font-size: 50px;
+    font-size: 2.5vw;
     letter-spacing: 2px;
 }
 
@@ -188,7 +182,7 @@ header {
     background-image: url(res/ground.png);
     height: 10vh;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     background-size: contain;
 }
 
@@ -278,7 +272,6 @@ header {
 
 .about-section {
     text-align: center;
-    max-height: 200vh;
     color: white;
     display: relative;
 }
@@ -289,12 +282,12 @@ header {
 
 #top-decor {
     position: absolute;
-    top: 0;
+    top: -1px;
     width: 100%;
     background-image: url(res/top_decor.png);
     height: 25vh;
     background-repeat: repeat-x;
-    background-position: center;
+    background-position: top;
     background-size: contain;
     z-index: 1;
 }
@@ -314,14 +307,14 @@ header {
 
 .left h2 {
     color: #400D69;
-    font-size: 38px;
+    font-size: 3vw;
     text-align: start;
 }
 
 .left p {
     margin-top: 20px;
     color: black;
-    font-size: 33px;
+    font-size: 2vw;
     text-align: start;
 }
 
@@ -338,12 +331,12 @@ header {
 
 #bottom-decor {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     width: 100%;
     background-image: url(res/bottom_decor.png);
     height: 25vh;
     background-repeat: repeat-x;
-    background-position: center;
+    background-position: bottom;
     background-size: contain;
     z-index: 1;
 }
@@ -358,11 +351,12 @@ header {
     padding-left: 30%;
     padding-right: 30%;
     letter-spacing: 2px;
+    z-index: 2;
 }
 
 #between-decor-purple h3 {
     color: white;
-    font-size: 43px;
+    font-size: 3vw;
     text-align: center;
 }
 
@@ -383,17 +377,13 @@ header {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    /* Разрешаем перенос элементов на новую строку */
     justify-content: center;
-    /* Выравниваем элементы по центру */
     color: black;
 }
 
 .course-card {
     width: 35%;
-    /* Ширина каждой карточки */
     margin: 70px;
-    /* Отступ между карточками */
     padding: 20px;
     background-color: #FDFDFD;
     border-radius: 20px;
@@ -437,13 +427,13 @@ header {
     font-family: "Sansita", sans-serif;
     font-style: bold;
     text-align: center;
-    font-size: 33px;
+    font-size: 2vw;
 }
 
 .course-card-text p {
     font-family: "Sansita", sans-serif;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 1.4vw;
     font-style: italic;
     text-align: center;
 }
@@ -462,34 +452,26 @@ header {
     animation-iteration-count: infinite;
 }
 
-/* Облако справа вверху */
 #cloud-right-top {
     --duration: 5s;
-    /* Задержка анимации */
     right: 5vh;
     top: 25vh;
 }
 
-/* Облако справа внизу */
 #cloud-right-bottom {
     --duration: 10s;
-    /* Задержка анимации */
     right: 9vh;
     bottom: 20vh;
 }
 
-/* Среднее облако */
 #cloud-middle {
     --duration: 8s;
-    /* Задержка анимации */
     left: 40%;
     top: 50vh;
 }
 
-/* Облако слева внизу */
 #cloud-left-bottom {
     --duration: 6s;
-    /* Задержка анимации */
     left: 5vh;
     bottom: 35vh;
 }
@@ -506,22 +488,17 @@ header {
     animation-name: cloud_flying;
     animation-duration: var(--duration, 7s);
     --duration: 2s;
-    /* Задержка анимации */
     animation-iteration-count: infinite;
 }
 
-/* Верхнее облако из двух */
 #two-clouds-top {
     --duration: 7s;
-    /* Задержка анимации */
     left: 5%;
     top: 10vh;
 }
 
-/* Нижнее облако из двух */
 #two-clouds-bottom {
     --duration: 9s;
-    /* Задержка анимации */
     bottom: 0;
     left: 35%;
 }
@@ -531,7 +508,7 @@ header {
     height: 80vh;
     width: 100%;
     background-image: linear-gradient(90deg, #1E7B9D, #400A68);
-    font-size: 44px;
+    font-size: 2.5vw;
     letter-spacing: 3;
     text-align: center;
     display: flex;
@@ -618,25 +595,20 @@ header {
     top: 0;
     width: 100%;
     background-image: url(res/top_decor_without_bubbles.png);
-    height: 15vh;
+    height: 25vh;
     background-repeat: repeat-x;
     background-position: top;
-    background-size: cover;
+    background-size: contain;
     z-index: 0;
 }
 
 .bubble {
     position: absolute;
     background-image: url("res/purple_bubble.png");
-    /* Путь к текстуре пузырька */
     background-size: contain;
-    /* Размер текстуры */
-    width: 50px;
-    /* Начальная ширина пузырька */
-    height: 50px;
-    /* Начальная высота пузырька */
+    background-repeat: no-repeat;
+    background-position: center;
     animation: float 5s linear infinite;
-    /* Анимация: плавное опускание вниз */
     z-index: 0;
     display: block;
     border-radius: 100%;
@@ -654,7 +626,7 @@ header {
 
 #questions-content h2 {
     color: #400D69;
-    font-size: 45px;
+    font-size: 3vw;
     text-align: start;
     z-index: 1;
 }
@@ -714,7 +686,6 @@ header {
     height: 80vh;
 }
 
-/* Стили для контента внутри секции */
 #submit-app-content {
     display: flex;
     height: 70%;
@@ -727,17 +698,14 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Стили для формы */
 #submit-app-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     margin-left: 20px;
-    /* Отступ слева */
 }
 
-/* Стили для ввода данных */
 #submit-app-form input[type="text"] {
     width: 300px;
     margin-bottom: 10px;
@@ -746,7 +714,6 @@ header {
     border-radius: 5px;
 }
 
-/* Стили для кнопки отправки */
 #submit-app-form input[type="submit"] {
     width: 150px;
     padding: 10px;
@@ -764,29 +731,14 @@ footer {
     text-align: center;
 }
 
-/* Стили для ссылок в футере */
 footer a {
     color: #fff;
     text-decoration: none;
 }
 
-/* Стили для ссылок при наведении */
 footer a:hover {
     text-decoration: underline;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #square1 {
     top: 10%;
@@ -1015,68 +967,39 @@ footer a:hover {
     }
 }
 
-
-@media screen and (max-width: 768px) {
+/* Стили для хедера на мобильных устройствах */
+@media screen and (max-width: 600px) {
     header {
-        height: auto;
-        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
     }
 
     .header-items {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
         align-items: center;
     }
 
     .header-items a {
-        margin: 10px 0;
+        margin: 5px 0;
     }
+}
 
-    .start-section {
-        padding: 8vh 5% 10vh;
-    }
-
-    .start-section h1 {
-        font-size: 8vw;
-    }
-
-    .start-section h2 {
-        font-size: 5vw;
-    }
-
-    #main-btn {
-        max-width: 80%;
-        height: auto;
-        z-index: 1;
-    }
-
-    .about-section .left,
-    .about-section .right {
-        flex: 1;
-        padding: 0 5%;
-    }
-
-    .about-section .right img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .courses-section {
-        padding: 8vh 5% 10vh;
-    }
-
-    .courses-section h3 {
-        font-size: 5vw;
-    }
-
-    .courses-content {
-        flex-direction: column;
-        /* Располагаем карточки вертикально на мобильных устройствах */
+/* Стили для хедера на десктопных устройствах */
+@media screen and (min-width: 601px) {
+    header {
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-        /* Выравниваем карточки по центру */
     }
 
-    .course-card {
-        width: 80%;
-        /* Уменьшаем ширину карточек для мобильных устройств */
+    .header-items {
+        display: flex;
+        gap: 20px;
     }
 }

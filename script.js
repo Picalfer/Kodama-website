@@ -19,12 +19,10 @@ menuButtons.forEach(button => {
 });
 
 selectCourseButton.addEventListener('click', function(event) {
-    event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+    event.preventDefault();
 
-    // Находим элемент, к которому нужно прокрутить страницу (например, с id="courses")
     const targetElement = document.getElementById('courses');
 
-    // Прокручиваем страницу к этому элементу с плавной анимацией
     targetElement.scrollIntoView({ behavior: 'smooth' });
 });
 
@@ -51,12 +49,9 @@ function toggleAnswer(id) {
 
 const bubbles = document.querySelectorAll('.bubble');
 
-    // Проходимся по каждому пузырьку
     bubbles.forEach(bubble => {
-        // Генерируем случайный размер от 20px до 100px
-        const size = Math.floor(Math.random() * 60) + 20;
-        // Применяем случайный размер
-        bubble.style.width = size + 'px';
-        bubble.style.height = size + 'px';
+        const size = Math.floor(Math.random() * 10) + 2;
+        bubble.style.width = size + 'vw';
+        bubble.style.height = size + 'vh';
     });
 
