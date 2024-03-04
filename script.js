@@ -55,6 +55,39 @@ bubbles.forEach(bubble => {
   bubble.style.height = size + 'vh';
 });
 
-document.getElementById('menu-toggle').addEventListener('click', function () {
-  document.querySelector('nav.menu').classList.toggle('open');
+document.addEventListener('DOMContentLoaded', function () {
+  var menuToggle = document.getElementById('menu-toggle');
+  var mobileMenu = document.getElementById('mobile-menu');
+  var closeButton = document.getElementById('close-menu-btn');
+  var menuButton = document.getElementById('menu-btn');
+  var navLinks = document.querySelectorAll('#nav-mobile-menu a');
+
+  // Функция для закрытия меню
+  function closeMenu() {
+    mobileMenu.style.display = 'none';
+    menuButton.style.display = 'block';
+  }
+
+  // Функция для открытия меню
+  function openMenu() {
+    mobileMenu.style.display = 'block';
+    menuButton.style.display = 'none';
+  }
+
+  // Привязываем событие клика к кнопке открытия меню
+  menuToggle.addEventListener('click', function () {
+    openMenu();
+  });
+
+  // Привязываем событие клика к кнопке закрытия меню
+  closeButton.addEventListener('click', function () {
+    closeMenu();
+  });
+
+  // Привязываем событие клика к каждой ссылке в меню
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+      closeMenu();
+    });
+  });
 });
