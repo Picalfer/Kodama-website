@@ -85,7 +85,6 @@ body {
     justify-content: start;
 }
 
-
 header {
     position: absolute;
     top: 0;
@@ -1059,7 +1058,7 @@ footer a:hover {
         cursor: pointer;
         outline: none;
     }
-    
+
     .button-img img {
         width: 100%;
         height: auto;
