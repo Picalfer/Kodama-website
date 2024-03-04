@@ -42,15 +42,18 @@
 
         </div>
     </section>
+
     <header>
         <img class="logo" src="res/logo.png">
-        <div class="header-items">
+        <button id="menu-toggle">Меню</button>
+        <nav class="menu">
             <a href="#top-decor">О школе</a>
             <a href="#courses">Курсы</a>
             <a href="#questions-section">Отзывы</a>
             <a href="#submit-app-section">Контакты</a>
-        </div>
+        </nav>
     </header>
+
     <section class="about-section">
         <div class="about-content">
             <div id="top-decor"></div>
@@ -178,27 +181,27 @@
         <div class="bubble" style="left: 90%; animation-duration: 11s;"></div>
         <div class="bubble" style="left: 110%; animation-duration: 7s;"></div>
         <div id="questions-content">
-            <h2>Пожилые вопросики</h2>
+            <h2>Вопросы, которые могут возникнуть у вас</h2>
             <div id="fabs">
                 <div class="faq-left">
-                    <div class="faq-item" onclick="toggleAnswer('faq-answer1')">Вопрос</div>
+                    <div class="faq-item" onclick="toggleAnswer('faq-answer1')">Продолжительность курсов</div>
                     <div class="faq-answer" id="faq-answer1">Ответ</div>
 
-                    <div class="faq-item" onclick="toggleAnswer('faq-answer2')">Вопрос</div>
+                    <div class="faq-item" onclick="toggleAnswer('faq-answer2')">Стоимость занятий</div>
                     <div class="faq-answer" id="faq-answer2">Ответ</div>
 
-                    <div class="faq-item" onclick="toggleAnswer('faq-answer3')">Вопрос</div>
+                    <div class="faq-item" onclick="toggleAnswer('faq-answer3')">Какие возрастные категории вы обучаете?</div>
                     <div class="faq-answer" id="faq-answer3">Ответ</div>
                 </div>
                 <div class="faq-right">
 
-                    <div class="faq-item" onclick="toggleAnswer('faq-answer4')">Вопрос</div>
+                    <div class="faq-item" onclick="toggleAnswer('faq-answer4')">Какие навыки мой ребенок приобретет?</div>
                     <div class="faq-answer" id="faq-answer4">Ответ</div>
 
-                    <div class="faq-item" onclick="toggleAnswer('faq-answer5')">Вопрос</div>
+                    <div class="faq-item" onclick="toggleAnswer('faq-answer5')">Какие дополнительные мероприятия доступны для учеников?</div>
                     <div class="faq-answer" id="faq-answer5">Ответ</div>
 
-                    <div class="faq-item" onclick="toggleAnswer('faq-answer6')">Вопрос</div>
+                    <div class="faq-item" onclick="toggleAnswer('faq-answer6')">Сколько времени длится  занятие?</div>
                     <div class="faq-answer" id="faq-answer6">Ответ</div>
                 </div>
             </div>
@@ -213,7 +216,8 @@
             <div id="submit-app-form">
                 <h2>Оставьте заявку</h2>
                 <input type="text" placeholder="Ваше имя">
-                <input type="text" placeholder="Ваш телефон">
+                <input type="tel" placeholder="Ваш телефон">
+                <input type="email" placeholder="Ваша почта">
                 <input type="submit" value="Отправить">
             </div>
         </div>
