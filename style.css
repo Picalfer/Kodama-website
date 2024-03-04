@@ -30,7 +30,7 @@ body {
 
 
 .start-section {
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
     padding-left: 5%;
     padding-right: 5%;
@@ -44,14 +44,15 @@ body {
     align-items: center;
 }
 
-.start-section .content {
+.start-content {
+    margin-top: 20vh;
     text-align: center;
     height: 100%;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
 }
 
 
@@ -95,7 +96,7 @@ header {
     color: #A4FFDE;
 }
 
-.start-section h1 {
+.start-content h1 {
     font-size: 140px;
     text-shadow: 0px 5px 10px rgb(49, 49, 49);
 }
@@ -110,6 +111,7 @@ header {
     max-width: 100%;
     max-height: 300px;
     width: 40%;
+    z-index: 1;
 }
 
 #select-course {
@@ -146,13 +148,13 @@ header {
 #mountains {
     position: absolute;
     background-image: url(res/mountains.png);
-    width: 30%;
-    height: 30vh;
+    width: 35%;
+    height: 46vh;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     left: 0;
-    bottom: 7vh;
+    bottom: 0vh;
 }
 
 #right-tree {
@@ -232,6 +234,22 @@ header {
     background-position: center;
     right: 30%;
     bottom: 2vh;
+}
+
+#sparkles {
+    position: absolute;
+    background-image: url(res/sparkles.png);
+    width: 7%;
+    height: 20vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 30%;
+    bottom: 19vh;
+    z-index: 0;
+    animation-name: sparkles_animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
 #hearts {
@@ -609,11 +627,16 @@ header {
 
 .bubble {
     position: absolute;
-    background-image: url("res/purple_bubble.png");/* Путь к текстуре пузырька */
-    background-size: contain; /* Размер текстуры */
-    width: 50px; /* Начальная ширина пузырька */
-    height: 50px; /* Начальная высота пузырька */
-    animation: float 5s linear infinite; /* Анимация: плавное опускание вниз */
+    background-image: url("res/purple_bubble.png");
+    /* Путь к текстуре пузырька */
+    background-size: contain;
+    /* Размер текстуры */
+    width: 50px;
+    /* Начальная ширина пузырька */
+    height: 50px;
+    /* Начальная высота пузырька */
+    animation: float 5s linear infinite;
+    /* Анимация: плавное опускание вниз */
     z-index: 0;
     display: block;
     border-radius: 100%;
@@ -689,7 +712,6 @@ header {
     background-color: #f7b63d;
     color: black;
     height: 80vh;
-    margin-bottom: 20vh;
 }
 
 /* Стили для контента внутри секции */
@@ -711,7 +733,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-left: 20px; /* Отступ слева */
+    margin-left: 20px;
+    /* Отступ слева */
 }
 
 /* Стили для ввода данных */
@@ -734,8 +757,23 @@ header {
     cursor: pointer;
 }
 
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
 
+/* Стили для ссылок в футере */
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
 
+/* Стили для ссылок при наведении */
+footer a:hover {
+    text-decoration: underline;
+}
 
 
 
@@ -892,10 +930,13 @@ header {
 
 @keyframes float {
     0% {
-        transform: translateY(-10px); /* Начальная позиция: над экраном */
+        transform: translateY(-10px);
+        /* Начальная позиция: над экраном */
     }
+
     100% {
-        transform: translateY(100vh); /* Конечная позиция: внизу экрана */
+        transform: translateY(100vh);
+        /* Конечная позиция: внизу экрана */
     }
 }
 
@@ -940,6 +981,22 @@ header {
         filter: brightness(1);
     }
 }
+
+@keyframes sparkles_animation {
+    0% {
+        filter: brightness(2);
+    }
+
+    50% {
+        filter: brightness(1);
+    }
+
+    100% {
+        filter: brightness(3);
+    }
+}
+
+
 
 @keyframes select-course-btn-animation {
     0% {
@@ -989,6 +1046,7 @@ header {
     #main-btn {
         max-width: 80%;
         height: auto;
+        z-index: 1;
     }
 
     .about-section .left,
