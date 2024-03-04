@@ -716,7 +716,7 @@ header {
     border-radius: 5px;
 }
 
-#submit-app-form input[type="submit"] {
+button.submit-app-form__btn {
     width: 150px;
     padding: 10px;
     border: none;
