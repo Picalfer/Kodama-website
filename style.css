@@ -704,12 +704,14 @@ header {
 }
 
 .faq-left {
+    margin: 2%;
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
 .faq-right {
+    margin: 2%;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -717,11 +719,12 @@ header {
 
 .faq-item {
     margin: 15px;
+    margin-bottom: 5px;
     font-family: sans-serif;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
     padding: 10px;
-    width: 80%;
+    width: 100%;
     border: 1px solid #FFC75C;
     color: #410E6A;
     border-radius: 15px;
@@ -730,14 +733,13 @@ header {
 
 .faq-answer {
     margin-left: 15px;
-    margin-top: -5px;
     font-family: sans-serif;
     border: 1px solid #410E6A;
     display: none;
     padding: 10px;
-    width: 80%;
+    width: 100%;
     color: #410E6A;
-    background-color: #d3d3d3;
+    background-color: #f0f0f0;
     border-radius: 15px;
 }
 

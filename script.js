@@ -1,6 +1,17 @@
 // Получаем все кнопки меню
 const menuButtons = document.querySelectorAll('.menu a');
 const selectCourseButton = document.getElementById('select-course-btn');
+const logo = document.getElementById('logo-link');
+
+logo.addEventListener('click', function (event) {
+  event.preventDefault();
+
+  const targetElement = document.getElementById('top-site');
+
+  targetElement.scrollIntoView({ behavior: 'smooth' });
+});
+
+
 menuButtons.forEach(button => {
   button.classList.add('menu-button-no-scrolled');
 });
