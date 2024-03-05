@@ -24,12 +24,8 @@
         <div class="start-content">
             <h2>Онлайн-школа программирования</h2>
             <h1>
-                K
-                <span class="blue-letter">O</span>
-                D
-                <span class="purple-letter">A</span>
-                <span class="blue-letter">M</span>
-                A
+                K<span class="blue-letter">O</span>D<span class="purple-letter">A</span><span
+                    class="blue-letter">M</span>A
             </h1>
             <img id="main-btn" src="res/main_button.png">
 
@@ -37,7 +33,6 @@
                 <a href="#courses">
                     <img id="select-course-btn" src="res/select_course_btn.png">
                 </a>
-                <!--<img id="pointer" src="res/pointer.png">-->
             </div>
 
         </div>
@@ -45,7 +40,7 @@
 
     <header>
         <img class="logo" src="res/logo.png">
-        <button id="menu-toggle">Меню</button>
+        <button id="menu-toggle" class="button-img"><img src="res/mobile_menu_btn.png" alt="Menu"></button>
         <nav class="menu">
             <a href="#top-decor">О школе</a>
             <a href="#courses">Курсы</a>
@@ -54,23 +49,36 @@
         </nav>
     </header>
 
+    <section id="mobile-menu">
+        <button id="close-menu-btn" class="button-img"><img src="res/exit_btn.png" alt="Close Menu"></button>
+        <nav id="nav-mobile-menu">
+            <a href="#top-decor">О школе</a>
+            <a href="#courses">Курсы</a>
+            <a href="#questions-section">Отзывы</a>
+            <a href="#submit-app-section">Контакты</a>
+        </nav>
+    </section>
+
     <section class="about-section">
         <div class="about-content">
             <div id="top-decor"></div>
             <div class="flex-section">
                 <div class="left">
                     <h2>Добро пожаловать в мир школы программирования Kodama</h2>
-                    <p>Мы рады представить вам онлайн-школу программирования Kodama, где вы сможете окунуться в
-                        увлекательный мир кодирования и создания программ. Занятия в коде научат вас обдумывать и
-                        настраивать собственные проекты, применять различные уровни сложности и экспериментировать с
-                        кодом, а также создавать свои уникальные программные решения. Здесь вы можете общаться с
-                        опытными преподавателями, изучать разные языки и программирование, создавать веб-сайты,
-                        мобильные приложения и многое другое. Наши курсы также предоставляют возможность работать над
-                        реальными проектами, развивать свои навыки. Для вашего обучения предусмотрены различные
-                        настройки, включая индивидуальное обучение, гибкий график занятий и доступ к обновленным
-                        материалам. Вы также можете создавать свои собственные проекты, расширять свои знания и внедрять
-                        основы в сфере информационных технологий. Если вы стремитесь к новым вызовам и хотите освоить
-                        мир программирования, то Кодама — ваш идеальный выбор! </p>
+                    <p>
+                        Добро пожаловать в Kodama - онлайн-школу программирования, где мы создаем будущее вместе! Мы
+                        предлагаем вам уникальную возможность погрузиться в увлекательный мир кодирования и создания
+                        программ. Наши курсы разработаны для того, чтобы помочь вам освоить различные языки
+                        программирования, научиться создавать веб-сайты, игры и многое другое.
+
+                        У нас вы найдете опытных преподавателей, готовых поддержать вас на каждом шагу вашего обучения.
+                        Мы предлагаем гибкий график занятий, чтобы вы могли учиться в удобное для вас время, а также
+                        возможность работать над реальными проектами, что поможет вам применить полученные навыки на
+                        практике.
+
+                        Присоединяйтесь к нашему сообществу и станьте частью новой волны программистов, готовых изменить
+                        мир с помощью технологий!
+                    </p>
                 </div>
                 <div class="right">
                     <img src="res/right_image_about.png">
@@ -130,7 +138,7 @@
         <h3>Лучшие студенты школы</h3>
         <div>
             <div class="student-card">
-                <img src="res/student1.png">
+                <img src="res/student1.jpg">
             </div>
             <div class="student-card">
                 <img src="res/student2.png">
@@ -166,10 +174,13 @@
         <div class="square" id="square19" data-speed="2.3"></div>
         <div class="square" id="square20" data-speed="2.4"></div>
 
-        <iframe id="guide-school-video" src="https://www.youtube.com/embed/eg_rlPU5nU0?si=LIow4rn37jrKlWfj"
-            title="YouTube video player" frameborder="0" allow="accelerometer; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-        </iframe>
+        <div id="guide-school-content">
+            <h3>Путеводитель по нашей школе</h3>
+            <iframe id="guide-school-video" src="https://www.youtube.com/embed/eg_rlPU5nU0?si=LIow4rn37jrKlWfj"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; gyroscope; picture-in-picture; web-share" allowfullscreen>
+            </iframe>
+        </div>
     </section>
 
     <section id="questions-section">
@@ -190,18 +201,21 @@
                     <div class="faq-item" onclick="toggleAnswer('faq-answer2')">Стоимость занятий</div>
                     <div class="faq-answer" id="faq-answer2">Ответ</div>
 
-                    <div class="faq-item" onclick="toggleAnswer('faq-answer3')">Какие возрастные категории вы обучаете?</div>
+                    <div class="faq-item" onclick="toggleAnswer('faq-answer3')">Какие возрастные категории вы обучаете?
+                    </div>
                     <div class="faq-answer" id="faq-answer3">Ответ</div>
                 </div>
                 <div class="faq-right">
 
-                    <div class="faq-item" onclick="toggleAnswer('faq-answer4')">Какие навыки мой ребенок приобретет?</div>
+                    <div class="faq-item" onclick="toggleAnswer('faq-answer4')">Какие навыки мой ребенок приобретет?
+                    </div>
                     <div class="faq-answer" id="faq-answer4">Ответ</div>
 
-                    <div class="faq-item" onclick="toggleAnswer('faq-answer5')">Какие дополнительные мероприятия доступны для учеников?</div>
+                    <div class="faq-item" onclick="toggleAnswer('faq-answer5')">Какие дополнительные мероприятия
+                        доступны для учеников?</div>
                     <div class="faq-answer" id="faq-answer5">Ответ</div>
 
-                    <div class="faq-item" onclick="toggleAnswer('faq-answer6')">Сколько времени длится  занятие?</div>
+                    <div class="faq-item" onclick="toggleAnswer('faq-answer6')">Сколько времени длится занятие?</div>
                     <div class="faq-answer" id="faq-answer6">Ответ</div>
                 </div>
             </div>
@@ -210,15 +224,13 @@
 
     <section id="submit-app-section">
         <div id="submit-app-content">
-            <div id="submit-app-photo">
-                <img src="res/request_photo.jpeg" alt="Your Photo" style="width: 300px;">
-            </div>
+            <img id="submit-app-photo" src="res/request_photo.jpeg">
             <div id="submit-app-form">
                 <h2>Оставьте заявку</h2>
                 <input type="text" placeholder="Ваше имя">
                 <input type="tel" placeholder="Ваш телефон">
                 <input type="email" placeholder="Ваша почта">
-                <input type="submit" value="Отправить">
+                <button class="submit-app-form__btn" type="submit">Отправить</button>
             </div>
         </div>
     </section>
