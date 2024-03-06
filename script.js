@@ -106,14 +106,17 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
 window.addEventListener('scroll', function () {
   var header = document.querySelector('header');
   var logo = document.querySelector('.logo');
   var scrollPosition = window.scrollY;
 
   if (scrollPosition > 0) {
-    logo.src = 'res/logo_scrolled.png';
+
     header.classList.add('header-scrolled');
+
+    logo.classList.add('logo-scrolled');
 
     menuButtons.forEach(button => {
       button.classList.remove('menu-button-no-scrolled');
@@ -124,8 +127,9 @@ window.addEventListener('scroll', function () {
     });
 
   } else {
-    logo.src = 'res/logo.png';
     header.classList.remove('header-scrolled');
+
+    logo.classList.remove('logo-scrolled');
 
     menuButtons.forEach(button => {
       button.classList.remove('menu-button-scrolled');

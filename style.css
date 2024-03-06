@@ -109,8 +109,28 @@ header {
     position: relative;
 }
 
-.logo {
+#logo-link {
+    display: block;
+    height: 100%;
     width: 15vw;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    background-image: url("res/logo.png");
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.logo-scrolled {
+    width: 100%;
+    height: 100%;
+    background-image: url("res/logo_scrolled.png");
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
 }
 
 .menu {
