@@ -1212,7 +1212,7 @@ footer a:hover {
     
     .course-card {
         width: 60%;
-        height: 20vh;
+        height: auto;
         margin: 5%;
         padding: 10px;
         box-shadow: 0 1% 1% #410E6A;
