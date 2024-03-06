@@ -1151,17 +1151,37 @@ footer a:hover {
     }
 
     .about-container {
+        display: flex;
         flex-direction: column;
+        justify-content: center;
         padding-left: 7%;
         padding-right: 7%;
+        padding-top: 12vh;
+        padding-bottom: 12vh;
+    }
+
+    .left {
+        background: none;
+        margin: 0;
     }
 
     .left h2 {
         font-size: 6vw;
+        color: #4f3069;
     }
 
     .left p {
         font-size: 4vw;
+        color: #333;
+    }
+
+    .right {
+        background: none;
+    }
+
+    .right img {
+        width: 100%;
+        margin-top: 10vh;
     }
 }
 
