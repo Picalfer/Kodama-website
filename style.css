@@ -1083,10 +1083,11 @@ footer a:hover {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        height: 7vh;
     }
 
-    .logo-main {
-        width: 30vw;
+    .logo {
+        width: 35vw;
     }
 
     .menu {
