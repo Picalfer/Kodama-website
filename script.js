@@ -109,12 +109,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 window.addEventListener('scroll', function () {
   var header = document.querySelector('header');
-  var logo = document.querySelector('.logo-main');
+  var logo = document.querySelector('.logo');
   var scrollPosition = window.scrollY;
 
   if (scrollPosition > 0) {
     header.classList.add('header-scrolled');
-
     logo.classList.add('logo-scrolled');
 
     menuButtons.forEach(button => {
@@ -127,7 +126,6 @@ window.addEventListener('scroll', function () {
 
   } else {
     header.classList.remove('header-scrolled');
-
     logo.classList.remove('logo-scrolled');
 
     menuButtons.forEach(button => {
