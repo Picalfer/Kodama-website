@@ -352,7 +352,7 @@ header {
     z-index: 1;
 }
 
-.about-section {
+#about-section {
     text-align: center;
     color: white;
     position: relative;
@@ -976,12 +976,10 @@ footer a:hover {
 @keyframes float {
     0% {
         transform: translateY(-10px);
-        /* Начальная позиция: над экраном */
     }
 
     100% {
         transform: translateY(100vh);
-        /* Конечная позиция: внизу экрана */
     }
 }
 
@@ -1041,8 +1039,6 @@ footer a:hover {
     }
 }
 
-
-
 @keyframes select-course-btn-animation {
     0% {
         filter: brightness(1);
@@ -1060,7 +1056,6 @@ footer a:hover {
     }
 }
 
-/* Стили для хедера на мобильных устройствах */
 @media screen and (max-width: 600px) {
     header {
         display: flex;
@@ -1149,7 +1144,6 @@ footer a:hover {
     }
 }
 
-/* Стили для хедера на десктопных устройствах */
 @media screen and (min-width: 601px) {
     header {
         display: flex;
