@@ -1193,6 +1193,48 @@ footer a:hover {
     #between-decor-purple h3 {
         font-size: 6vw;
     }
+
+    #courses-section {
+        max-height: 150vh;
+    }
+    
+    .courses-content {
+        position: relative;
+        padding-top: 10vh;
+    }
+    
+    .courses-container {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .course-card {
+        width: 60%;
+        height: 20vh;
+        margin: 5%;
+        padding: 10px;
+        box-shadow: 0 1% 1% #410E6A;
+    }
+    
+    .course-card img {
+        max-width: 40%;
+    }
+    
+    .course-card-text {
+        width: 70%;
+        margin: 0 auto;
+        transform: translateY(-35%);
+    }
+    
+    .course-card-text h3 {
+        font-size: 5vw;
+    }
+    
+    .course-card-text p {
+        font-size: 3.5vw;
+    }
 }
 
 @media screen and (min-width: 601px) {
