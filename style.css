@@ -36,10 +36,15 @@ body {
 
 #close-menu-btn {
     position: absolute;
-    background-image: url('res/exit_btn.png');
+    background: none;
+    background-image: url('res/close_mobile_menu_btn.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
     top: 20px;
     right: 20px;
     width: 30px;
@@ -969,7 +974,7 @@ footer a:hover {
     }
 
     90% {
-        opacity: 1;    
+        opacity: 1;
     }
 
     100% {
@@ -1069,7 +1074,6 @@ footer a:hover {
         align-items: center;
     }
 
-
     .menu.open {
         display: block;
     }
@@ -1078,18 +1082,18 @@ footer a:hover {
         margin: 5px 0;
     }
 
-    .button-img {
+    #open-menu-btn {
         width: 8vw;
+        height: 50%;
         border: none;
         padding: 0;
         background: none;
         cursor: pointer;
         outline: none;
-    }
-
-    .button-img img {
-        width: 100%;
-        height: auto;
+        background-image: url("res/open_mobile_menu_btn.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
     #submit-app-photo {
@@ -1151,7 +1155,7 @@ footer a:hover {
         gap: 20px;
     }
 
-    #menu-toggle {
+    #open-menu-btn {
         display: none;
     }
 }

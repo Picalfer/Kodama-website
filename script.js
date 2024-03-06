@@ -64,10 +64,10 @@ bubbles.forEach(bubble => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  var menuToggle = document.getElementById('menu-toggle');
+  var menuToggle = document.getElementById('open-menu-btn');
   var mobileMenu = document.getElementById('mobile-menu');
   var closeButton = document.getElementById('close-menu-btn');
-  var menuButton = document.getElementById('menu-btn');
+  var menuButton = document.getElementById('open-menu-btn');
   var navLinks = document.querySelectorAll('#nav-mobile-menu a');
 
   function closeMenu() {
