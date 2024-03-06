@@ -1183,6 +1183,16 @@ footer a:hover {
         width: 100%;
         margin-top: 10vh;
     }
+
+    #between-decor-purple {
+        height: 20vh;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    #between-decor-purple h3 {
+        font-size: 6vw;
+    }
 }
 
 @media screen and (min-width: 601px) {
