@@ -109,11 +109,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 window.addEventListener('scroll', function () {
   var header = document.querySelector('header');
-  var logo = document.querySelector('.logo');
+  var logo = document.querySelector('.logo-main');
   var scrollPosition = window.scrollY;
 
   if (scrollPosition > 0) {
-
     header.classList.add('header-scrolled');
 
     logo.classList.add('logo-scrolled');
