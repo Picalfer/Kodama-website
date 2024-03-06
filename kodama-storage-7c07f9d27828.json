@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "kodama-storage",
+  "private_key_id": "7c07f9d27828962084e0d901ab2d9fd15d237fde",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDBq9QnGbUthIvw\nSkUZj9PES5FyZg2bvAXZQOyjbQ9xM08ZXOd0zjGWlVJ2hVWHQKbpK08MMYI7lZGN\nTxbCF14LhriixEd+ltjt0FE+t+bUcMd9MVRgVAZAqu5zNPUJ8SWiZ9SB9yKv8tRY\n1kyHuuFpL8MVAFLinCM/be+Y6crg/BGTBgkD/Th5ND1q5yjFFkV/aQZ62ZBkd5f4\nMf0HEwkwDnZtT+5lPpvN9fLGYl+hgMM9bMjySdrEQzlCH6od2eMg4h15X5DJ24e5\n7wHVH5dXRqfBpiAkGksWwgCGHZ1mmAExeyof1JDs5DY5pbQ8mEWbjGJmK2IQKbhT\nK1rH9GOrAgMBAAECggEAH/HxyolJAzsLwhTeFPtOWOCGGzKOKBP5ev5kighhNbDa\n6ToTy4Z/U3FJ6tbPZsHZRjioj0BTVPS0z3QuMtGb55bPObnaeRz0pzVnUUsQPhZk\nMVhDrKfvaBdJwaMIkB1AsesieFWFWTRaplSixviiWbFRIlOtWEec4MeHb9eQaU+h\nOQPWPN3tVP7hF1TwgR602eweVhWzyqBKdDLhZykgcwp0vMVxbPFLpsCRCVHJJ8E1\nbnX/m+0TpCcYC8NXr4wp71kYcZ8rRhiZ2iwQn6fRm0SThhm8NrAywrsvbGsWg4OV\nZqPPHE/Go3s08J1byA7NlWUfYdmFrXNoBRBmqUJyQQKBgQDgkL7PS2HAnS5SrxLV\nai0VYtGgkwVgZRHR7kj8jyYa7Lz22sYzkkcmBsKuqVGG9N7kP0QNfJqUaeUPUWr+\nKLptS1sPucFtg+/k4DmWLMJ/cSPx3rJ02H6ZDAo3OGAk+5prc3CLh7jrjnkkPN1j\nL15Bog6LIm++4Py+qtVuQoXSEQKBgQDcx/73ZT5YxGI598p6VXuW4C4OLvfOzMOT\nQN4eHfg2ZMhu91LIjOYcZuetyMldEPyvrzeyjqEHVJJyz/30yBVudPnqTbexYZVv\niZJOKCPZKfSzpPhyBdT4l2+yApwCd+sjiyT1pUEKabHGKaDyt6B4rHYyapjWH9oB\nvt7n4zud+wKBgQDF5YjhcRLSBTI/V12HiSv1vsHxed6xFiBgGldjilsQOzRDboRg\nCjZ9AlQqS7g28DBEgKReJkKrK67akutw0z+G9XNoJlCZTD3qOtdEymkUmgYNLi2h\n3u+hvAR8qUfBD6EDtBWoQJDrtQB4uNJ4h9POjxu17UEAu5DADhhMNH9toQKBgBgP\nW4PObrrxu9qhXFl0k2Ff0OUOzUamHfIgMZSKo5AZ75XYMhdU84bI2BqiNP+FaGQk\n7ibxUC8iUktcy0ovu9YrvUiBa7FS9xwOm/kUesOhxN8G7WRPqmPk7PEzQ5kpRGC9\nOyvh9HKUDiGQS8/nnv9HnCHmZ/19vx5NlLEknEydAoGBAJtFf5CgzWcQlnYk8iN+\n3za71GRyUX14UoBif66RF3gVdOv0rYa43rQ7qHXmUh/02iL62Tly/0BAEIz2x5by\nIWMsDGl6rfdjxkwzqW2fhXcG6Ggtyk0n5lXcngrFbIsSnSK+v8/XtMKBVxllwjnb\nNeaSAnTKEP1EW1W/rLIpH0eF\n-----END PRIVATE KEY-----\n",
+  "client_email": "kodama@kodama-storage.iam.gserviceaccount.com",
+  "client_id": "110201855080038931795",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/kodama%40kodama-storage.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

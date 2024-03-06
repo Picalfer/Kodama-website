@@ -12,8 +12,8 @@ SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive",
 ]
-CREDENTIALS_FILE = ".env.kodama-website-c0d04f804947.json"
-EMAIL_USER = "chelnok1190@gmail.com"
+CREDENTIALS_FILE = "kodama-storage-7c07f9d27828.json"
+EMAIL_USER = "landfathich@gmail.com"
 
 
 # Функция для аутентификации
@@ -117,13 +117,13 @@ if __name__ == "__main__":
 
     # Раскомкоментировать create_spreadsheet для создания новой электронной таблицы Google.
     # Запишет адрес созданой таблицы в файл ".env.spreadsheet_id.txt"
-    # create_spreadsheet(service)
+    create_spreadsheet(service)
 
     # Раскомкоментировать для разрешения пользователю(EMAIL_USER) использовать созданную таблицу
-    # set_user_permissions(service, get_sheet_id())
+    set_user_permissions(service, get_sheet_id())
 
     # Раскомкоментировать что бы создать заголовки, определенными в массиве table_values
-    # generate_title_sheet(service, get_sheet_id())
+    generate_title_sheet(service, get_sheet_id())
 
     table_id = get_sheet_id()
 

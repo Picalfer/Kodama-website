@@ -1,4 +1,4 @@
-const menuButtons = document.querySelectorAll('.menu a');
+const menuButtons = document.querySelectorAll('.menu-item');
 const selectCourseButton = document.getElementById('select-course-btn');
 const logo = document.getElementById('logo-link');
 
@@ -9,7 +9,6 @@ logo.addEventListener('click', function (event) {
 
   targetElement.scrollIntoView({ behavior: 'smooth' });
 });
-
 
 menuButtons.forEach(button => {
   button.classList.add('menu-button-no-scrolled');
@@ -71,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var menuButton = document.getElementById('menu-btn');
   var navLinks = document.querySelectorAll('#nav-mobile-menu a');
 
-  // Функция для закрытия меню
   function closeMenu() {
     mobileMenu.style.display = 'none';
     menuButton.style.display = 'block';

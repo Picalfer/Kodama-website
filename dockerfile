@@ -13,7 +13,7 @@ COPY res ./res/
 COPY src ./src/
 COPY base.html script.js style.css ./
 COPY .env.spreadsheet_id.txt ./src/.env.spreadsheet_id.txt
-COPY .env.kodama-website-c0d04f804947.json ./src/.env.kodama-website-c0d04f804947.json
+COPY kodama-storage-7c07f9d27828.json ./src/kodama-storage-7c07f9d27828.json
 
 
 RUN poetry install --without dev 
