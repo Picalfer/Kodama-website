@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,26 +22,22 @@
       <div class="start-content">
         <h2>Онлайн-школа программирования</h2>
         <h1>
-          K
-          <span class="blue-letter">O</span>
-          D
-          <span class="purple-letter">A</span>
-          <span class="blue-letter">M</span>
-          A
+            K<span class="blue-letter">O</span>D<span class="purple-letter">A</span><span
+                class="blue-letter">M</span>A
         </h1>
         <img id="main-btn" src="{{ url_for('static', path='/main_button.png') }}">
         <div class="container" id="select-course">
           <a href="#courses">
-            <img id="select-course-btn"
-                 src="{{ url_for('static', path='/select_course_btn.png') }}">
+              <img id="select-course-btn" src="{{ url_for('static', path='/select_course_btn.png') }}">
           </a>
-          <!--<img id="pointer" src="res/pointer.png">-->
         </div>
+
       </div>
     </section>
+
     <header>
       <img class="logo" src="{{ url_for('static', path='/logo.png') }}">
-      <button id="menu-toggle">Меню</button>
+      <button id="menu-toggle" class="button-img"><img src="{{ url_for('static', path='/mobile_menu_btn.png') }}" alt="Menu"></button>
       <nav class="menu">
         <a href="#top-decor">О школе</a>
         <a href="#courses">Курсы</a>
@@ -48,6 +45,17 @@
         <a href="#submit-app-section">Контакты</a>
       </nav>
     </header>
+
+    <section id="mobile-menu">
+        <button id="close-menu-btn" class="button-img"><img src="{{ url_for('static', path='/exit_btn.png') }}" alt="Close Menu"></button>
+        <nav id="nav-mobile-menu">
+            <a href="#top-decor">О школе</a>
+            <a href="#courses">Курсы</a>
+            <a href="#questions-section">Отзывы</a>
+            <a href="#submit-app-section">Контакты</a>
+        </nav>
+    </section>
+
     <section class="about-section">
       <div class="about-content">
         <div id="top-decor"></div>
@@ -55,29 +63,32 @@
           <div class="left">
             <h2>Добро пожаловать в мир школы программирования Kodama</h2>
             <p>
-              Мы рады представить вам онлайн-школу программирования Kodama, где вы сможете окунуться в
-              увлекательный мир кодирования и создания программ. Занятия в коде научат вас обдумывать и
-              настраивать собственные проекты, применять различные уровни сложности и экспериментировать с
-              кодом, а также создавать свои уникальные программные решения. Здесь вы можете общаться с
-              опытными преподавателями, изучать разные языки и программирование, создавать веб-сайты,
-              мобильные приложения и многое другое. Наши курсы также предоставляют возможность работать над
-              реальными проектами, развивать свои навыки. Для вашего обучения предусмотрены различные
-              настройки, включая индивидуальное обучение, гибкий график занятий и доступ к обновленным
-              материалам. Вы также можете создавать свои собственные проекты, расширять свои знания и внедрять
-              основы в сфере информационных технологий. Если вы стремитесь к новым вызовам и хотите освоить
-              мир программирования, то Кодама — ваш идеальный выбор! 
+                Добро пожаловать в Kodama - онлайн-школу программирования, где мы создаем будущее вместе! Мы
+                предлагаем вам уникальную возможность погрузиться в увлекательный мир кодирования и создания
+                программ. Наши курсы разработаны для того, чтобы помочь вам освоить различные языки
+                программирования, научиться создавать веб-сайты, игры и многое другое.
+
+                У нас вы найдете опытных преподавателей, готовых поддержать вас на каждом шагу вашего обучения.
+                Мы предлагаем гибкий график занятий, чтобы вы могли учиться в удобное для вас время, а также
+                возможность работать над реальными проектами, что поможет вам применить полученные навыки на
+                практике.
+
+                Присоединяйтесь к нашему сообществу и станьте частью новой волны программистов, готовых изменить
+                мир с помощью технологий!
             </p>
           </div>
           <div class="right">
-            <img src="{{ url_for('static', path='/right_image_about.png') }}">
+              <img src="{{ url_for('static', path='/right_image_about.png') }}">
           </div>
         </div>
         <div id="bottom-decor"></div>
       </div>
     </section>
+
     <div id="between-decor-purple">
       <h3>Знания, приключения и веселье: выбери свой путь</h3>
     </div>
+
     <section class="courses-section" id="courses">
       <div class="courses-content">
         <div id="top-decor"></div>
@@ -103,8 +114,7 @@
             </div>
           </div>
           <div class="course-card">
-            <img src="{{ url_for('static', path='/comp_lit_logo.png') }}"
-                 alt="Computer Literacy">
+            <img src="{{ url_for('static', path='/comp_lit_logo.png') }}" alt="Computer Literacy">
             <div class="course-card-text">
               <h3>Компьютерная</h3>
               <p>грамотность</p>
@@ -120,6 +130,7 @@
         </div>
       </div>
     </section>
+
     <section id="students-section">
       <h3>Лучшие студенты школы</h3>
       <div>
@@ -137,6 +148,7 @@
         </div>
       </div>
     </section>
+
     <section class="guide-school-section">
       <div class="square" id="square1" data-speed="3"></div>
       <div class="square" id="square2" data-speed="0.6"></div>
@@ -158,14 +170,16 @@
       <div class="square" id="square18" data-speed="2.2"></div>
       <div class="square" id="square19" data-speed="2.3"></div>
       <div class="square" id="square20" data-speed="2.4"></div>
-      <iframe id="guide-school-video"
-              src="https://www.youtube.com/embed/eg_rlPU5nU0?si=LIow4rn37jrKlWfj"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-      </iframe>
+
+      <div id="guide-school-content">
+          <h3>Путеводитель по нашей школе</h3>
+          <iframe id="guide-school-video" src="https://www.youtube.com/embed/eg_rlPU5nU0?si=LIow4rn37jrKlWfj"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; gyroscope; picture-in-picture; web-share" allowfullscreen>
+          </iframe>
+      </div>
     </section>
+
     <section id="questions-section">
       <div id="top-decor-without-bubbles"></div>
       <div class="bubble" style="left: 10%; animation-duration: 10s;"></div>
@@ -180,45 +194,48 @@
           <div class="faq-left">
             <div class="faq-item" onclick="toggleAnswer('faq-answer1')">Продолжительность курсов</div>
             <div class="faq-answer" id="faq-answer1">Ответ</div>
+
             <div class="faq-item" onclick="toggleAnswer('faq-answer2')">Стоимость занятий</div>
             <div class="faq-answer" id="faq-answer2">Ответ</div>
-            <div class="faq-item" onclick="toggleAnswer('faq-answer3')">Какие возрастные категории вы обучаете?</div>
+
+            <div class="faq-item" onclick="toggleAnswer('faq-answer3')">Какие возрастные категории вы обучаете?
+            </div>
             <div class="faq-answer" id="faq-answer3">Ответ</div>
           </div>
           <div class="faq-right">
-            <div class="faq-item" onclick="toggleAnswer('faq-answer4')">Какие навыки мой ребенок приобретет?</div>
-            <div class="faq-answer" id="faq-answer4">Ответ</div>
-            <div class="faq-item" onclick="toggleAnswer('faq-answer5')">
-              Какие дополнительные мероприятия доступны для учеников?
+
+            <div class="faq-item" onclick="toggleAnswer('faq-answer4')">Какие навыки мой ребенок приобретет?
             </div>
+            <div class="faq-answer" id="faq-answer4">Ответ</div>
+
+            <div class="faq-item" onclick="toggleAnswer('faq-answer5')">Какие дополнительные мероприятия
+                доступны для учеников?</div>
             <div class="faq-answer" id="faq-answer5">Ответ</div>
-            <div class="faq-item" onclick="toggleAnswer('faq-answer6')">Сколько времени длится  занятие?</div>
+
+            <div class="faq-item" onclick="toggleAnswer('faq-answer6')">Сколько времени длится занятие?</div>
             <div class="faq-answer" id="faq-answer6">Ответ</div>
           </div>
         </div>
       </div>
     </section>
+
     <section id="submit-app-section">
       <div id="submit-app-content">
-        <div id="submit-app-photo">
-          <img src="{{ url_for('static', path='/request_photo.jpeg') }}"
-               alt="Your Photo"
-               style="width: 300px">
-        </div>
-        <form action="/request" method="post" id="submit-app-form">
-          <h2>Оставьте заявку</h2>
-          <input type="text" name="text"  placeholder="Ваше имя">
-          <input type="tel" name="tel"  placeholder="Ваш телефон">
-          <input type="email" name="email"  placeholder="Ваша почта">
-          <button class="submit-app-form__btn" type="submit">Отправить</button>
-        </form>
+          <img id="submit-app-photo" src="{{ url_for('static', path='/request_photo.jpeg') }}">
+          <div id="submit-app-form">
+            <form action="/request" method="post" id="submit-app-form">
+              <h2>Оставьте заявку</h2>
+              <input type="text" name="text"  placeholder="Ваше имя">
+              <input type="tel" name="tel"  placeholder="Ваш телефон">
+              <input type="email" name="email"  placeholder="Ваша почта">
+              <button class="submit-app-form__btn" type="submit">Отправить</button>
+            </form>
+          </div>
       </div>
     </section>
     <footer>
       <p>&copy; 2024 Kodama. Все права защищены.</p>
-      <p>
-        Свяжитесь с нами: <a href="kodama.edu@gmail.com">kodama.edu@gmail.com</a>
-      </p>
+      <p>Свяжитесь с нами: <a href="kodama.edu@gmail.com">kodama.edu@gmail.com</a></p>
     </footer>
     <script src="{{ url_for('root', path='/script.js') }}" defer></script>
   </body>
