@@ -10,33 +10,6 @@
 </head>
 
 <body id="top-site">
-    <section class="start-section">
-        <div id="mountains"></div>
-        <div id="right-tree"></div>
-        <div id="ground"></div>
-        <div id="left-cloud"></div>
-        <div id="right-cloud"></div>
-        <div id="mashroom"></div>
-        <div id="sparkles"></div>
-        <div id="hearts"></div>
-        <div id="stars"></div>
-        <div id="kodamic"></div>
-        <div class="start-content">
-            <h2>Онлайн-школа программирования</h2>
-            <h1>
-                K<span class="blue-letter">O</span>D<span class="purple-letter">A</span><span
-                    class="blue-letter">M</span>A
-            </h1>
-            <img id="main-btn" src="res/main_button.png">
-
-            <div class="container" id="select-course">
-                <a href="#courses">
-                    <img id="select-course-btn" src="res/select_course_btn.png">
-                </a>
-            </div>
-
-        </div>
-    </section>
 
     <header>
         <a href="#top-site" id="logo-link">
@@ -50,6 +23,33 @@
             <a class="menu-item" href="#submit-app-section">Контакты</a>
         </nav>
     </header>
+
+    <section id="start-section">
+        <div id="mountains"></div>
+        <div id="right-tree"></div>
+        <div id="ground"></div>
+        <div id="left-cloud"></div>
+        <div id="right-cloud"></div>
+        <div id="mashroom"></div>
+        <div id="hearts"></div>
+        <div id="stars"></div>
+        <div id="kodamic"></div>
+        <div class="start-content">
+            <h2>Онлайн-школа программирования</h2>
+            <h1>
+                K<span class="blue-letter">O</span>D<span class="purple-letter">A</span><span
+                    class="blue-letter">M</span>A
+            </h1>
+            <img id="main-btn" src="res/start_red_btn.png">
+
+            <div class="container" id="select-course">
+                <a href="#courses-section">
+                    <img id="select-course-btn" src="res/select_course_btn.png">
+                </a>
+            </div>
+
+        </div>
+    </section>
 
     <section id="mobile-menu">
         <button id="close-menu-btn" class="button-img"><img src="res/exit_btn.png" alt="Close Menu"></button>
@@ -196,30 +196,87 @@
             <div id="fabs">
                 <div class="faq-left">
                     <div class="faq faq-item" onclick="toggleAnswer('faq-answer1')">Продолжительность курсов</div>
-                    <div class="faq faq-answer" id="faq-answer1">Ответ</div>
+                    <div class="faq faq-answer" id="faq-answer1">
+                        У нас каждый студент может выбирать удобное для себя количество занятий в неделю: 1, 2 или 3
+                        раза. Мы учитываем вашу индивидуальную загруженность и желания.
+
+                        Наши курсы разделены на программы разной продолжительности:
+
+                        Для начинающих в создании 2D игр в Scratch: от 6 месяцев до 1 года.
+                        Программа по графическому дизайну: от 1 года до 2 лет.
+                        Программа по компьютерной грамотности: от 6 месяцев до 1 года.
+                        Мы гарантируем, что ваше обучение будет не только эффективным, но и увлекательным!
+                    </div>
 
                     <div class="faq faq-item" onclick="toggleAnswer('faq-answer2')">Стоимость занятий</div>
-                    <div class="faq faq-answer" id="faq-answer2">Ответ</div>
+                    <div class="faq faq-answer" id="faq-answer2">
+                        В нашей школе представлены три варианта оплаты:
+
+                        "Приключение" – 10 уроков за 12000 рублей, средняя стоимость урока 1200 рублей. Кроме того, при
+                        покупке этого абонемента вы получаете бонусные баллы в размере 1000 рублей.
+                        "Компас" – 22 урока за 24200 рублей, средняя стоимость урока около 1100 рублей. В рамках этого
+                        абонемента вы получаете бонусные баллы в размере 1500 рублей.
+                        "Творческий мастер" – 45 уроков за 45000 рублей, средняя стоимость урока около 1000 рублей. При
+                        покупке этого абонемента вы получаете бонусные баллы в размере 2000 рублей.
+                        Выбрав один из наших абонементов, вы получите возможность обучиться программированию по выгодной
+                        цене и в удобном формате, а также сможете воспользоваться бонусами для дополнительных уроков или
+                        материалов.
+                    </div>
 
                     <div class="faq faq-item" onclick="toggleAnswer('faq-answer3')">Какие возрастные категории вы
                         обучаете?
                     </div>
-                    <div class="faq faq-answer" id="faq-answer3">Ответ</div>
+                    <div class="faq faq-answer" id="faq-answer3">
+                        Мы предлагаем обучение программированию для детей и подростков возрастом от 7 до 18 лет. Наши
+                        курсы разработаны с учетом возрастных особенностей учеников:
+
+                        Создание 2D игр в Scratch : Принимаем детей от 7 лет и старше.
+                        Графический дизайн: Рекомендовано для детей от 10 лет и старше.
+                        Roblox : Подходит для детей от 9 лет и старше.
+                        Компьютерная грамотность: Подходит для детей от 8 лет и старше.
+                    </div>
                 </div>
 
                 <div class="faq-right">
 
                     <div class="faq faq-item" onclick="toggleAnswer('faq-answer4')">Какие навыки мой ребенок приобретет?
                     </div>
-                    <div class="faq faq-answer" id="faq-answer4">Ответ</div>
+                    <div class="faq faq-answer" id="faq-answer4">
+                        Ваш ребенок приобретет навыки программирования, создания игр, работу с компьютерными
+                        программами, а также улучшит логическое мышление, творческий потенциал и умение работать в
+                        команде
+                    </div>
 
                     <div class="faq faq-item" onclick="toggleAnswer('faq-answer5')">Какие дополнительные мероприятия
                         доступны для учеников?</div>
-                    <div class="faq faq-answer" id="faq-answer5">Ответ</div>
+                    <div class="faq faq-answer" id="faq-answer5">
+                        Дополнительные материалы, доступные для учеников, включают в себя:
+
+                        Учебные ресурсы: Электронные учебники, видеоуроки, презентации и онлайн-курсы, которые помогут
+                        углубить знания по конкретным темам и освоить новые концепции.
+
+                        Практические задания: Дополнительные задания и проекты, которые позволяют применить полученные
+                        знания на практике и развить навыки программирования.
+
+                        Онлайн-платформы: Доступ к специализированным онлайн-платформам и ресурсам, где ученики могут
+                        участвовать в соревнованиях, решать задачи и общаться с другими участниками.
+
+                        Справочные материалы: Различные справочники, руководства и статьи по программированию и
+                        связанным с ним темам, которые помогут ученикам быстро находить нужную информацию и решать
+                        возникающие вопросы.
+
+                        Индивидуальные консультации: Возможность получить индивидуальные консультации и помощь от
+                        опытных преподавателей по вопросам, связанным с учебным процессом.
+
+                        Все эти материалы предоставляются с целью обеспечить ученикам максимально полное и эффективное
+                        обучение в рамках нашей школы программирования.
+                    </div>
 
                     <div class="faq faq-item" onclick="toggleAnswer('faq-answer6')">Сколько времени длится занятие?
                     </div>
-                    <div class="faq faq-answer" id="faq-answer6">Ответ</div>
+                    <div class="faq faq-answer" id="faq-answer6">
+                        В нашей школе каждое занятие продолжается 55 минут.
+                    </div>
                 </div>
             </div>
         </div>

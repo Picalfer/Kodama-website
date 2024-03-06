@@ -29,7 +29,7 @@ menuButtons.forEach(button => {
 selectCourseButton.addEventListener('click', function (event) {
   event.preventDefault();
 
-  const targetElement = document.getElementById('courses');
+  const targetElement = document.getElementById('courses-section');
 
   targetElement.scrollIntoView({ behavior: 'smooth' });
 });

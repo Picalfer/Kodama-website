@@ -59,7 +59,7 @@ body {
 }
 
 
-.start-section {
+#start-section {
     overflow: hidden;
     position: relative;
     padding-left: 5%;
@@ -169,7 +169,7 @@ header {
     text-shadow: 0px 5px 10px rgb(49, 49, 49);
 }
 
-.start-section h2 {
+#start-section h2 {
     margin-bottom: 10px;
     font-size: 2.5vw;
     letter-spacing: 2px;
@@ -302,22 +302,6 @@ header {
     background-position: center;
     right: 30%;
     bottom: 2vh;
-}
-
-#sparkles {
-    position: absolute;
-    background-image: url(res/sparkles.png);
-    width: 7%;
-    height: 20vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    right: 30%;
-    bottom: 19vh;
-    z-index: 0;
-    animation-name: sparkles_animation;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
 }
 
 #hearts {
@@ -667,7 +651,8 @@ header {
 
 #questions-section {
     width: 100%;
-    height: 110vh;
+    min-height: 110vh;
+    height: auto;
     position: relative;
     overflow: hidden;
 }
@@ -980,10 +965,16 @@ footer a:hover {
 @keyframes float {
     0% {
         transform: translateY(-10px);
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;    
     }
 
     100% {
         transform: translateY(100vh);
+        opacity: 0;
     }
 }
 
@@ -1113,7 +1104,7 @@ footer a:hover {
         width: 100%;
     }
 
-    .start-section {
+    #start-section {
         height: 85vh;
     }
 
