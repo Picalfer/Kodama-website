@@ -9,7 +9,7 @@
     <script src="script.js" defer></script>
 </head>
 
-<body>
+<body id="top-site">
     <section class="start-section">
         <div id="mountains"></div>
         <div id="right-tree"></div>
@@ -39,7 +39,9 @@
     </section>
 
     <header>
-        <div class="logo-main"></div>
+        <a href="#top-site" id="logo-link">
+            <div class="logo"></div>
+        </a>
         <button id="menu-toggle" class="button-img"><img src="res/mobile_menu_btn.png" alt="Menu"></button>
         <nav class="menu">
             <a href="#top-decor">О школе</a>
@@ -60,32 +62,30 @@
     </section>
 
     <section class="about-section">
-        <div class="about-content">
-            <div id="top-decor"></div>
-            <div class="flex-section">
-                <div class="left">
-                    <h2>Добро пожаловать в мир школы программирования Kodama</h2>
-                    <p>
-                        Добро пожаловать в Kodama - онлайн-школу программирования, где мы создаем будущее вместе! Мы
-                        предлагаем вам уникальную возможность погрузиться в увлекательный мир кодирования и создания
-                        программ. Наши курсы разработаны для того, чтобы помочь вам освоить различные языки
-                        программирования, научиться создавать веб-сайты, игры и многое другое.
+        <div class="top-decor"></div>
+        <div class="about-container">
+            <div class="left">
+                <h2>Добро пожаловать в мир школы программирования Kodama</h2>
+                <p>
+                    Добро пожаловать в Kodama - онлайн-школу программирования, где мы создаем будущее вместе! Мы
+                    предлагаем вам уникальную возможность погрузиться в увлекательный мир кодирования и создания
+                    программ. Наши курсы разработаны для того, чтобы помочь вам освоить различные языки
+                    программирования, научиться создавать веб-сайты, игры и многое другое.
 
-                        У нас вы найдете опытных преподавателей, готовых поддержать вас на каждом шагу вашего обучения.
-                        Мы предлагаем гибкий график занятий, чтобы вы могли учиться в удобное для вас время, а также
-                        возможность работать над реальными проектами, что поможет вам применить полученные навыки на
-                        практике.
+                    У нас вы найдете опытных преподавателей, готовых поддержать вас на каждом шагу вашего обучения.
+                    Мы предлагаем гибкий график занятий, чтобы вы могли учиться в удобное для вас время, а также
+                    возможность работать над реальными проектами, что поможет вам применить полученные навыки на
+                    практике.
 
-                        Присоединяйтесь к нашему сообществу и станьте частью новой волны программистов, готовых изменить
-                        мир с помощью технологий!
-                    </p>
-                </div>
-                <div class="right">
-                    <img src="res/right_image_about.png">
-                </div>
+                    Присоединяйтесь к нашему сообществу и станьте частью новой волны программистов, готовых изменить
+                    мир с помощью технологий!
+                </p>
             </div>
-            <div id="bottom-decor"></div>
+            <div class="right">
+                <img src="res/right_image_about.png">
+            </div>
         </div>
+        <div class="bottom-decor"></div>
     </section>
 
     <div id="between-decor-purple">
@@ -94,7 +94,7 @@
 
     <section class="courses-section" id="courses">
         <div class="courses-content">
-            <div id="top-decor"></div>
+            <div class="top-decor"></div>
             <div class="two-clouds" id="two-clouds-top"></div>
             <div class="two-clouds" id="two-clouds-bottom"></div>
             <div class="cloud" id="cloud-right-top"></div>
@@ -154,10 +154,10 @@
 
     <section class="guide-school-section">
         <div class="square" id="square1" data-speed="3"></div>
-        <div class="square" id="square2" data-speed="0.6"></div>
-        <div class="square" id="square3" data-speed="0.7"></div>
+        <div class="square" id="square2" data-speed="2"></div>
+        <div class="square" id="square3" data-speed="3"></div>
         <div class="square" id="square4" data-speed="3"></div>
-        <div class="square" id="square5" data-speed="0.9"></div>
+        <div class="square" id="square5" data-speed="2S"></div>
         <div class="square" id="square6" data-speed="1"></div>
         <div class="square" id="square7" data-speed="1.1"></div>
         <div class="square" id="square8" data-speed="1.2"></div>
@@ -169,7 +169,7 @@
         <div class="square" id="square14" data-speed="1.8"></div>
         <div class="square" id="square15" data-speed="1.9"></div>
         <div class="square" id="square16" data-speed="2"></div>
-        <div class="square" id="square17" data-speed="2.1"></div>
+        <div class="square" id="square17" data-speed="2"></div>
         <div class="square" id="square18" data-speed="2.2"></div>
         <div class="square" id="square19" data-speed="2.3"></div>
         <div class="square" id="square20" data-speed="2.4"></div>
@@ -195,28 +195,31 @@
             <h2>Вопросы, которые могут возникнуть у вас</h2>
             <div id="fabs">
                 <div class="faq-left">
-                    <div class="faq-item" onclick="toggleAnswer('faq-answer1')">Продолжительность курсов</div>
-                    <div class="faq-answer" id="faq-answer1">Ответ</div>
+                    <div class="faq faq-item" onclick="toggleAnswer('faq-answer1')">Продолжительность курсов</div>
+                    <div class="faq faq-answer" id="faq-answer1">Ответ</div>
 
-                    <div class="faq-item" onclick="toggleAnswer('faq-answer2')">Стоимость занятий</div>
-                    <div class="faq-answer" id="faq-answer2">Ответ</div>
+                    <div class="faq faq-item" onclick="toggleAnswer('faq-answer2')">Стоимость занятий</div>
+                    <div class="faq faq-answer" id="faq-answer2">Ответ</div>
 
-                    <div class="faq-item" onclick="toggleAnswer('faq-answer3')">Какие возрастные категории вы обучаете?
+                    <div class="faq faq-item" onclick="toggleAnswer('faq-answer3')">Какие возрастные категории вы
+                        обучаете?
                     </div>
-                    <div class="faq-answer" id="faq-answer3">Ответ</div>
+                    <div class="faq faq-answer" id="faq-answer3">Ответ</div>
                 </div>
+
                 <div class="faq-right">
 
-                    <div class="faq-item" onclick="toggleAnswer('faq-answer4')">Какие навыки мой ребенок приобретет?
+                    <div class="faq faq-item" onclick="toggleAnswer('faq-answer4')">Какие навыки мой ребенок приобретет?
                     </div>
-                    <div class="faq-answer" id="faq-answer4">Ответ</div>
+                    <div class="faq faq-answer" id="faq-answer4">Ответ</div>
 
-                    <div class="faq-item" onclick="toggleAnswer('faq-answer5')">Какие дополнительные мероприятия
+                    <div class="faq faq-item" onclick="toggleAnswer('faq-answer5')">Какие дополнительные мероприятия
                         доступны для учеников?</div>
-                    <div class="faq-answer" id="faq-answer5">Ответ</div>
+                    <div class="faq faq-answer" id="faq-answer5">Ответ</div>
 
-                    <div class="faq-item" onclick="toggleAnswer('faq-answer6')">Сколько времени длится занятие?</div>
-                    <div class="faq-answer" id="faq-answer6">Ответ</div>
+                    <div class="faq faq-item" onclick="toggleAnswer('faq-answer6')">Сколько времени длится занятие?
+                    </div>
+                    <div class="faq faq-answer" id="faq-answer6">Ответ</div>
                 </div>
             </div>
         </div>
@@ -224,7 +227,7 @@
 
     <section id="submit-app-section">
         <div id="submit-app-content">
-            <img id="submit-app-photo" src="res/request_photo.jpeg">
+            <img id="submit-app-photo" src="res/request_photo.jpg">
             <div id="submit-app-form">
                 <h2>Оставьте заявку</h2>
                 <input type="text" placeholder="Ваше имя">

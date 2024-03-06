@@ -1,6 +1,17 @@
 // Получаем все кнопки меню
 const menuButtons = document.querySelectorAll('.menu a');
 const selectCourseButton = document.getElementById('select-course-btn');
+const logo = document.getElementById('logo-link');
+
+logo.addEventListener('click', function (event) {
+  event.preventDefault();
+
+  const targetElement = document.getElementById('top-site');
+
+  targetElement.scrollIntoView({ behavior: 'smooth' });
+});
+
+
 menuButtons.forEach(button => {
   button.classList.add('menu-button-no-scrolled');
 });
@@ -95,14 +106,16 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
 window.addEventListener('scroll', function () {
   var header = document.querySelector('header');
   var logo = document.querySelector('.logo-main');
   var scrollPosition = window.scrollY;
 
   if (scrollPosition > 0) {
-    logo.classList.add('logo-main--scrolled');
     header.classList.add('header-scrolled');
+
+    logo.classList.add('logo-scrolled');
 
     menuButtons.forEach(button => {
       button.classList.remove('menu-button-no-scrolled');
@@ -113,8 +126,9 @@ window.addEventListener('scroll', function () {
     });
 
   } else {
-    logo.classList.remove('logo-main--scrolled');
     header.classList.remove('header-scrolled');
+
+    logo.classList.remove('logo-scrolled');
 
     menuButtons.forEach(button => {
       button.classList.remove('menu-button-scrolled');
