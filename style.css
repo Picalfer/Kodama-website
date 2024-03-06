@@ -596,6 +596,7 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    height: 100%;
 }
 
 .student-card {
@@ -604,17 +605,21 @@ header {
     background-size: contain;
     background-position: center;
     width: 23%;
-    height: auto;
     padding: 10%;
     transition: 0.6s;
 }
 
-.student-card img {
+.student-card-photo {
+    display: block;
     width: 100%;
+    background-image: url(res/student.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     transition: 1s;
 }
 
-.student-card:hover img {
+.student-card:hover .student-card-photo {
     transform: scale(1.3);
 }
 

@@ -1,4 +1,3 @@
-// Получаем все кнопки меню
 const menuButtons = document.querySelectorAll('.menu a');
 const selectCourseButton = document.getElementById('select-course-btn');
 const logo = document.getElementById('logo-link');
@@ -16,18 +15,14 @@ menuButtons.forEach(button => {
   button.classList.add('menu-button-no-scrolled');
 });
 
-// Для каждой кнопки меню добавляем обработчик события при нажатии
 menuButtons.forEach(button => {
   button.addEventListener('click', function (e) {
-    e.preventDefault(); // Предотвращаем стандартное поведение ссылки
+    e.preventDefault();
 
-    // Получаем id раздела, к которому нужно прокрутить страницу
     const targetId = button.getAttribute('href').substring(1);
 
-    // Получаем элемент, к которому нужно прокрутить страницу
     const targetElement = document.getElementById(targetId);
 
-    // Плавно прокручиваем страницу к элементу
     targetElement.scrollIntoView({ behavior: 'smooth' });
   });
 });
@@ -82,23 +77,19 @@ document.addEventListener('DOMContentLoaded', function () {
     menuButton.style.display = 'block';
   }
 
-  // Функция для открытия меню
   function openMenu() {
     mobileMenu.style.display = 'block';
     menuButton.style.display = 'none';
   }
 
-  // Привязываем событие клика к кнопке открытия меню
   menuToggle.addEventListener('click', function () {
     openMenu();
   });
 
-  // Привязываем событие клика к кнопке закрытия меню
   closeButton.addEventListener('click', function () {
     closeMenu();
   });
 
-  // Привязываем событие клика к каждой ссылке в меню
   navLinks.forEach(function (link) {
     link.addEventListener('click', function () {
       closeMenu();
