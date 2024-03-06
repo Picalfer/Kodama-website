@@ -109,8 +109,18 @@ header {
     position: relative;
 }
 
-.logo {
+.logo-main {
+    background-image: url(res/logo.png);
     width: 15vw;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 4;
+}
+
+.logo-main--scrolled {
+    background-image: url(res/logo_scrolled.png);
 }
 
 .menu {
@@ -1045,7 +1055,7 @@ footer a:hover {
         align-items: center;
     }
 
-    .logo {
+    .logo-main {
         width: 30vw;
     }
 

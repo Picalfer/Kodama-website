@@ -97,11 +97,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 window.addEventListener('scroll', function () {
   var header = document.querySelector('header');
-  var logo = document.querySelector('.logo');
+  var logo = document.querySelector('.logo-main');
   var scrollPosition = window.scrollY;
 
   if (scrollPosition > 0) {
-    logo.src = 'res/logo_scrolled.png';
+    logo.classList.add('logo-main--scrolled');
     header.classList.add('header-scrolled');
 
     menuButtons.forEach(button => {
@@ -113,7 +113,7 @@ window.addEventListener('scroll', function () {
     });
 
   } else {
-    logo.src = 'res/logo.png';
+    logo.classList.remove('logo-main--scrolled');
     header.classList.remove('header-scrolled');
 
     menuButtons.forEach(button => {
