@@ -31,8 +31,12 @@ body {
     height: 100vh;
     z-index: 5;
     overflow: hidden;
+    background-image: url("res/mobile_menu_bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
 }
-
 
 #close-menu-btn {
     position: absolute;
@@ -56,11 +60,28 @@ body {
     flex-direction: column;
 }
 
+.mobile-logo {
+    width: 85%;
+    margin: 0 auto;
+    height: 20%;
+    background-image: url("res/logo_scrolled.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 #nav-mobile-menu a {
-    color: #7017b4;
-    margin: 5%;
-    font-size: 7vw;
+    display: inline-block;
+    color: #400D69;
+    margin-left: 10%;
+    margin: 3%;
+    font-size: 7.5vw;
     text-decoration: none;
+}
+
+.mobile-menu-icon {
+    width: 9vw;
+    margin-right: 1vw;
 }
 
 

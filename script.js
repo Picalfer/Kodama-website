@@ -1,8 +1,18 @@
 const menuButtons = document.querySelectorAll('.menu-item');
+const mobileMenuButtons = document.querySelectorAll('.mobile-menu-item');
 const selectCourseButton = document.getElementById('select-course-btn');
 const logo = document.getElementById('logo-link');
+const mobileLogo = document.getElementById('mobile-logo-link');
 
 logo.addEventListener('click', function (event) {
+  event.preventDefault();
+
+  const targetElement = document.getElementById('top-site');
+
+  targetElement.scrollIntoView({ behavior: 'smooth' });
+});
+
+mobileLogo.addEventListener('click', function (event) {
   event.preventDefault();
 
   const targetElement = document.getElementById('top-site');
@@ -15,6 +25,18 @@ menuButtons.forEach(button => {
 });
 
 menuButtons.forEach(button => {
+  button.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const targetId = button.getAttribute('href').substring(1);
+
+    const targetElement = document.getElementById(targetId);
+
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+mobileMenuButtons.forEach(button => {
   button.addEventListener('click', function (e) {
     e.preventDefault();
 
@@ -87,6 +109,10 @@ document.addEventListener('DOMContentLoaded', function () {
   closeButton.addEventListener('click', function () {
     closeMenu();
   });
+
+  mobileLogo.addEventListener('click', function () {
+    closeMenu();
+  })
 
   navLinks.forEach(function (link) {
     link.addEventListener('click', function () {
