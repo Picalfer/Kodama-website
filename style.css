@@ -224,13 +224,6 @@ header {
     animation-iteration-count: infinite;
 }
 
-#pointer {
-    position: absolute;
-    height: 60px;
-    bottom: 0;
-    right: 0;
-}
-
 .blue-letter {
     color: #A4FFDE;
 }
@@ -260,7 +253,7 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     right: 7%;
-    bottom: 4vh;
+    bottom: 3.5vh;
 }
 
 #kodamic {
@@ -354,11 +347,11 @@ header {
     top: 6vh;
 }
 
-.top-decor {
+.top-decor-about {
     position: absolute;
     top: -1px;
     width: 100%;
-    background-image: url(res/top_decor.png);
+    background-image: url(res/top_decor_about.png);
     height: 25vh;
     background-repeat: repeat-x;
     background-position: top;
@@ -383,7 +376,7 @@ header {
     margin-top: 23vh;
     padding-left: 3%;
     padding-right: 3%;
-    margin-bottom: 24vh;
+    margin-bottom: 30vh;
 }
 
 .left h2 {
@@ -410,16 +403,16 @@ header {
     max-width: 50%;
 }
 
-.bottom-decor {
+.bottom-decor-about {
     position: absolute;
     bottom: -1px;
     width: 100%;
-    background-image: url(res/bottom_decor.png);
-    height: 25vh;
+    background-image: url(res/bottom_decor_about.png);
+    height: 30vh;
     background-repeat: repeat-x;
     background-position: bottom;
     background-size: contain;
-    z-index: 1;
+    z-index: 0;
 }
 
 #between-decor-purple {
@@ -448,9 +441,22 @@ header {
     display: relative;
 }
 
+.top-decor-courses {
+    position: absolute;
+    top: -1vh;
+    width: 100%;
+    height: 25vh;
+    background-repeat: repeat-x;
+    background-position: top;
+    background-size: contain;
+    z-index: 1;
+    background-image: url(res/top_decor_courses.png);
+}
+
 .courses-content {
     padding-top: 30vh;
     position: relative;
+    padding-bottom: 13vh;
 }
 
 .courses-container {
@@ -595,6 +601,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding-bottom: 10vh;
 }
 
 #students-section h3 {
@@ -683,7 +690,7 @@ header {
     overflow: hidden;
 }
 
-#top-decor-without-bubbles {
+#top-decor-faq {
     position: absolute;
     top: 0;
     width: 100%;
@@ -1134,12 +1141,12 @@ footer a:hover {
         height: 85vh;
     }
 
-    .top-decor {
+    .top-decor-about .top-decor-courses {
         height: 13vh;
         background-size: cover;
     }
 
-    #top-decor-without-bubbles {
+    #top-decor-faq {
         margin-top: -1px;
         height: 10vh;
         background-size: cover;
@@ -1194,22 +1201,18 @@ footer a:hover {
         font-size: 6vw;
     }
 
-    #courses-section {
-        max-height: 150vh;
-    }
-    
     .courses-content {
         position: relative;
         padding-top: 10vh;
     }
-    
+
     .courses-container {
         width: 100%;
         height: 100%;
         flex-direction: column;
         align-items: center;
     }
-    
+
     .course-card {
         width: 60%;
         height: auto;
@@ -1217,23 +1220,35 @@ footer a:hover {
         padding: 10px;
         box-shadow: 0 1% 1% #410E6A;
     }
-    
+
     .course-card img {
         max-width: 40%;
     }
-    
+
     .course-card-text {
         width: 70%;
         margin: 0 auto;
         transform: translateY(-35%);
     }
-    
+
     .course-card-text h3 {
         font-size: 5vw;
     }
-    
+
     .course-card-text p {
         font-size: 3.5vw;
+    }
+
+    #students-section {
+        height: auto;
+        font-size: 2.5vw;
+    }
+
+    #students-section h3 {
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+        letter-spacing: 3px;
+        font-size: 6vw;
     }
 }
 
