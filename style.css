@@ -785,7 +785,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f7b63d;
+    background-color: #410E6A;
     color: black;
     height: 80vh;
 }
@@ -811,6 +811,11 @@ header {
     width: 15vw;
 }
 
+#submit-app-form h3 {
+    color: #410E6A;
+    font-size: 2.5vw;
+}
+
 #submit-app-photo {
     width: 15vw;
 }
@@ -821,6 +826,43 @@ header {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+.bottom-decor-faq {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-image: url(res/bottom_decor_faq.png);
+    height: 15vh;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: contain;
+    z-index: 1;
+}
+
+.bottom-decor-faq-bg {
+    position: absolute;
+    bottom: -1vh;
+    width: 100%;
+    background-image: linear-gradient(#410e6a00, #410E6A);
+    height: 7vh;
+    background-color: #410E6A;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: contain;
+    z-index: 0;
+}
+
+.bottom-decor-faq-bg-transparent {
+    position: absolute;
+    bottom: -1vh;
+    width: 100%;
+    background-image: linear-gradient(#410e6a00, #410e6a83);
+    height: 20vh;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: contain;
+    z-index: 0;
 }
 
 button.submit-app-form__btn {
@@ -1148,11 +1190,11 @@ footer a:hover {
 
     #top-decor-faq {
         margin-top: -1px;
-        height: 10vh;
+        height: 7vh;
         background-size: cover;
     }
 
-    .bottom-decor {
+    .bottom-decor-about {
         height: 13vh;
         background-size: cover;
     }
@@ -1249,6 +1291,13 @@ footer a:hover {
         padding-bottom: 4vh;
         letter-spacing: 3px;
         font-size: 6vw;
+    }
+
+
+
+    #questions-content h2 {
+        font-size: 6vw;
+        text-align: center;
     }
 }
 
