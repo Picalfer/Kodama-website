@@ -1419,6 +1419,52 @@ footer a:hover {
     #guide-school-content {
         
     }
+
+    #start-section h2 {
+        font-size: 7vw;
+    }
+
+    #start-section h1 {
+        font-size: 14vw;
+    }
+
+    #main-btn {
+        width: 84%;
+    }
+
+    #select-course-btn-link {
+        display: block;
+        width: 100%;
+    }
+
+    #select-course {
+        width: 60%;
+    }
+
+    #mountains {
+        width: 70%;
+        height: 30vh;
+    }
+
+    #right-tree {
+        width: 17%;
+    }
+
+    #kodamic {
+        width: 20%;
+    }
+
+    #left-cloud {
+        width: 30%;
+        height: 15vh;
+        left: 5vw;
+        top: 10vh;
+        z-index: 0;
+    }
+    
+    #right-cloud {
+        width: 35%;
+    }
 }
 
 @media screen and (min-width: 601px) {
