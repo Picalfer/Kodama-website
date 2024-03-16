@@ -433,9 +433,7 @@ header {
 
 #courses-section {
     text-align: center;
-    max-height: 150vh;
-    color: rgb(221, 245, 255);
-    display: relative;
+    background-color: rgb(221, 245, 255);
 }
 
 .top-decor-courses {
@@ -451,9 +449,9 @@ header {
 }
 
 .courses-content {
-    padding-top: 30vh;
+    padding-top: 25vh;
     position: relative;
-    padding-bottom: 13vh;
+    padding-bottom: 20vh;
 }
 
 .courses-container {
@@ -495,13 +493,14 @@ header {
 }
 
 .course-card img {
-    max-width: 30%;
+    max-width: 40%;
     height: auto;
     transform: translateY(-35%);
     transition: transform 0.3s;
 }
 
 .course-card-text {
+    margin-top: 1vh;
     width: 60%;
     margin: 0 auto;
     transform: translateY(-35%);
@@ -550,7 +549,7 @@ header {
 
 #cloud-middle {
     --duration: 8s;
-    left: 40%;
+    left: 25%;
     top: 50vh;
 }
 
@@ -588,7 +587,6 @@ header {
 }
 
 #students-section {
-    margin-top: 12vh;
     height: 80vh;
     width: 100%;
     background-image: linear-gradient(90deg, #1E7B9D, #400A68);

@@ -221,7 +221,8 @@ header {
     text-align: center;
 }
 
-.faq-left, .faq-right {
+.faq-left,
+.faq-right {
     display: contents;
 }
 
@@ -248,22 +249,19 @@ header {
     font-size: 6vw;
 }
 
-.courses-content {
-    position: relative;
-    padding-top: 10vh;
-}
-
 .courses-container {
     width: 100%;
     height: 100%;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 5vh;
 }
 
 .course-card {
     width: 60%;
     height: auto;
     margin: 5%;
+    margin-bottom: 3vh;
     padding: 10px;
     box-shadow: 0 1% 1% #410E6A;
 }
