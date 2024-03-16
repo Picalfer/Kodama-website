@@ -142,20 +142,16 @@ header {
     height: 3vh;
 }
 
-#submit-app-photo {
-    width: 30vw;
-}
-
-#submit-app-form {
-    width: 30vw;
-}
-
-#submit-app-form input[type="submit"] {
-    width: 100%;
-}
-
 #start-section {
     height: 85vh;
+}
+
+#stars {
+    top: 2vh;
+}
+
+#hearts {
+    top: 2vh;
 }
 
 .top-decor-about .top-decor-courses {
@@ -210,13 +206,36 @@ header {
     margin-top: 10vh;
 }
 
-#fabs {
-    width: 70%;
-    margin-top: 3vh;
-}
-
 #questions-section {
     min-height: 80vh;
+}
+
+#fabs {
+    width: 80%;
+    margin-top: 2vh;
+    display: contents;
+}
+
+#questions-content h2 {
+    font-size: 6vw;
+    text-align: center;
+}
+
+.faq-left, .faq-right {
+    display: contents;
+}
+
+#questions-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.faq {
+    width: 85%;
+    padding: 0.5vh auto;
+    margin: 1vh auto;
 }
 
 #between-decor-purple {
@@ -268,8 +287,9 @@ header {
 }
 
 #students-section {
-    height: auto;
+    height: 140vh;
     font-size: 2.5vw;
+    padding-bottom: 0;
 }
 
 #students-section h3 {
@@ -279,25 +299,37 @@ header {
     font-size: 6vw;
 }
 
-#questions-content h2 {
-    font-size: 6vw;
-    text-align: center;
+#students-container {
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-#stars {
-    top: 2vh;
+.student-card {
+    width: 60%;
+    height: 30vh;
 }
 
-#hearts {
-    top: 2vh;
+.student-card-photo {
+    width: 93%;
 }
 
 #guide-school-section {
-    height: 35vh;
+    height: 40vh;
 }
 
 #guide-school-content h3 {
     font-size: 5vw;
+}
+
+#guide-school-video {
+    width: 90%;
+    height: 71%;
+    border: #E769E4 3px solid;
+    border-radius: 7px;
+    z-index: 1;
 }
 
 #start-section h2 {
@@ -363,10 +395,14 @@ header {
     padding-bottom: 0;
 }
 
-#guide-school-video {
-    width: 90%;
-    height: 71%;
-    border: #E769E4 3px solid;
-    border-radius: 7px;
-    z-index: 1;
+#submit-app-photo {
+    width: 30vw;
+}
+
+#submit-app-form {
+    width: 30vw;
+}
+
+#submit-app-form input[type="submit"] {
+    width: 100%;
 }
