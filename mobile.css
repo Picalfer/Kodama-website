@@ -312,6 +312,7 @@ header {
 .student-card {
     width: 60%;
     height: 30vh;
+    margin-bottom: 4vh;
 }
 
 .student-card-photo {
@@ -319,20 +320,34 @@ header {
 }
 
 #guide-school-section {
-    height: 40vh;
+    height: auto; /* Изменено на автоматическую высоту, чтобы контент мог поместиться */
+    max-height: 60vh;
+}
+
+#guide-school-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 20px; /* Добавлено внутреннее заполнение для контента */
 }
 
 #guide-school-content h3 {
     font-size: 5vw;
+    margin-bottom: 20px; /* Добавлен отступ снизу для заголовка */
 }
 
 #guide-school-video {
-    width: 90%;
-    height: 71%;
+    width: 100%; /* Изменено на 100%, чтобы видео занимало всю ширину контейнера */
+    max-width: 90%; /* Добавлено максимальное значение ширины для видео */
+    height: auto; /* Изменено на автоматическую высоту, чтобы соотношение сторон оставалось */
     border: #E769E4 3px solid;
     border-radius: 7px;
     z-index: 1;
 }
+
 
 #start-section h2 {
     font-size: 7vw;
@@ -373,7 +388,6 @@ header {
     height: 15vh;
     left: 5vw;
     top: 10vh;
-    z-index: 0;
 }
 
 #right-cloud {
