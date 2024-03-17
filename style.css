@@ -802,6 +802,7 @@ header {
     background-color: #ffffff;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     border: 2px solid #FFC75C;
+    transition: background-color 0.3s ease;
 }
 
 #submit-app-form {
@@ -811,6 +812,7 @@ header {
     align-items: flex-start;
     width: 50%;
     padding: 20px;
+    transition: background-color 0.3s ease;
 }
 
 #submit-app-form h3 {
@@ -832,6 +834,7 @@ header {
 
 #course-select {
     margin-bottom: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .submit-app-form__btn {
