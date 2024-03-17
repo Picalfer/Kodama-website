@@ -20,7 +20,7 @@
         <nav class="menu">
             <a class="menu-item" href="#about-section">О школе</a>
             <a class="menu-item" href="#courses-section">Курсы</a>
-            <a class="menu-item" href="#questions-section">Отзывы</a>
+            <a class="menu-item" href="#questions-section">Вопросы</a>
             <a class="menu-item" href="#submit-app-section">Контакты</a>
         </nav>
     </header>
@@ -67,7 +67,7 @@
             </a>
             <a class="mobile-menu-item" href="#questions-section">
                 <img class="mobile-menu-icon" src="res/feedbacks_icon.png">
-                Отзывы
+                Вопросы
             </a>
             <a class="mobile-menu-item" href="#submit-app-section">
                 <img class="mobile-menu-icon" src="res/contacts_icon.png">
@@ -307,13 +307,21 @@
             <img id="submit-app-photo" src="res/request_photo.jpg">
             <div id="submit-app-form">
                 <h3>Запишитесь на первый урок</h3>
-                <input type="text" placeholder="Ваше имя">
-                <input type="tel" placeholder="Ваш телефон">
-                <input type="email" placeholder="Ваша почта">
-                <button class="submit-app-form__btn" type="submit">Отправить</button>
+                <input type="text" id="name" placeholder="Ваше имя">
+                <input type="tel" id="phone" placeholder="Ваш телефон">
+                <input type="email" id="email" placeholder="Ваша почта">
+                <select id="course-select">
+                    <option value="" selected disabled hidden>Выберите курс</option>
+                    <option value="figma">Figma</option>
+                    <option value="computer-literacy">Компьютерная грамотность</option>
+                    <option value="scratch">Scratch</option>
+                    <option value="roblox">Roblox</option>
+                </select>
+                <button class="submit-app-form__btn" id="submit-btn" type="submit" disabled>Отправить</button>
             </div>
         </div>
     </section>
+
 
     <footer>
         <p>&copy; 2024 Kodama. Все права защищены.</p>

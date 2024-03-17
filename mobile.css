@@ -393,14 +393,46 @@ header {
     padding-bottom: 0;
 }
 
+#submit-app-section {
+    height: auto; /* Автоматическая высота для лучшего масштабирования */
+    padding: 10vh 0; /* Добавляем внешние отступы сверху и снизу */
+}
+
+#submit-app-content {
+    flex-direction: column-reverse; /* Переворачиваем порядок элементов */
+    width: 80%; /* Уменьшаем ширину контейнера */
+    padding: 20px; /* Добавляем внутренние отступы */
+}
+
 #submit-app-photo {
-    width: 30vw;
+    width: 85%; /* Увеличиваем ширину картинки */
+    margin-bottom: 20px; /* Добавляем отступ снизу */
 }
 
 #submit-app-form {
-    width: 30vw;
+    width: 100%; /* Увеличиваем ширину формы */
 }
 
-#submit-app-form input[type="submit"] {
-    width: 100%;
+#submit-app-form h3 {
+    font-size: 5vw; /* Увеличиваем размер заголовка */
+}
+
+#submit-app-form input[type="text"],
+#submit-app-form input[type="tel"],
+#submit-app-form input[type="email"],
+#submit-app-form button.submit-app-form__btn {
+    width: 100%; /* Увеличиваем ширину полей ввода и кнопки */
+    font-size: 4vw; /* Увеличиваем размер текста в полях ввода и кнопке */
+    margin-bottom: 10px; /* Добавляем отступы между элементами */
+    padding: 10px; /* Увеличиваем внутренние отступы */
+}
+
+#course-select {
+    width: 100%; /* Увеличиваем ширину элемента выбора курса */
+    font-size: 4vw; /* Увеличиваем размер текста */
+    padding: 10px; /* Увеличиваем внутренние отступы */
+    margin-bottom: 10px; /* Добавляем отступ снизу */
+    border: 1px solid #ccc; /* Добавляем рамку */
+    border-radius: 5px; /* Закругляем углы */
+    background-color: #fff; /* Задаем цвет фона */
 }
