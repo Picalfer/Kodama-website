@@ -12,8 +12,10 @@ COPY fonts ./fonts/
 COPY res ./res/
 COPY src ./src/
 COPY base.html script.js style.css ./
+
 COPY .env ./src/.env
 COPY .env.api ./src/.env.api
+
 
 
 RUN poetry install --without dev 

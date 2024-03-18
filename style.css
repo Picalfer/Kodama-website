@@ -13,6 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-weight: 100;
 }
 
 body {
@@ -31,15 +32,24 @@ body {
     height: 100vh;
     z-index: 5;
     overflow: hidden;
+    background-image: url("res/mobile_menu_bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
 }
-
 
 #close-menu-btn {
     position: absolute;
-    background-image: url('res/exit_btn.png');
+    background: none;
+    background-image: url('res/close_mobile_menu_btn.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
     top: 20px;
     right: 20px;
     width: 30px;
@@ -51,22 +61,39 @@ body {
     flex-direction: column;
 }
 
+.mobile-logo {
+    width: 85%;
+    margin: 0 auto;
+    height: 20%;
+    background-image: url("res/logo_scrolled.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 #nav-mobile-menu a {
-    color: #7017b4;
-    margin: 5%;
-    font-size: 7vw;
+    display: inline-block;
+    color: #400D69;
+    margin-left: 10%;
+    margin: 3%;
+    font-size: 7.5vw;
     text-decoration: none;
 }
 
+.mobile-menu-icon {
+    width: 9vw;
+    margin-right: 1vw;
+}
 
-.start-section {
+
+#start-section {
     overflow: hidden;
     position: relative;
     padding-left: 5%;
     padding-right: 5%;
     margin-top: 0;
     padding-top: 8vh;
-    height: 100vh;
+    height: 91vh;
     width: 100%;
     background-image: linear-gradient(90deg, #1E7B9D, #400A68);
     display: flex;
@@ -75,14 +102,15 @@ body {
 }
 
 .start-content {
-    margin-top: 20vh;
     text-align: center;
+    width: 100%;
     height: 100%;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
+    z-index: 1;
 }
 
 header {
@@ -103,10 +131,6 @@ header {
 .header-scrolled {
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 2px 10px gray;
-}
-
-.conteiner {
-    position: relative;
 }
 
 #logo-link {
@@ -142,7 +166,7 @@ header {
     align-items: center;
 }
 
-.menu a {
+.menu-item {
     text-decoration: none;
     font-size: 2vw;
     transition: 0.5s;
@@ -152,12 +176,16 @@ header {
     color: black;
 }
 
+.menu-button-scrolled:hover {
+    color: #400D69;
+}
+
 .menu-button-no-scrolled {
     color: white;
 }
 
-.menu a:hover {
-    color: #A4FFDE;
+.menu-button-no-scrolled:hover {
+    color: #E769E4;
 }
 
 .start-content h1 {
@@ -165,7 +193,7 @@ header {
     text-shadow: 0px 5px 10px rgb(49, 49, 49);
 }
 
-.start-section h2 {
+#start-section h2 {
     margin-bottom: 10px;
     font-size: 2.5vw;
     letter-spacing: 2px;
@@ -194,13 +222,6 @@ header {
     animation-iteration-count: infinite;
 }
 
-#pointer {
-    position: absolute;
-    height: 60px;
-    bottom: 0;
-    right: 0;
-}
-
 .blue-letter {
     color: #A4FFDE;
 }
@@ -213,12 +234,12 @@ header {
     position: absolute;
     background-image: url(res/mountains.png);
     width: 35%;
-    height: 46vh;
+    height: 60vh;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     left: 0;
-    bottom: 0vh;
+    bottom: 0;
 }
 
 #right-tree {
@@ -228,9 +249,9 @@ header {
     height: 30vh;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     right: 7%;
-    bottom: 4vh;
+    bottom: 0;
 }
 
 #kodamic {
@@ -240,20 +261,20 @@ header {
     height: 30vh;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     left: 7%;
-    bottom: 3vh;
+    bottom: 0;
 }
 
 #ground {
-    position: absolute;
-    bottom: 0;
+    position: relative;
     width: 100%;
     background-image: url(res/ground.png);
-    height: 10vh;
+    height: 9vh;
+    bottom: 0;
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: contain;
+    background-size: cover;
 }
 
 #left-cloud {
@@ -282,7 +303,6 @@ header {
     background-position: center;
     right: -11vh;
     top: 30vh;
-    z-index: 0;
     animation-name: cloud_flying;
     animation-duration: var(--duration, 6s);
     animation-iteration-count: infinite;
@@ -295,25 +315,9 @@ header {
     height: 27vh;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     right: 30%;
-    bottom: 2vh;
-}
-
-#sparkles {
-    position: absolute;
-    background-image: url(res/sparkles.png);
-    width: 7%;
-    height: 20vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    right: 30%;
-    bottom: 19vh;
-    z-index: 0;
-    animation-name: sparkles_animation;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+    bottom: 0vh;
 }
 
 #hearts {
@@ -340,11 +344,11 @@ header {
     top: 6vh;
 }
 
-.top-decor {
+.top-decor-about {
     position: absolute;
     top: -1px;
     width: 100%;
-    background-image: url(res/top_decor.png);
+    background-image: url(res/top_decor_about.png);
     height: 25vh;
     background-repeat: repeat-x;
     background-position: top;
@@ -352,7 +356,7 @@ header {
     z-index: 1;
 }
 
-.about-section {
+#about-section {
     text-align: center;
     color: white;
     position: relative;
@@ -369,7 +373,7 @@ header {
     margin-top: 23vh;
     padding-left: 3%;
     padding-right: 3%;
-    margin-bottom: 24vh;
+    margin-bottom: 30vh;
 }
 
 .left h2 {
@@ -396,16 +400,16 @@ header {
     max-width: 50%;
 }
 
-.bottom-decor {
+.bottom-decor-about {
     position: absolute;
     bottom: -1px;
     width: 100%;
-    background-image: url(res/bottom_decor.png);
-    height: 25vh;
+    background-image: url(res/bottom_decor_about.png);
+    height: 30vh;
     background-repeat: repeat-x;
     background-position: bottom;
     background-size: contain;
-    z-index: 1;
+    z-index: 0;
 }
 
 #between-decor-purple {
@@ -427,16 +431,27 @@ header {
     text-align: center;
 }
 
-.courses-section {
+#courses-section {
     text-align: center;
-    max-height: 150vh;
-    color: rgb(221, 245, 255);
-    display: relative;
+    background-color: rgb(221, 245, 255);
+}
+
+.top-decor-courses {
+    position: absolute;
+    top: -1vh;
+    width: 100%;
+    height: 25vh;
+    background-repeat: repeat-x;
+    background-position: top;
+    background-size: contain;
+    z-index: 1;
+    background-image: url(res/top_decor_courses.png);
 }
 
 .courses-content {
-    padding-top: 30vh;
+    padding-top: 25vh;
     position: relative;
+    padding-bottom: 20vh;
 }
 
 .courses-container {
@@ -478,13 +493,14 @@ header {
 }
 
 .course-card img {
-    max-width: 30%;
+    max-width: 40%;
     height: auto;
     transform: translateY(-35%);
     transition: transform 0.3s;
 }
 
 .course-card-text {
+    margin-top: 1vh;
     width: 60%;
     margin: 0 auto;
     transform: translateY(-35%);
@@ -533,7 +549,7 @@ header {
 
 #cloud-middle {
     --duration: 8s;
-    left: 40%;
+    left: 25%;
     top: 50vh;
 }
 
@@ -571,7 +587,6 @@ header {
 }
 
 #students-section {
-    margin-top: 12vh;
     height: 80vh;
     width: 100%;
     background-image: linear-gradient(90deg, #1E7B9D, #400A68);
@@ -581,6 +596,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding-bottom: 10vh;
 }
 
 #students-section h3 {
@@ -589,13 +605,14 @@ header {
     letter-spacing: 3px;
 }
 
-#students-section div {
+#students-container {
     padding: 2%;
     display: flex;
     height: max-content;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    height: 100%;
 }
 
 .student-card {
@@ -604,17 +621,26 @@ header {
     background-size: contain;
     background-position: center;
     width: 23%;
-    height: auto;
-    padding: 10%;
+    height: 100%;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     transition: 0.6s;
 }
 
-.student-card img {
+.student-card-photo {
     width: 100%;
+    height: 100%;
+    background-image: url(res/square_example.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     transition: 1s;
 }
 
-.student-card:hover img {
+.student-card:hover .student-card-photo {
     transform: scale(1.3);
 }
 
@@ -622,7 +648,7 @@ header {
     transform: scale(0.9);
 }
 
-.guide-school-section {
+#guide-school-section {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -658,12 +684,14 @@ header {
 
 #questions-section {
     width: 100%;
-    height: 110vh;
+    min-height: 110vh;
+    padding-bottom: 10vh;
+    height: auto;
     position: relative;
     overflow: hidden;
 }
 
-#top-decor-without-bubbles {
+#top-decor-faq {
     position: absolute;
     top: 0;
     width: 100%;
@@ -736,6 +764,7 @@ header {
     border-radius: 15px;
     color: #410E6A;
     font-family: sans-serif;
+    z-index: 2;
 }
 
 .faq-item {
@@ -758,21 +787,22 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f7b63d;
-    color: black;
+    background-color: #410E6A;
+    color: white;
     height: 80vh;
 }
 
 #submit-app-content {
     display: flex;
-    height: 70%;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     width: 80%;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 1.7vw;
     background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid #FFC75C;
+    transition: background-color 0.3s ease;
 }
 
 #submit-app-form {
@@ -780,20 +810,91 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-left: 20px;
-    width: 15vw;
+    width: 50%;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#submit-app-form h3 {
+    color: #410E6A;
+    font-size: 2.5vw;
+    margin-bottom: 20px;
+}
+
+#submit-app-form input,
+#course-select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    font-size: 1.2vw;
+}
+
+#course-select {
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-app-form__btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #FFC75C;
+    border: none;
+    border-radius: 5px;
+    color: #410E6A;
+    font-size: 1.2vw;
+    cursor: pointer;
+}
+
+.submit-app-form__btn:hover {
+    background-color: #410E6A;
+    color: #FFC75C;
 }
 
 #submit-app-photo {
-    width: 15vw;
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-#submit-app-form input {
+
+.bottom-decor-faq {
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    background-image: url(res/bottom_decor_faq.png);
+    height: 15vh;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: contain;
+    z-index: 1;
+}
+
+.bottom-decor-faq-bg {
+    position: absolute;
+    bottom: -1vh;
+    width: 100%;
+    background-image: linear-gradient(#410e6a00, #410E6A);
+    height: 7vh;
+    background-color: #410E6A;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: contain;
+    z-index: 0;
+}
+
+.bottom-decor-faq-bg-transparent {
+    position: absolute;
+    bottom: -1vh;
+    width: 100%;
+    background-image: linear-gradient(#410e6a00, #410e6a83);
+    height: 20vh;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: contain;
+    z-index: 0;
 }
 
 button.submit-app-form__btn {
@@ -971,12 +1072,16 @@ footer a:hover {
 @keyframes float {
     0% {
         transform: translateY(-10px);
-        /* Начальная позиция: над экраном */
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
     }
 
     100% {
         transform: translateY(100vh);
-        /* Конечная позиция: внизу экрана */
+        opacity: 0;
     }
 }
 
@@ -1036,8 +1141,6 @@ footer a:hover {
     }
 }
 
-
-
 @keyframes select-course-btn-animation {
     0% {
         filter: brightness(1);
@@ -1055,97 +1158,7 @@ footer a:hover {
     }
 }
 
-/* Стили для хедера на мобильных устройствах */
-@media screen and (max-width: 600px) {
-    header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo-main {
-        width: 30vw;
-    }
-
-    .menu {
-        display: none;
-        flex-direction: row;
-        align-items: center;
-    }
-
-
-    .menu.open {
-        display: block;
-    }
-
-    .menu a {
-        margin: 5px 0;
-    }
-
-    .button-img {
-        width: 8vw;
-        border: none;
-        padding: 0;
-        background: none;
-        cursor: pointer;
-        outline: none;
-    }
-
-    .button-img img {
-        width: 100%;
-        height: auto;
-    }
-
-    #submit-app-photo {
-        width: 30vw;
-    }
-
-    #submit-app-form {
-        width: 30vw;
-    }
-
-    #submit-app-form input[type="submit"] {
-        width: 100%;
-    }
-
-    .start-section {
-        height: 85vh;
-    }
-
-    .top-decor {
-        height: 13vh;
-        background-size: cover;
-    }
-
-    #top-decor-without-bubbles {
-        margin-top: -1px;
-        height: 10vh;
-        background-size: cover;
-    }
-
-    .bottom-decor {
-        height: 13vh;
-        background-size: cover;
-    }
-
-    .about-container {
-        flex-direction: column;
-        padding-left: 7%;
-        padding-right: 7%;
-    }
-
-    .left h2 {
-        font-size: 6vw;
-    }
-
-    .left p {
-        font-size: 4vw;
-    }
-}
-
-/* Стили для хедера на десктопных устройствах */
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 769px) {
     header {
         display: flex;
         justify-content: space-between;
@@ -1157,7 +1170,7 @@ footer a:hover {
         gap: 20px;
     }
 
-    #menu-toggle {
+    #open-menu-btn {
         display: none;
     }
 }

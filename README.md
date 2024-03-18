@@ -40,5 +40,7 @@ python src/spreadsheets.py
 ```bash
 python src/main.py
 ```
-
+Открыть докер
+запустить docker build .
+далее docker run -d -p 5050:5050 b389bf где последние 6 символов это первые 6 от "writing image sha256:65d7450f6188e08edf954a11c8d8..."
 Сервер запустится на http://localhost:5050/.

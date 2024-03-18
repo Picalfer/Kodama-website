@@ -4,8 +4,10 @@ import uuid
 import pytz
 
 
+
 from config import settings
 from dependencies import get_spreadsheet_service
+
 
 EMAIL_USER = settings.email
 SHEET_ID = settings.sheet_id
@@ -94,13 +96,13 @@ if __name__ == "__main__":
 
     # Раскомкоментировать create_spreadsheet для создания новой электронной таблицы Google.
     # Запишет адрес созданой таблицы в файл ".env.spreadsheet_id.txt"
-    # create_spreadsheet(service)
+    create_spreadsheet(service)
 
     # Раскомкоментировать для разрешения пользователю(EMAIL_USER) использовать созданную таблицу
-    # set_user_permissions(service, get_sheet_id())
+    set_user_permissions(service, get_sheet_id())
 
     # Раскомкоментировать что бы создать заголовки, определенными в массиве table_values
-    # generate_title_sheet(service, get_sheet_id())
+    generate_title_sheet(service, get_sheet_id())
 
     # Раскомкоментировать что бы добавить новую строку в лист "Requests"
     # append_to_sheet(service, SHEET_ID, email="example@example.com", phone_number="8(999)999-99-98")
