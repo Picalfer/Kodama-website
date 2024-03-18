@@ -1,4 +1,3 @@
-from pathlib import Path
 from typing import Annotated
 
 from fastapi import FastAPI, Request, Form
@@ -8,26 +7,28 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import uvicorn
 
-from spreadsheets import authenticate_google_api, append_to_sheet, get_sheet_id
 
+from dependencies import get_spreadsheet_service
+from spreadsheets import append_to_sheet
 
-# Подключение шаблонизатора Jinja
-templatу_directory = Path(__file__).resolve().parent.parent
-print(templatу_directory)
-templates = Jinja2Templates(directory=templatу_directory)
+from config import settings
+
+# Подключение шаблонизатора Jinja2
+templates = Jinja2Templates(directory=settings.root_directory)
 
 
 # Создание экземпляра приложения
 def make_up():
     app = FastAPI()
 
-    path_for_static = Path(__file__).parent.parent / "res"
+    path_for_static = settings.root_directory / "res"
     app.mount(
         str(path_for_static), StaticFiles(directory=str(path_for_static)), name="static"
     )
-    root_directory = Path(__file__).parent.parent
     app.mount(
-        str(root_directory), StaticFiles(directory=str(root_directory)), name="root"
+        str(settings.root_directory),
+        StaticFiles(directory=str(settings.root_directory)),
+        name="root",
     )
     app.add_middleware(
         CORSMiddleware,
@@ -47,12 +48,14 @@ def make_up():
         email: Annotated[str, Form()],
         tel: Annotated[str, Form()],
         text: Annotated[str, Form()],
-    ) -> None:
-        table_id = get_sheet_id()
-        service, credentials = authenticate_google_api()
-        print(email, tel, text)
+        spreadsheet_service=get_spreadsheet_service()
+    ):
         append_to_sheet(
-            service, table_id, email=email, phone_number=tel, comment=text
+            spreadsheet_service,
+            settings.sheet_id,
+            email=email,
+            phone_number=tel,
+            comment=text,
         )
 
         return RedirectResponse("/", status_code=303)
