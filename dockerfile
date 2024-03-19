@@ -12,12 +12,13 @@ COPY fonts ./fonts/
 COPY res ./res/
 COPY src ./src/
 COPY base.html script.js style.css ./
-COPY .env.spreadsheet_id.txt ./src/.env.spreadsheet_id.txt
-COPY kodama-storage-7c07f9d27828.json ./src/kodama-storage-7c07f9d27828.json
+
+COPY .env ./src/.env
+COPY .env.api ./src/.env.api
+
 
 
 RUN poetry install --without dev 
 WORKDIR /app/src
 
 CMD ["poetry", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5050"]
-

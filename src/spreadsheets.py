@@ -3,30 +3,19 @@ import uuid
 
 import pytz
 
-# Импорты для работы с Google_API
-from google.oauth2.service_account import Credentials
-from googleapiclient import discovery
-
-# Работа с Google_API
-SCOPES = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive",
-]
-CREDENTIALS_FILE = "kodama-storage-7c07f9d27828.json"
-EMAIL_USER = "landfathich@gmail.com"
 
 
-# Функция для аутентификации
-def authenticate_google_api() -> tuple[discovery.Resource, Credentials]:
-    credentials = Credentials.from_service_account_file(CREDENTIALS_FILE, scopes=SCOPES)
-    service = discovery.build("sheets", "v4", credentials=credentials)
+from config import settings
+from dependencies import get_spreadsheet_service
 
-    return service, credentials
+
+EMAIL_USER = settings.email
+SHEET_ID = settings.sheet_id
 
 
 # Функция для создания тела spreadsheet
-def create_spreadsheet(service) -> str:
-    """Запишет адрес созданой таблицы в файл ".env.spreadsheet_id.txt" """
+def create_spreadsheet(spreadsheet_service) -> str:
+    """Запишет адрес созданой таблицы в файл ".env" """
     spreadsheet_body = {
         "properties": {
             "title": "Kodama-admin",
@@ -43,37 +32,27 @@ def create_spreadsheet(service) -> str:
             }
         ],
     }
-    request = service.spreadsheets().create(body=spreadsheet_body)
+    request = spreadsheet_service.spreadsheets().create(body=spreadsheet_body)
     response = request.execute()
     spreadsheet_id = response["spreadsheetId"]
     linq_spreadsheet = "https://docs.google.com/spreadsheets/d/" + spreadsheet_id
-    print(linq_spreadsheet)
-    with open(".env.spreadsheet_id.txt", "w") as f:
+
+    with open(".env.link", "w") as f:
         f.write(linq_spreadsheet)
 
     return spreadsheet_id
 
 
 # Функция для установки прав доступа для EMAIL_USER
-def set_user_permissions(service, spreadsheet_id) -> None:
+def set_user_permissions_to_spreadsheet(disc_service, spreadsheet_id) -> None:
     permissions_body = {
         "type": "user",
         "role": "writer",
         "emailAddress": EMAIL_USER,
     }
-    google_drive_service = discovery.build("drive", "v3", credentials=credentials)
-    google_drive_service.permissions().create(
+    disc_service.permissions().create(
         fileId=spreadsheet_id, body=permissions_body
     ).execute()
-
-    return None
-
-
-# Функция для получения id sheet получает id отсекая его из ссылки
-def get_sheet_id():
-    with open(".env.spreadsheet_id.txt", "r") as f:
-        linq = f.read()
-        return linq.split("/")[-1]
 
 
 def append_to_sheet(service, spreadsheet_id, **kwargs) -> None:
@@ -113,7 +92,7 @@ def generate_title_sheet(service, spreadsheet_id) -> None:
 
 
 if __name__ == "__main__":
-    service, credentials = authenticate_google_api()
+    service = get_spreadsheet_service()
 
     # Раскомкоментировать create_spreadsheet для создания новой электронной таблицы Google.
     # Запишет адрес созданой таблицы в файл ".env.spreadsheet_id.txt"
@@ -125,7 +104,5 @@ if __name__ == "__main__":
     # Раскомкоментировать что бы создать заголовки, определенными в массиве table_values
     generate_title_sheet(service, get_sheet_id())
 
-    table_id = get_sheet_id()
-
     # Раскомкоментировать что бы добавить новую строку в лист "Requests"
-    # append_to_sheet(service, table_id, email="example@example.com", phone_number="8(999)999-99-98")
+    # append_to_sheet(service, SHEET_ID, email="example@example.com", phone_number="8(999)999-99-98")
