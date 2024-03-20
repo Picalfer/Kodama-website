@@ -323,7 +323,7 @@ header {
 
 #guide-school-section {
     height: auto; /* Изменено на автоматическую высоту, чтобы контент мог поместиться */
-    max-height: 50vh;
+    max-height: 40vh;
 }
 
 #guide-school-content {

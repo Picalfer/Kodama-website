@@ -40,7 +40,7 @@ def make_up():
 
     @app.get("/")
     async def index(request: Request):
-        return templates.TemplateResponse("base.html", {"request": request})
+        return templates.TemplateResponse("main.html", {"request": request})
 
     # хендлер добавляющий запись в sheet Request
     @app.post("/request/")

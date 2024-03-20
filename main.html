@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('root', path='/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('root', path='/mobile.css') }}" media="screen and (max-width: 768px)">
+    <title>Kodama</title>
+    <link rel="icon" type="image/png" href="res/favicon.ico">
+</head>
+<body id="top-site">
+    {% include "templates/header.html" %}
+
+    {% include "templates/start_section.html" %}
+
+    <script src="{{ url_for('root', path='/script.js') }}" defer></script>
+</body>
+</html>
