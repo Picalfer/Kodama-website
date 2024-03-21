@@ -8,11 +8,10 @@ WORKDIR /app
 COPY pyproject.toml poetry.lock README.md ./
 RUN poetry install --only main --no-root && rm -rf $POETRY_CACHE_DIR
 
-COPY fonts ./fonts/
 COPY res ./res/
 COPY src ./src/
 COPY templates ./templates/
-COPY main.html script.js style.css ./
+COPY main.html script.js ./
 
 COPY .env ./src/.env
 COPY .env.api ./src/.env.api

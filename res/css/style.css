@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap);
 
 @font-face {
-    font-family: "SuperMario";
-    src: url("fonts/SuperMario286/SuperMario286.woff")format("woff"),
-        url("fonts/SuperMario286/SuperMario286.ttf")format("ttf"),
-        url("fonts/SuperMario286/SuperMario286.woff2")format("woff2"),
-        url("fonts/SuperMario286/SuperMario286.otf")format("otf");
+    font-family: 'SuperMario';
+    src: url(../fonts/SuperMario286/SuperMario286.woff)format('woff'),
+        url(../fonts/SuperMario286/SuperMario286.ttf)format('ttf'),
+        url(../fonts/SuperMario286/SuperMario286.woff2)format('woff2'),
+        url(../fonts/SuperMario286/SuperMario286.otf)format('otf');
     ;
 }
 
@@ -17,7 +17,7 @@
 }
 
 body {
-    font-family: "SuperMario", sans-serif;
+    font-family: 'SuperMario', sans-serif;
     color: white;
     line-height: 1.5;
 }
@@ -32,7 +32,7 @@ body {
     height: 100vh;
     z-index: 5;
     overflow: hidden;
-    background-image: url("res/mobile_menu_bg.png");
+    background-image: url(../icon/mobile_menu_bg.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: right;
@@ -42,7 +42,7 @@ body {
 #close-menu-btn {
     position: absolute;
     background: none;
-    background-image: url('res/close_mobile_menu_btn.png');
+    background-image: url(../icon/close_mobile_menu_btn.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -65,7 +65,7 @@ body {
     width: 85%;
     margin: 0 auto;
     height: 20%;
-    background-image: url("res/logo_scrolled.png");
+    background-image: url(../icon/logo_scrolled.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -142,7 +142,7 @@ header {
 .logo {
     width: 100%;
     height: 100%;
-    background-image: url("res/logo.png");
+    background-image: url(../icon/logo.png);
     background-size: contain;
     background-position: left;
     background-repeat: no-repeat;
@@ -151,7 +151,7 @@ header {
 .logo-scrolled {
     width: 100%;
     height: 100%;
-    background-image: url("res/logo_scrolled.png");
+    background-image: url(../icon/logo_scrolled.png);
     background-size: contain;
     background-position: left;
     background-repeat: no-repeat;
@@ -232,7 +232,7 @@ header {
 
 #mountains {
     position: absolute;
-    background-image: url(res/mountains.png);
+    background-image: url(../icon/mountains.png);
     width: 35%;
     height: 60vh;
     background-size: contain;
@@ -244,7 +244,7 @@ header {
 
 #right-tree {
     position: absolute;
-    background-image: url(res/right-tree.png);
+    background-image: url(../icon/right-tree.png);
     width: 10%;
     height: 30vh;
     background-size: contain;
@@ -256,7 +256,7 @@ header {
 
 #kodamic {
     position: absolute;
-    background-image: url(res/kodamic.png);
+    background-image: url(../icon/kodamic.png);
     width: 6%;
     height: 30vh;
     background-size: contain;
@@ -269,7 +269,7 @@ header {
 #ground {
     position: relative;
     width: 100%;
-    background-image: url(res/ground.png);
+    background-image: url(../icon/ground.png);
     height: 9vh;
     bottom: 0;
     background-repeat: no-repeat;
@@ -279,7 +279,7 @@ header {
 
 #left-cloud {
     position: absolute;
-    background-image: url(res/two_clouds.png);
+    background-image: url(../icon/two_clouds.png);
     width: 22%;
     height: 20vh;
     background-size: contain;
@@ -295,7 +295,7 @@ header {
 
 #right-cloud {
     position: absolute;
-    background-image: url(res/two_clouds.png);
+    background-image: url(../icon/two_clouds.png);
     width: 25%;
     height: 23vh;
     background-size: contain;
@@ -310,7 +310,7 @@ header {
 
 #mashroom {
     position: absolute;
-    background-image: url(res/mashroom.png);
+    background-image: url(../icon/mashroom.png);
     width: 7%;
     height: 27vh;
     background-size: contain;
@@ -322,7 +322,7 @@ header {
 
 #hearts {
     position: absolute;
-    background-image: url(res/hearts.png);
+    background-image: url(../icon/hearts.png);
     width: 15%;
     height: 15vh;
     background-size: contain;
@@ -334,7 +334,7 @@ header {
 
 #stars {
     position: absolute;
-    background-image: url(res/stars.png);
+    background-image: url(../icon/stars.png);
     width: 15%;
     height: 15vh;
     background-size: contain;
@@ -348,7 +348,7 @@ header {
     position: absolute;
     top: -1px;
     width: 100%;
-    background-image: url(res/top_decor_about.png);
+    background-image: url(../icon/top_decor_about.png);
     height: 25vh;
     background-repeat: repeat-x;
     background-position: top;
@@ -404,7 +404,7 @@ header {
     position: absolute;
     bottom: -1px;
     width: 100%;
-    background-image: url(res/bottom_decor_about.png);
+    background-image: url(../icon/bottom_decor_about.png);
     height: 30vh;
     background-repeat: repeat-x;
     background-position: bottom;
@@ -445,7 +445,7 @@ header {
     background-position: top;
     background-size: contain;
     z-index: 1;
-    background-image: url(res/top_decor_courses.png);
+    background-image: url(../icon/top_decor_courses.png);
 }
 
 .courses-content {
@@ -507,14 +507,14 @@ header {
 }
 
 .course-card-text h3 {
-    font-family: "Sansita", sans-serif;
+    font-family: 'Sansita', sans-serif;
     font-style: bold;
     text-align: center;
     font-size: 2vw;
 }
 
 .course-card-text p {
-    font-family: "Sansita", sans-serif;
+    font-family: 'Sansita', sans-serif;
     font-weight: 400;
     font-size: 1.4vw;
     font-style: italic;
@@ -523,7 +523,7 @@ header {
 
 .cloud {
     position: absolute;
-    background-image: url(res/cloud.png);
+    background-image: url(../icon/cloud.png);
     width: 15%;
     height: 18vh;
     background-size: contain;
@@ -561,7 +561,7 @@ header {
 
 .two-clouds {
     position: absolute;
-    background-image: url(res/two_clouds.png);
+    background-image: url(../icon/two_clouds.png);
     width: 25%;
     height: 20vh;
     background-size: contain;
@@ -616,7 +616,7 @@ header {
 }
 
 .student-card {
-    background-image: url(res/student_bg.png);
+    background-image: url(../icon/student_bg.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -633,7 +633,7 @@ header {
 .student-card-photo {
     width: 100%;
     height: 100%;
-    background-image: url(res/square_example.jpg);
+    background-image: url(../icon/square_example.jpg);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -695,7 +695,7 @@ header {
     position: absolute;
     top: 0;
     width: 100%;
-    background-image: url(res/top_decor_without_bubbles.png);
+    background-image: url(../icon/top_decor_without_bubbles.png);
     height: 25vh;
     background-repeat: repeat-x;
     background-position: top;
@@ -705,7 +705,7 @@ header {
 
 .bubble {
     position: absolute;
-    background-image: url("res/purple_bubble.png");
+    background-image: url(../icon/purple_bubble.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -864,7 +864,7 @@ header {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-image: url(res/bottom_decor_faq.png);
+    background-image: url(../icon/bottom_decor_faq.png);
     height: 15vh;
     background-repeat: repeat-x;
     background-position: bottom;

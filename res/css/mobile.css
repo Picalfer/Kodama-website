@@ -132,7 +132,7 @@ header {
     background: none;
     cursor: pointer;
     outline: none;
-    background-image: url("res/open_mobile_menu_btn.png");
+    background-image: url(../icon/open_mobile_menu_btn.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -322,7 +322,8 @@ header {
 }
 
 #guide-school-section {
-    height: auto; /* Изменено на автоматическую высоту, чтобы контент мог поместиться */
+    height: auto;
+    /* Изменено на автоматическую высоту, чтобы контент мог поместиться */
     max-height: 40vh;
 }
 
@@ -340,9 +341,12 @@ header {
 }
 
 #guide-school-video {
-    width: 100%; /* Изменено на 100%, чтобы видео занимало всю ширину контейнера */
-    max-width: 98%; /* Добавлено максимальное значение ширины для видео */
-    height: auto; /* Изменено на автоматическую высоту, чтобы соотношение сторон оставалось */
+    width: 100%;
+    /* Изменено на 100%, чтобы видео занимало всю ширину контейнера */
+    max-width: 98%;
+    /* Добавлено максимальное значение ширины для видео */
+    height: auto;
+    /* Изменено на автоматическую высоту, чтобы соотношение сторон оставалось */
     min-height: 25vh;
     border: #E769E4 3px solid;
     border-radius: 7px;
