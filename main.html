@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', path='/css/mobile.css') }}" media="screen and (max-width: 768px)">
     <title>Kodama</title>
-    <link rel="icon" type="image/png" href="res/favicon.ico">
+    <link rel="icon" type="image/png" href="{{ url_for('static', path='/icon/favicon.ico') }}">
 </head>
 <body id="top-site">
     {% include "templates/header.html" %}
