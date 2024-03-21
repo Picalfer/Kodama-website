@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: kadama-website
+    ports:
+      - "5050:5050"
+    volumes:
+      - ./templates:/app/templates
+      - ./fonts:/app/fonts
+      - ./res:/app/res
+      - ./src:/app/src
+    environment:
+      - POETRY_NO_INTERACTION=1
+      - POETRY_CACHE_DIR=/tmp/poetry_cache
+    working_dir: /app/src
+    command: poetry run uvicorn main:app --host 0.0.0.0 --port 5050
