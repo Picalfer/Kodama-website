@@ -64,6 +64,7 @@ def append_to_sheet(service, spreadsheet_id, **kwargs) -> None:
             kwargs.get("phone_number", ""),
             kwargs.get("date", str(datetime.date.today())),
             kwargs.get("time", datetime.datetime.now(timezone).time().strftime("%H:%M")),
+            kwargs.get("course", "Не выбран"),
             kwargs.get("comment", ""),
             kwargs.get("status", "Ожидает ответа"),
         ],
@@ -80,7 +81,7 @@ def append_to_sheet(service, spreadsheet_id, **kwargs) -> None:
 # Функция для обновления sheet - Requests
 def generate_title_sheet(service, spreadsheet_id) -> None:
     table_values = [  # Здесь объявляются заголовки
-        ["id_request", "email", "phone_number", "date", "time", "comment", "status"],
+        ["id_request", "email", "phone_number", "date", "time", "course", "comment", "status"],
     ]
     request_body = {"majorDimension": "ROWS", "values": table_values}
     service.spreadsheets().values().update(

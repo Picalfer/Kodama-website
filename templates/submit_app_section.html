@@ -3,7 +3,7 @@
         <img id="submit-app-photo" src="{{ url_for('static', path='/icon/request_photo.jpg') }}">
         <form action="/request" method="post" id="submit-app-form">
             <h3>Запишитесь на первый урок</h3>
-            <select id="course-select">
+            <select id="course-select" name="course">
                 <option value="" selected disabled hidden>Выберите курс</option>
                 <option value="figma">Figma</option>
                 <option value="computer-literacy">Компьютерная грамотность</option>

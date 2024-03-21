@@ -48,6 +48,7 @@ def make_up():
         email: Annotated[str, Form()],
         tel: Annotated[str, Form()],
         text: Annotated[str, Form()],
+        course: Annotated[str, Form()],
         spreadsheet_service=get_spreadsheet_service()
     ):
         append_to_sheet(
@@ -56,6 +57,7 @@ def make_up():
             email=email,
             phone_number=tel,
             comment=text,
+            course=course
         )
 
         return RedirectResponse("/", status_code=303)
