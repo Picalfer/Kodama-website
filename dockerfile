@@ -11,7 +11,7 @@ RUN poetry install --only main --no-root && rm -rf $POETRY_CACHE_DIR
 COPY res ./res/
 COPY src ./src/
 COPY templates ./templates/
-COPY main.html script.js ./
+COPY base.html script.js ./
 
 COPY .env ./src/.env
 COPY .env.api ./src/.env.api
