@@ -1,0 +1,137 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    height: 8vh;
+    background-color: rgba(231, 105, 228, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    z-index: 3;
+}
+
+.mobile-menu-icon {
+    width: 9vw;
+    margin-right: 1vw;
+}
+
+#logo-link {
+    display: block;
+    height: 100%;
+    width: 15vw;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    background-image: url(../icon/logo.png);
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.logo-scrolled {
+    width: 100%;
+    height: 100%;
+    background-image: url(../icon/logo_scrolled.png);
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.header-scrolled {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px gray;
+}
+
+.menu {
+    height: 100%;
+    padding-right: 1%;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-item {
+    text-decoration: none;
+    font-size: 2vw;
+    transition: 0.5s;
+}
+
+.menu-button-scrolled {
+    color: black;
+}
+
+.menu-button-scrolled:hover {
+    color: #400D69;
+}
+
+.menu-button-no-scrolled {
+    color: white;
+}
+
+.menu-button-no-scrolled:hover {
+    color: #E769E4;
+}
+
+#mobile-menu {
+    display: none;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    overflow: hidden;
+    background-image: url(../icon/mobile_menu_bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+}
+
+#close-menu-btn {
+    position: absolute;
+    background: none;
+    background-image: url(../icon/close_mobile_menu_btn.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+#nav-mobile-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-logo {
+    width: 85%;
+    margin: 0 auto;
+    height: 20%;
+    background-image: url(../icon/logo_scrolled.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#nav-mobile-menu a {
+    display: inline-block;
+    color: #400D69;
+    margin-left: 10%;
+    margin: 3%;
+    font-size: 7.5vw;
+    text-decoration: none;
+}

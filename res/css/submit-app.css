@@ -1,0 +1,86 @@
+
+#submit-app-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #410E6A;
+    color: white;
+    height: 80vh;
+}
+
+#submit-app-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    padding: 20px;
+    border-radius: 1.7vw;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid #FFC75C;
+    transition: background-color 0.3s ease;
+}
+
+#submit-app-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#submit-app-form h3 {
+    color: #410E6A;
+    font-size: 2.5vw;
+    margin-bottom: 20px;
+}
+
+#submit-app-form input,
+#course-select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    font-size: 1.2vw;
+}
+
+#course-select {
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-app-form__btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #FFC75C;
+    border: none;
+    border-radius: 5px;
+    color: #410E6A;
+    font-size: 1.2vw;
+    cursor: pointer;
+}
+
+.submit-app-form__btn:hover {
+    background-color: #410E6A;
+    color: #FFC75C;
+}
+
+#submit-app-photo {
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button.submit-app-form__btn {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
