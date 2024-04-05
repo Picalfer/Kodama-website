@@ -60,3 +60,19 @@
 .student-card:hover {
     transform: scale(0.9);
 }
+
+.student1 {
+    background-image: url(../icon/student1.jpg);
+}
+
+.student2 {
+    background-image: url(../icon/student2.jpg);
+}
+
+.student3 {
+    background-image: url(../icon/student3.jpg);
+}
+
+.student4 {
+    background-image: url(../icon/student4.jpg);
+}
