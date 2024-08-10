@@ -156,69 +156,128 @@
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6); /* Более темный фон для модального окна */
 }
 
 .modal-content {
     background-color: #fff;
-    margin: 10% auto;
+    margin: 5% auto;
     padding: 20px;
-    border: 1px solid #ccc;
-    width: 60%;
-    border: #f7873d solid 1.5px;
+    width: 70%;
+    max-width: 800px;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Обеспечивает расположение footer внизу */
+    height: fit-content; /* Устанавливает высоту модального окна */
 }
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
     cursor: pointer;
+    color: #333;
+    background-color: white;
+    padding: 10px;
+    height: fit-content;
+    width: 60px;
+    border-radius: 10px;
 }
 
-.title-container {
+.modal-header, .modal-body {
+    margin-bottom: 20px;
+}
+
+.modal-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-title-container {
+    flex: 2;
+}
+
+.modal-title-container h2, 
+.modal-title-container h3 {
+    margin: 5px 0;
+}
+
+#course-modal-icon {
+    flex: 1;
+    max-width: 100px; /* Ограничение размера иконки */
+    margin: 0 20px;
+}
+
+#course-modal-description {
+    flex: 3;
+    margin: 0;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: #F3F3F3;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.images-container {
+    flex: 1.8;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.course-image img {
+    max-width: 100%;
+}
+
+.course-image {
+    width: 100%;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+.course-details {
+    flex: 1;
+    margin-left: 50px;
+}
+
+.course-details p {
+    margin: 10px 0;
+    text-align: left;
 }
 
 .apply-button {
-    background-color: #007bff;
+    background-color: #f7873d;
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 .apply-button:hover {
-    background-color: #0056b3;
-}
-
-.images-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.images-container img {
-    max-width: 45%;
-    border-radius: 5px;
+    background-color: #d96d2c;
 }
 
 

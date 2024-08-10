@@ -195,24 +195,46 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// Course modal section
+
 // Получаем модальное окно и кнопку закрытия
-var figmaModal = document.getElementById("figma-modal");
+var courseModal = document.getElementById("course-modal");
 var span = document.getElementsByClassName("close")[0];
 
 // Функция открытия модального окна
-function openFigmaModal() {
-  figmaModal.style.display = "block";
+function openCourseModal(course) {
+
+  const courseModalTitle = document.getElementById('course-modal-title')
+  const courseModalSubtitle = document.getElementById('course-modal-subtitle')
+  const courseModalDescription = document.getElementById('course-modal-description')
+  const courseModalIcon = document.getElementById('course-modal-icon')
+
+  switch(course) {
+    case 'figma':
+      courseModalTitle.textContent = "Графический дизайн";
+      courseModalSubtitle.textContent = "в редакторе Figma"
+      courseModalDescription.textContent = "Фигма – это графический редактор, с помощью которого создают дизайны. Его применяют в работе дизайнеры, маркетологи, менеджеры продукта, разработчики."
+      courseModalIcon.src = 'res/icon/figma_logo.png'
+      break;
+    default:
+      courseModalTitle.textContent = "";
+      courseModalSubtitle.textContent = ""
+      .textContent = ""
+      courseModalIcon.src = null
+  }
+
+  courseModal.style.display = "block";
 }
 
 // Функция закрытия модального окна при клике на крестик
 span.onclick = function () {
-  figmaModal.style.display = "none";
+  courseModal.style.display = "none";
 }
 
 // Закрытие модального окна при клике за его пределами
 window.onclick = function (event) {
-  if (event.target == figmaModal) {
-    figmaModal.style.display = "none";
+  if (event.target == courseModal) {
+    courseModal.style.display = "none";
   }
 }
 
