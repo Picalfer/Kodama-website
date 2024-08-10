@@ -14,7 +14,7 @@
     width: 80%;
     padding: 20px;
     border-radius: 1.7vw;
-    background-color: #ffffff;
+    background-color: #2E3038;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     border: 2px solid #FFC75C;
     transition: background-color 0.3s ease;
@@ -31,7 +31,7 @@
 }
 
 #submit-app-block h3 {
-    color: #410E6A;
+    color: #A4FFDE;
     font-size: 2.5vw;
     margin-bottom: 20px;
 }

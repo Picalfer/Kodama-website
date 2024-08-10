@@ -341,20 +341,20 @@ header {
     /* Добавляем отступ снизу */
 }
 
-#submit-app-form {
+#submit-app-block {
     width: 100%;
     /* Увеличиваем ширину формы */
 }
 
-#submit-app-form h3 {
+#submit-app-block h3 {
     font-size: 5vw;
     /* Увеличиваем размер заголовка */
 }
 
-#submit-app-form input[type="text"],
-#submit-app-form input[type="tel"],
-#submit-app-form input[type="email"],
-#submit-app-form button.submit-app-form__btn {
+#submit-app-block input[type="text"],
+#submit-app-block input[type="tel"],
+#submit-app-block input[type="email"],
+#submit-app-block button.submit-app-form__btn {
     width: 100%;
     /* Увеличиваем ширину полей ввода и кнопки */
     font-size: 4vw;
