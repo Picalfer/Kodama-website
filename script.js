@@ -268,7 +268,7 @@ function changeBackground() {
       backgroundColor = '#ffffff'; // Белый цвет по умолчанию
       inputBackgroundColor = '#f8f9fa'; // Светло-серый цвет для областей ввода информации
       backgroundColorTransparent = '#2E3038';
-      titleColor = '#410E6A'
+      titleColor = '#A4FFDE'
       submitAppPhoto.src = 'res/icon/figma_submit.png'
   }
 
@@ -292,6 +292,9 @@ document.getElementById('submit-app-form').addEventListener('submit', function (
   var courseSelect = document.getElementById("course-select");
   var name = document.getElementById("name").value;
   var selectedCourse = courseSelect.options[courseSelect.selectedIndex].text;
+  if (selectedCourse == 'Выберите курс' || selectedCourse == 'Не могу определиться') {
+    selectedCourse = 'подобрать курс'
+  }
   document.getElementById("lead-title").value = name + " " + selectedCourse;
 
   var formData = new FormData(this);

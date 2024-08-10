@@ -336,10 +336,11 @@
                         <option value="computer-literacy">Компьютерная грамотность</option>
                         <option value="scratch">Scratch</option>
                         <option value="roblox">Roblox</option>
+                        <option value="dont_know">Не могу определиться</option>
                     </select>
                     <input id="lead-title" type="text" name="fields[TITLE]" placeholder="Заголовок лида" value="Заявка с сайта" hidden>
                     <input type="text" name="fields[NAME]" id="name" placeholder="Ваше имя" required>
-                    <input type="tel" id="phone" name="fields[PHONE][0][VALUE]" placeholder="Ваш телефон" required>
+                    <input type="tel" id="phone" name="fields[PHONE][0][VALUE]" placeholder="Ваш телефон" required pattern="[0-9]{10,15}" title="Введите номер телефона (только цифры, 10-15 символов)">
                     <input type="text" name="fields[PHONE][0][VALUE_TYPE]" value="WORK" hidden>
                     <input type="email" id="email" name="fields[EMAIL][0][VALUE]" placeholder="Ваша почта" required>
                     <input type="text" name="fields[EMAIL][0][VALUE_TYPE]" value="WORK" hidden>
