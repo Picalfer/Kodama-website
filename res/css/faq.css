@@ -95,8 +95,16 @@
 .faq-answer {
     margin-left: 15px;
     border: 1px solid #410E6A;
-    display: none;
     background-color: #f0f0f0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.faq-answer.open {
+    max-height: 600px; /* Устанавливаем достаточно большое значение */
+    opacity: 1;
 }
 
 .bottom-decor-faq {

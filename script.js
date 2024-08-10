@@ -72,12 +72,14 @@ if (window.innerWidth > 600) {
 
 function toggleAnswer(id) {
   var answer = document.getElementById(id);
-  if (answer.style.display === 'none' || answer.style.display === '') {
-    answer.style.display = 'block';
+
+  if (answer.classList.contains('open')) {
+      answer.classList.remove('open');
   } else {
-    answer.style.display = 'none';
+      answer.classList.add('open');
   }
 }
+
 
 const bubbles = document.querySelectorAll('.bubble');
 
