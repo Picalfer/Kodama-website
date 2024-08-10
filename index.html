@@ -11,7 +11,6 @@
 </head>
 
 <body id="top-site">
-
     <header>
         <a href="#top-site" id="logo-link">
             <div class="logo"></div>
@@ -117,7 +116,7 @@
             <div class="cloud" id="cloud-middle"></div>
             <div class="cloud" id="cloud-left-bottom"></div>
             <div class="courses-container">
-                <div class="course-card">
+                <div class="course-card" onclick="openFigmaModal()">
                     <img src="res/icon/figma_logo.png" alt="Figma">
                     <div class="course-card-text">
                         <h3>Графический дизайн</h3>
@@ -145,6 +144,25 @@
                         <p>в Roblox</p>
                     </div>
                 </div>
+
+                <div id="figma-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="title-container">
+                            <h2>Название курса</h2>
+                        </div>
+                        
+                        <p>Описание курса</p>
+                        <div class="images-container">
+                            <img src="res/icon/request_photo.jpg" alt="Скриншот курса">
+                            <img src="res/icon/request_photo.jpg" alt="Скриншот курса">
+                        </div>
+                        <p>Допустимый возраст ребенка: 10-12 лет</p>
+                        <p>Кому идеально подойдет: детям, интересующимся графическим дизайном</p>
+                        <button class="apply-button">Записаться</button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -167,6 +185,7 @@
         </div>
     </section>
 
+    <!--
     <section id="guide-school-section">
         <div class="square" id="square1" data-speed="3"></div>
         <div class="square" id="square2" data-speed="2"></div>
@@ -191,12 +210,13 @@
 
         <div id="guide-school-content">
             <h3>Путеводитель по нашей школе</h3>
-            <iframe id="guide-school-video" src="https://www.youtube.com/embed/eg_rlPU5nU0?si=LIow4rn37jrKlWfj"
+            <iframe id="guide-school-video" src=""
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; gyroscope; picture-in-picture; web-share" allowfullscreen>
             </iframe>
         </div>
     </section>
+    -->
 
     <section id="questions-section">
         <div id="top-decor-faq"></div>
@@ -322,12 +342,29 @@
         </div>
     </section>
 
+    <form action="https://kodama.bitrix24.ru/rest/1/aya08q7mvcwmttf6/crm.lead.add.json" method="POST">
+        <input type="text" name="fields[TITLE]" placeholder="Заголовок лида" value="Новый лид" required>
+        <input type="text" name="fields[NAME]" placeholder="Ваше имя" required>
+        <input type="text" name="fields[PHONE][0][VALUE]" placeholder="Ваш телефон" required>
+        <input type="text" name="fields[PHONE][0][VALUE_TYPE]" value="WORK" hidden>
+        <input type="email" name="fields[EMAIL][0][VALUE]" placeholder="Ваш email" required>
+        <input type="text" name="fields[EMAIL][0][VALUE_TYPE]" value="WORK" hidden>
+        <input type="submit" value="Отправить">
+    </form>
+     
+
     <footer>
         <p>&copy; 2024 Kodama. Все права защищены.</p>
-        <p>Свяжитесь с нами: <a href="mailto:kodama.edu@gmail.com">kodama.edu@gmail.com</a></p>
+        <p>Свяжитесь с нами: <a href="mailto:kodama.edu@gmail.com" style="color: #A4FFDE; text-decoration: underline;">kodama.edu@gmail.com</a></p>
     </footer>
 
     <script src="script.js" defer></script>
+    <script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.ru/b30468202/crm/site_button/loader_2_q99zpy.js');
+</script>
 </body>
 
 </html>

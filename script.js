@@ -247,3 +247,24 @@ function changeBackground() {
     input.style.backgroundColor = inputBackgroundColor;
   });
 }
+
+// Получаем модальное окно и кнопку закрытия
+var figmaModal = document.getElementById("figma-modal");
+var span = document.getElementsByClassName("close")[0];
+
+// Функция открытия модального окна
+function openFigmaModal() {
+  figmaModal.style.display = "block";
+}
+
+// Функция закрытия модального окна при клике на крестик
+span.onclick = function() {
+  figmaModal.style.display = "none";
+}
+
+// Закрытие модального окна при клике за его пределами
+window.onclick = function(event) {
+  if (event.target == figmaModal) {
+    figmaModal.style.display = "none";
+  }
+}

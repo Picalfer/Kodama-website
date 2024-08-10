@@ -24,6 +24,10 @@
     font-weight: 100;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'SuperMario', sans-serif;
     color: white;
