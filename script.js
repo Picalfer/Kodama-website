@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Получаем элементы формы
 const courseSelect = document.getElementById('course-select');
 const submitForm = document.getElementById('submit-app-content');
-const formInputs = document.querySelectorAll('#submit-app-form input');
+const formInputs = document.querySelectorAll('#submit-app-block input');
 
 // Добавляем обработчик события change
 courseSelect.addEventListener('change', changeBackground);
@@ -258,13 +258,52 @@ function openFigmaModal() {
 }
 
 // Функция закрытия модального окна при клике на крестик
-span.onclick = function() {
+span.onclick = function () {
   figmaModal.style.display = "none";
 }
 
 // Закрытие модального окна при клике за его пределами
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == figmaModal) {
     figmaModal.style.display = "none";
   }
+}
+
+// submit app sextion
+document.getElementById('submit-app-form').addEventListener('submit', function (e) {
+  e.preventDefault(); // Предотвращаем стандартное поведение формы
+
+  var courseSelect = document.getElementById("course-select");
+  var name = document.getElementById("name").value;
+  var selectedCourse = courseSelect.options[courseSelect.selectedIndex].text;
+  document.getElementById("lead-title").value = name + " " + selectedCourse;
+
+  var formData = new FormData(this);
+
+  fetch('https://kodama.bitrix24.ru/rest/1/aya08q7mvcwmttf6/crm.lead.add.json', {
+    method: 'POST',
+    body: formData
+  })
+    .then(response => response.json())
+    .then(data => {
+      // Проверка, что result присутствует и не undefined
+      if (data.result !== undefined) {
+        showSubmitAppModal("Данные успешно отправлены! ID лида: " + data.result);
+      } else {
+        showSubmitAppModal("Данные отправлены, но ID лида не получен.");
+      }
+    })
+    .catch(error => {
+      // Обработка ошибки
+      showSubmitAppModal("Произошла ошибка при отправке данных.");
+    });
+});
+
+function showSubmitAppModal(message) {
+  document.getElementById('submit-app-modal-message').textContent = message;
+  document.getElementById('submit-app-modal').style.display = 'flex';
+}
+
+function closeSubmitAppModal() {
+  document.getElementById('submit-app-modal').style.display = 'none';
 }

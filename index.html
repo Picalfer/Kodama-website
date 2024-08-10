@@ -151,7 +151,7 @@
                         <div class="title-container">
                             <h2>Название курса</h2>
                         </div>
-                        
+
                         <p>Описание курса</p>
                         <div class="images-container">
                             <img src="res/icon/request_photo.jpg" alt="Скриншот курса">
@@ -325,47 +325,49 @@
     <section id="submit-app-section">
         <div id="submit-app-content">
             <img id="submit-app-photo" src="res/icon/request_photo.jpg">
-            <div id="submit-app-form">
+            <div id="submit-app-block">
                 <h3>Запишитесь на первый урок</h3>
-                <select id="course-select">
-                    <option value="" selected disabled hidden>Выберите курс</option>
-                    <option value="figma">Figma</option>
-                    <option value="computer-literacy">Компьютерная грамотность</option>
-                    <option value="scratch">Scratch</option>
-                    <option value="roblox">Roblox</option>
-                </select>
-                <input type="text" id="name" placeholder="Ваше имя">
-                <input type="tel" id="phone" placeholder="Ваш телефон">
-                <input type="email" id="email" placeholder="Ваша почта">
-                <button class="submit-app-form__btn" id="submit-btn" type="submit" disabled>Отправить</button>
+                <form id="submit-app-form">
+                    <select id="course-select">
+                        <option value="" selected disabled hidden>Выберите курс</option>
+                        <option value="figma">Figma</option>
+                        <option value="computer-literacy">Компьютерная грамотность</option>
+                        <option value="scratch">Scratch</option>
+                        <option value="roblox">Roblox</option>
+                    </select>
+                    <input id="lead-title" type="text" name="fields[TITLE]" placeholder="Заголовок лида" value="Заявка с сайта" hidden>
+                    <input type="text" name="fields[NAME]" id="name" placeholder="Ваше имя" required>
+                    <input type="tel" id="phone" name="fields[PHONE][0][VALUE]" placeholder="Ваш телефон" required>
+                    <input type="text" name="fields[PHONE][0][VALUE_TYPE]" value="WORK" hidden>
+                    <input type="email" id="email" name="fields[EMAIL][0][VALUE]" placeholder="Ваша почта" required>
+                    <input type="text" name="fields[EMAIL][0][VALUE_TYPE]" value="WORK" hidden>
+
+                    <button class="submit-app-form__btn" id="submit-btn" type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="submit-app-modal">
+            <div id="submit-app-modal-content">
+                <p id="submit-app-modal-message"></p>
+                <button onclick="closeSubmitAppModal()">Закрыть</button>
             </div>
         </div>
     </section>
 
-    <form action="https://kodama.bitrix24.ru/rest/1/aya08q7mvcwmttf6/crm.lead.add.json" method="POST">
-        <input type="text" name="fields[TITLE]" placeholder="Заголовок лида" value="Новый лид" required>
-        <input type="text" name="fields[NAME]" placeholder="Ваше имя" required>
-        <input type="text" name="fields[PHONE][0][VALUE]" placeholder="Ваш телефон" required>
-        <input type="text" name="fields[PHONE][0][VALUE_TYPE]" value="WORK" hidden>
-        <input type="email" name="fields[EMAIL][0][VALUE]" placeholder="Ваш email" required>
-        <input type="text" name="fields[EMAIL][0][VALUE_TYPE]" value="WORK" hidden>
-        <input type="submit" value="Отправить">
-    </form>
-     
-
     <footer>
         <p>&copy; 2024 Kodama. Все права защищены.</p>
-        <p>Свяжитесь с нами: <a href="mailto:kodama.edu@gmail.com" style="color: #A4FFDE; text-decoration: underline;">kodama.edu@gmail.com</a></p>
+        <p>Свяжитесь с нами: <a href="mailto:kodama.edu@gmail.com"
+                style="color: #A4FFDE; text-decoration: underline;">kodama.edu@gmail.com</a></p>
     </footer>
 
     <script src="script.js" defer></script>
     <script>
-        (function(w,d,u){
-                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
-                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-        })(window,document,'https://cdn-ru.bitrix24.ru/b30468202/crm/site_button/loader_2_q99zpy.js');
-</script>
+        (function (w, d, u) {
+            var s = d.createElement('script'); s.async = true; s.src = u + '?' + (Date.now() / 60000 | 0);
+            var h = d.getElementsByTagName('script')[0]; h.parentNode.insertBefore(s, h);
+        })(window, document, 'https://cdn-ru.bitrix24.ru/b30468202/crm/site_button/loader_2_q99zpy.js');
+    </script>
 </body>
 
 </html>
-spermach
