@@ -356,6 +356,10 @@ header {
     flex-direction: column;
 }
 
+#course-modal-icon {
+    max-height: max-content;
+}
+
 .course-details {
     margin-left: 20px;
 }
