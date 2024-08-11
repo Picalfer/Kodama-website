@@ -433,3 +433,13 @@ header {
     background-color: #fff;
     /* Задаем цвет фона */
 }
+
+#privacy-policy-checkbox {
+    height: 15px;
+    flex: 1.5;
+}
+
+.privacy-policy p {
+    flex: 8.5;
+    font-size: 2vw;
+}

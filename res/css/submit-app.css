@@ -84,6 +84,7 @@ button.submit-app-form__btn {
     border: none;
     border-radius: 5px;
     background-color: #4CAF50;
+    margin-top: 15px;
     color: white;
     cursor: pointer;
 }
@@ -109,4 +110,63 @@ button.submit-app-form__btn {
     max-width: 300px;
     margin: auto;
     text-align: center;
+}
+
+.privacy-policy {
+    font-family: 'Sansita', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#privacy-policy-checkbox {
+    display: block;
+    height: 15px;
+    flex: 1;
+}
+
+.privacy-policy a {
+    color: orange;
+}
+
+.privacy-policy p {
+    flex: 9;
+    text-align: justify;
+    font-size: 0.6vw;
+}
+
+#privacy-policy-modal {
+    display: none; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 80%; 
+    max-width: 600px; 
+    background-color: white; 
+    color: rgb(39, 39, 39);
+    font-family: 'Sansita', sans-serif;
+    padding: 20px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    z-index: 1000;
+}
+
+#privacy-policy-modal h2 {
+    margin-top: 0;
+}
+
+#privacy-policy-modal p {
+    margin: 10px 0;
+}
+
+#privacy-policy-modal button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+#privacy-policy-modal button#decline-privacy-policy {
+    background-color: #6c757d;
 }

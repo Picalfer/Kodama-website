@@ -436,3 +436,20 @@ function showSubmitAppModal(message) {
 function closeSubmitAppModal() {
   document.getElementById('submit-app-modal').style.display = 'none';
 }
+
+document.getElementById('show-privacy-policy').addEventListener('click', function(event) {
+  event.preventDefault();
+  document.getElementById('privacy-policy-modal').style.display = 'block';
+});
+
+document.getElementById('accept-privacy-policy').addEventListener('click', function() {
+  document.getElementById('privacy-policy-modal').style.display = 'none';
+  var checkbox = document.getElementById('privacy-policy-checkbox');
+  checkbox.checked = true;
+});
+
+document.getElementById('decline-privacy-policy').addEventListener('click', function() {
+  document.getElementById('privacy-policy-modal').style.display = 'none';
+  var checkbox = document.getElementById('privacy-policy-checkbox');
+  checkbox.checked = false;
+});
