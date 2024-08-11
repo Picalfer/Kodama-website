@@ -357,7 +357,11 @@ header {
 }
 
 #course-modal-icon {
-    max-height: max-content;
+    max-height: 15vh;
+}
+
+.course-image {
+    max-height: 30vh;
 }
 
 .course-details {
