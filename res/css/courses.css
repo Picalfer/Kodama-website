@@ -261,6 +261,7 @@
 
 .course-image img {
     max-width: 100%;
+    border: 2px solid rgb(78, 78, 78);
 }
 
 .course-image {

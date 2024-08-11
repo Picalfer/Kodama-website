@@ -63,6 +63,10 @@
     cursor: pointer;
 }
 
+#course-select {
+    color: rgb(37, 37, 37);
+}
+
 .submit-app-form__btn:hover {
     background-color: #410E6A;
     color: #FFC75C;
