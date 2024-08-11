@@ -318,6 +318,49 @@ header {
     padding-bottom: 0;
 }
 
+/*courses modal section */
+.modal-content {
+    width: 95%;
+    max-height: 70vh;
+    top: 45vh;
+}
+
+.close {
+    right: 20px;
+    top: 5px;
+}
+
+.modal-header {
+    flex-direction: column;
+}
+
+#course-modal-title {
+    font-size: 6vw;
+    text-align: center;
+}
+
+#course-modal-subtitle {
+    font-size: 5vw;
+    text-align: center;
+}
+
+#course-modal-icon {
+    margin: 10px;
+}
+
+.modal-body {
+    flex-direction: column;
+}
+
+.images-container {
+    flex-direction: column;
+}
+
+.course-details {
+    margin-left: 20px;
+}
+
+/*submit app section */
 #submit-app-section {
     height: auto;
     /* Автоматическая высота для лучшего масштабирования */
@@ -348,6 +391,7 @@ header {
 
 #submit-app-block h3 {
     font-size: 5vw;
+    text-align: center;
     /* Увеличиваем размер заголовка */
 }
 

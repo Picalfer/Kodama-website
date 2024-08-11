@@ -74,9 +74,9 @@ function toggleAnswer(id) {
   var answer = document.getElementById(id);
 
   if (answer.classList.contains('open')) {
-      answer.classList.remove('open');
+    answer.classList.remove('open');
   } else {
-      answer.classList.add('open');
+    answer.classList.add('open');
   }
 }
 
@@ -199,44 +199,130 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Получаем модальное окно и кнопку закрытия
 var courseModal = document.getElementById("course-modal");
-var span = document.getElementsByClassName("close")[0];
+var closeButton = document.getElementsByClassName("close")[0];
 
 // Функция открытия модального окна
 function openCourseModal(course) {
+  document.body.classList.add('no-scroll');
 
   const courseModalTitle = document.getElementById('course-modal-title')
   const courseModalSubtitle = document.getElementById('course-modal-subtitle')
   const courseModalDescription = document.getElementById('course-modal-description')
   const courseModalIcon = document.getElementById('course-modal-icon')
+  const courseImage1 = document.getElementById('course-image1')
+  const courseImage2 = document.getElementById('course-image2')
+  const courseFact1 = document.getElementById('course-fact1')
+  const courseFact2 = document.getElementById('course-fact2')
+  const courseFact3 = document.getElementById('course-fact3')
 
-  switch(course) {
+  switch (course) {
     case 'figma':
       courseModalTitle.textContent = "Графический дизайн";
-      courseModalSubtitle.textContent = "в редакторе Figma"
-      courseModalDescription.textContent = "Фигма – это графический редактор, с помощью которого создают дизайны. Его применяют в работе дизайнеры, маркетологи, менеджеры продукта, разработчики."
-      courseModalIcon.src = 'res/icon/figma_logo.png'
+      courseModalSubtitle.textContent = "в редакторе Figma";
+      courseModalDescription.textContent = "Figma — это простая и удобная программа для создания дизайна. Здесь ребенок научится придумывать и рисовать макеты сайтов, приложений и других проектов. Программа работает прямо в браузере, что позволяет легко работать и делиться результатами.";
+      courseModalIcon.src = 'res/icon/figma_logo.png';
+      courseImage1.src = 'res/icon/course-figma1.png';
+      courseImage2.src = 'res/icon/course-figma2.png';
+      courseFact1.textContent = 'Идеально подойдет: детям с интересом к дизайну и творчеству.';
+      courseFact2.textContent = 'Допустимый возраст: 7-16 лет.';
+      courseFact3.textContent = 'Чему научится ребёнок: создавать макеты и прототипы, разрабатывать интерфейсы для веб и мобильных приложений, работать в команде над проектами.';
+      break;
+    case 'scratch':
+      courseModalTitle.textContent = "Создание 2D игр";
+      courseModalSubtitle.textContent = "на языке Scratch";
+      courseModalDescription.textContent = "Scratch — это визуальная платформа программирования для детей, где они могут создавать игры, мультфильмы и интерактивные истории. Курс помогает развить логическое мышление и креативность, погружая ребёнка в мир программирования в игровой форме.";
+      courseModalIcon.src = 'res/icon/scratch_logo.png'
+      courseImage1.src = 'res/icon/course-scratch1.png';
+      courseImage2.src = 'res/icon/course-scratch2.png';
+      courseFact1.textContent = 'Идеально для: детей, увлеченных играми и мультфильмами.';
+      courseFact2.textContent = 'Возраст: 8-14 лет.';
+      courseFact3.textContent = 'Навыки: логика, креативное мышление, основы программирования.';
+      break;
+    case 'computer-literacy':
+      courseModalTitle.textContent = "Компьютерная";
+      courseModalSubtitle.textContent = "грамотность";
+      courseModalDescription.textContent = "Курс обучает детей основам работы с компьютером. Ребенок освоит использование офисных программ (Word, PowerPoint), научится пользоваться браузером, электронной почтой, а также узнает основные правила безопасного поведения в интернете. Этот курс поможет детям уверенно пользоваться компьютером в учебе и повседневной жизни.";
+      courseModalIcon.src = 'res/icon/comp_lit_logo.png'
+      courseImage1.src = 'res/icon/course-comp-lit1.png';
+      courseImage2.src = 'res/icon/course-comp-lit2.png';
+      courseFact1.textContent = 'Идеально для: начинающих пользователей, которым нужны базовые навыки работы с компьютером.';
+      courseFact2.textContent = 'Возраст: 7-14 лет.';
+      courseFact3.textContent = 'Навыки: работа с текстами и презентациями, интернет-серфинг, использование электронной почты.';
+      break;
+    case 'roblox':
+      courseModalTitle.textContent = "Создание 3D игр";
+      courseModalSubtitle.textContent = "в Roblox";
+      courseModalDescription.textContent = "Курс учит детей создавать свои собственные игры и миры в Roblox. Дети изучат основы программирования и дизайна, научатся использовать инструменты Roblox Studio для создания 3D-игр. Курс развивает творческие способности и логическое мышление, позволяя детям воплотить свои идеи в интерактивные проекты.";
+      courseModalIcon.src = 'res/icon/roblox_logo.png';
+      courseImage1.src = 'res/icon/course-roblox1.png';
+      courseImage2.src = 'res/icon/course-roblox2.png';
+      courseFact1.textContent = 'Идеально для: детей, интересующихся созданием игр и виртуальных миров.';
+      courseFact2.textContent = 'Возраст: 8-14 лет.';
+      courseFact3.textContent = 'Навыки: базовое программирование, работа с 3D-графикой, проектирование игровых уровней.';
       break;
     default:
       courseModalTitle.textContent = "";
-      courseModalSubtitle.textContent = ""
-      .textContent = ""
-      courseModalIcon.src = null
+      courseModalSubtitle.textContent = "";
+      courseModalDescription.textContent = "";
+      courseModalIcon.src = null;
+      courseImage1.src = '';
+      courseImage2.src = '';
+      courseFact1.textContent = '';
+      courseFact2.textContent = '';
+      courseFact3.textContent = '';
   }
 
   courseModal.style.display = "block";
 }
 
 // Функция закрытия модального окна при клике на крестик
-span.onclick = function () {
+closeButton.onclick = function () {
   courseModal.style.display = "none";
+  document.body.classList.remove('no-scroll');
 }
 
 // Закрытие модального окна при клике за его пределами
 window.onclick = function (event) {
   if (event.target == courseModal) {
     courseModal.style.display = "none";
+    document.body.classList.remove('no-scroll');
   }
 }
+
+// Объект для сопоставления заголовков и значений селектора
+const courseMapping = {
+  "Графический дизайн": "figma",
+  "Создание 2D игр": "scratch",
+  "Компьютерная": "computer-literacy",
+  "Создание 3D игр": "roblox"
+};
+
+// Обработчик клика по кнопке "Записаться"
+document.querySelector('.apply-button').addEventListener('click', function () {
+  // Закрываем модальное окно
+  document.getElementById('course-modal').style.display = 'none';
+
+  // Получаем выбранный курс
+  const selectedCourseTitle = document.getElementById('course-modal-title').innerText;
+
+  // Прокручиваем страницу к форме
+  document.getElementById('submit-app-section').scrollIntoView({ behavior: 'smooth' });
+
+  // Получаем значение селектора на основе заголовка
+  const courseSelect = document.getElementById('course-select');
+  const courseValue = courseMapping[selectedCourseTitle] || ''; // Если нет совпадений, устанавливаем пустую строку
+  courseSelect.value = courseValue;
+  changeBackground();
+
+  // Включаем фокус на первом поле ввода
+  document.getElementById('name').focus();
+});
+
+// Закрытие модального окна при нажатии на крестик
+document.querySelector('.close').addEventListener('click', function () {
+  document.getElementById('course-modal').style.display = 'none';
+});
+
 
 // submit app section
 // Получаем элементы формы
@@ -264,36 +350,36 @@ function changeBackground() {
       backgroundColor = '#FFC75C'; // Желтый цвет для Figma
       inputBackgroundColor = '#FFFFE0'; // Более блеклый цвет для областей ввода информации
       backgroundColorTransparent = 'rgba(255, 199, 92, 0.5)';
-      titleColor = '#410E6A'
-      submitAppPhoto.src = 'res/icon/roblox_submit.png'
+      titleColor = '#410E6A';
+      submitAppPhoto.src = 'res/icon/roblox_submit.png';
       break;
     case 'computer-literacy':
       backgroundColor = '#41EAD4'; // Зеленый цвет для Компьютерной грамотности
       inputBackgroundColor = '#E0FFF3'; // Более блеклый цвет для областей ввода информации
       backgroundColorTransparent = 'rgba(65, 234, 212, 0.5)';
-      titleColor = '#410E6A'
-      submitAppPhoto.src = 'res/icon/comp_lit_submit.png'
+      titleColor = '#410E6A';
+      submitAppPhoto.src = 'res/icon/comp_lit_submit.png';
       break;
     case 'scratch':
       backgroundColor = '#6E65FF'; // Фиолетовый цвет для Scratch
       inputBackgroundColor = '#F0E7FF'; // Более блеклый цвет для областей ввода информации
       backgroundColorTransparent = 'rgba(110, 101, 255, 0.5)';
-      titleColor = '#FFC75C'
-      submitAppPhoto.src = 'res/icon/scratch_submit.png'
+      titleColor = '#FFC75C';
+      submitAppPhoto.src = 'res/icon/scratch_submit.png';
       break;
     case 'figma':
       backgroundColor = '#FF6E6E'; // Красный цвет для Roblox
       inputBackgroundColor = '#FFE0E0'; // Более блеклый цвет для областей ввода информации
       backgroundColorTransparent = 'rgba(255, 110, 110, 0.5)';
-      titleColor = '#410E6A'
-      submitAppPhoto.src = 'res/icon/figma_submit.png'
+      titleColor = '#410E6A';
+      submitAppPhoto.src = 'res/icon/figma_submit.png';
       break;
     default:
       backgroundColor = '#ffffff'; // Белый цвет по умолчанию
       inputBackgroundColor = '#f8f9fa'; // Светло-серый цвет для областей ввода информации
       backgroundColorTransparent = '#2E3038';
-      titleColor = '#A4FFDE'
-      submitAppPhoto.src = 'res/icon/figma_submit.png'
+      titleColor = '#A4FFDE';
+      submitAppPhoto.src = 'res/icon/figma_submit.png';
   }
 
   // Устанавливаем цвет фона для элемента выбора курса

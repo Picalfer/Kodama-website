@@ -167,30 +167,31 @@
 
 .modal-content {
     background-color: #fff;
-    margin: 5% auto;
+    margin: 0 auto; /* Убираем верхний и нижний отступы */
     padding: 20px;
-    width: 70%;
-    max-width: 800px;
+    width: 50%;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Фиксированное позиционирование */
+    top: 50%; /* Центрирование по вертикали */
+    left: 50%; /* Центрирование по горизонтали */
+    transform: translate(-50%, -50%); /* Смещение на половину ширины и высоты */
+    z-index: 1000; /* Убедитесь, что модальное окно перекрывает другие элементы */
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Обеспечивает расположение footer внизу */
-    height: fit-content; /* Устанавливает высоту модального окна */
+    height: auto;
+    max-height: 90vh; /* Ограничение максимальной высоты для адаптивности */
+    overflow-y: auto; /* Позволяет прокручивать контент, если его слишком много */
 }
 
 .close {
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: -5px;
+    right: 10px;
     font-size: 30px;
     cursor: pointer;
     color: #333;
-    background-color: white;
-    padding: 10px;
-    height: fit-content;
-    width: 60px;
-    border-radius: 10px;
 }
 
 .modal-header, .modal-body {
@@ -199,6 +200,7 @@
 
 .modal-header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
@@ -219,13 +221,25 @@
     margin: 0 20px;
 }
 
+#course-modal-title {
+    text-align: right;
+    font-size: 1.6vw;
+}
+
+#course-modal-subtitle {
+    color: rgb(44, 44, 44);
+    text-align: right;
+}
+
 #course-modal-description {
     flex: 3;
     margin: 0;
+    text-align: left;
 }
 
 .modal-body {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     margin-top: 20px;
     background-color: #F3F3F3;
@@ -260,7 +274,7 @@
     margin-left: 50px;
 }
 
-.course-details p {
+.course-details li {
     margin: 10px 0;
     text-align: left;
 }
@@ -279,7 +293,6 @@
 .apply-button:hover {
     background-color: #d96d2c;
 }
-
 
 @keyframes flying {
     0% {
