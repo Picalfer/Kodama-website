@@ -3,3 +3,4 @@
 spreadsh
 *.pyc
 __pycache__/
+api_constants.js

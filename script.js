@@ -405,11 +405,11 @@ document.getElementById('submit-app-form').addEventListener('submit', function (
   if (selectedCourse == 'Выберите курс' || selectedCourse == 'Не могу определиться') {
     selectedCourse = 'подобрать курс'
   }
-  document.getElementById("lead-title").value = name + " " + selectedCourse;
+  document.getElementById("lead-title").value = name + " (" + selectedCourse + ")";
 
   var formData = new FormData(this);
 
-  fetch('https://kodama.bitrix24.ru/rest/1/aya08q7mvcwmttf6/crm.lead.add.json', {
+  fetch(BITRIX_API, {
     method: 'POST',
     body: formData
   })
@@ -419,7 +419,7 @@ document.getElementById('submit-app-form').addEventListener('submit', function (
       if (data.result !== undefined) {
         showSubmitAppModal("Данные успешно отправлены! ID лида: " + data.result);
       } else {
-        showSubmitAppModal("Данные отправлены, но ID лида не получен.");
+        showSubmitAppModal("Данные отправлены, но что-то пошло не так...");
       }
     })
     .catch(error => {
