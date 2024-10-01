@@ -6,29 +6,28 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'
+    # Добавляем шаг для создания api_constants.js
+    - name: Generate api_constants.js
+      run: |
+        echo "export const BITRIX_TOKEN = '${{ secrets.BITRIX_TOKEN }}';" > ./src/api_constants.js
 
-    - name: Install dependencies
-      run: npm install
+    # Твой шаг для сборки проекта (если есть)
+    - name: Build project
+      run: |
+        # Если у тебя есть команда для сборки, вставь её здесь
+        # Например: npm run build
+        echo "Сборка проекта..."
 
-    - name: Create .env file
-      run: echo "BITRIX_API=${{ secrets.BITRIX_TOKEN }}" > .env
-
-    - name: Build the project
-      run: npm run build
-
+    # Шаг деплоя на GitHub Pages (это твой уже существующий шаг)
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+        publish_dir: ./build  # Здесь укажи директорию с собранным проектом
