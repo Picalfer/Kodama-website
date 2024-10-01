@@ -1,4 +1,4 @@
-import { BITRIX_API } from "./api_constants.js";
+import { BITRIX_TOKEN } from "./api_constants.js";
 
 const menuButtons = document.querySelectorAll('.menu-item');
 const mobileMenuButtons = document.querySelectorAll('.mobile-menu-item');
@@ -411,7 +411,7 @@ document.getElementById('submit-app-form').addEventListener('submit', function (
 
   var formData = new FormData(this);
 
-  fetch(BITRIX_API, {
+  fetch(BITRIX_TOKEN, {
     method: 'POST',
     body: formData
   })
