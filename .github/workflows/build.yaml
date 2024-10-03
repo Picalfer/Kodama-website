@@ -18,7 +18,8 @@ jobs:
 
     # Использование Create a File Action для создания api_constants.js
     - name: Create api_constants.js file
-      uses: AndromedaNine/create-a-file-action@v1
+      uses: 1arp/create-a-file-action@0.4.5
+
       with:
         path: './src/api_constants.js'  # Путь до файла
         content: "export const BITRIX_TOKEN = '${{ secrets.BITRIX_TOKEN }}';"  # Содержимое файла
