@@ -16,10 +16,17 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    # Генерация файла api_constants.js с API-ключом
-    - name: Generate api_constants.js
-      run: |
-        echo "export const BITRIX_TOKEN = '${{ secrets.BITRIX_TOKEN }}';" > ./src/api_constants.js
+    # Использование Create a File Action для создания api_constants.js
+    - name: Create api_constants.js file
+      uses: AndromedaNine/create-a-file-action@v1
+      with:
+        path: './src/api_constants.js'  # Путь до файла
+        content: "export const BITRIX_TOKEN = '${{ secrets.BITRIX_TOKEN }}';"  # Содержимое файла
+        overwrite: true  # Перезаписывать файл, если он уже существует
+
+    # Проверка, что файл api_constants.js был создан
+    - name: List files in src directory
+      run: ls -la ./src
 
     # Деплой на GitHub Pages
     - name: Deploy to GitHub Pages
