@@ -1,0 +1,67 @@
+.top-decor-about {
+    position: absolute;
+    top: -1px;
+    width: 100%;
+    background-image: url(../icon/top_decor_about.png);
+    height: 25vh;
+    background-repeat: repeat-x;
+    background-position: top;
+    background-size: contain;
+    z-index: 1;
+}
+
+#about-section {
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.left {
+    flex: 1;
+    margin-top: 23vh;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-bottom: 30vh;
+}
+
+.left h2 {
+    color: #400D69;
+    font-size: 3vw;
+    text-align: start;
+}
+
+.left p {
+    margin-top: 20px;
+    color: black;
+    font-size: 2vw;
+    text-align: start;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right img {
+    max-width: 50%;
+}
+
+.bottom-decor-about {
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    background-image: url(../icon/bottom_decor_about.png);
+    height: 30vh;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: contain;
+    z-index: 0;
+}

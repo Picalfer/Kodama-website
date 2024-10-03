@@ -1,0 +1,172 @@
+#submit-app-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #410E6A;
+    color: white;
+    height: 80vh;
+}
+
+#submit-app-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    padding: 20px;
+    border-radius: 1.7vw;
+    background-color: #2E3038;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid #FFC75C;
+    transition: background-color 0.3s ease;
+}
+
+#submit-app-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#submit-app-block h3 {
+    color: #A4FFDE;
+    font-size: 2.5vw;
+    margin-bottom: 20px;
+}
+
+#submit-app-block input,
+#course-select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    font-size: 1.2vw;
+}
+
+#course-select {
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-app-form__btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #FFC75C;
+    border: none;
+    border-radius: 5px;
+    color: #410E6A;
+    font-size: 1.2vw;
+    cursor: pointer;
+}
+
+#course-select {
+    color: rgb(37, 37, 37);
+}
+
+.submit-app-form__btn:hover {
+    background-color: #410E6A;
+    color: #FFC75C;
+}
+
+#submit-app-photo {
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button.submit-app-form__btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    margin-top: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+#submit-app-modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+#submit-app-modal-content {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.privacy-policy {
+    font-family: 'Sansita', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#privacy-policy-checkbox {
+    display: block;
+    height: 15px;
+    flex: 1;
+}
+
+.privacy-policy a {
+    color: orange;
+}
+
+.privacy-policy p {
+    flex: 9;
+    text-align: justify;
+    font-size: 0.6vw;
+}
+
+#privacy-policy-modal {
+    display: none; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 80%; 
+    max-width: 600px; 
+    background-color: white; 
+    color: rgb(39, 39, 39);
+    font-family: 'Sansita', sans-serif;
+    padding: 20px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    z-index: 1000;
+}
+
+#privacy-policy-modal h2 {
+    margin-top: 0;
+}
+
+#privacy-policy-modal p {
+    margin: 10px 0;
+}
+
+#privacy-policy-modal button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+#privacy-policy-modal button#decline-privacy-policy {
+    background-color: #6c757d;
+}

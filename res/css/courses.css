@@ -1,0 +1,324 @@
+#courses-section {
+    text-align: center;
+    background-color: rgb(221, 245, 255);
+}
+
+.top-decor-courses {
+    position: absolute;
+    top: -1vh;
+    width: 100%;
+    height: 25vh;
+    background-repeat: repeat-x;
+    background-position: top;
+    background-size: contain;
+    z-index: 1;
+    background-image: url(../icon/top_decor_courses.png);
+}
+
+.courses-content {
+    padding-top: 25vh;
+    position: relative;
+    padding-bottom: 20vh;
+}
+
+.courses-container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: black;
+}
+
+.course-card {
+    width: 35%;
+    margin: 70px;
+    padding: 20px;
+    background-color: #FDFDFD;
+    border-radius: 20px;
+    box-shadow: 0 10px 8px #410E6A;
+    transition: 1s;
+    z-index: 1;
+    border: #f7b63d 3px solid;
+    overflow: visible;
+}
+
+.course-card:hover {
+    background-color: #612c8b;
+    color: white;
+    box-shadow: 7px 15px 8px #410E6A;
+    animation-name: flying;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    border: #f7873d 4px solid;
+}
+
+.course-card:hover img {
+    animation-name: bright;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.course-card img {
+    max-width: 40%;
+    height: auto;
+    transform: translateY(-35%);
+    transition: transform 0.3s;
+}
+
+.course-card-text {
+    margin-top: 1vh;
+    width: 60%;
+    margin: 0 auto;
+    transform: translateY(-35%);
+}
+
+.course-card-text h3 {
+    font-family: 'Sansita', sans-serif;
+    font-style: bold;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.course-card-text p {
+    font-family: 'Sansita', sans-serif;
+    font-weight: 400;
+    font-size: 1.4vw;
+    font-style: italic;
+    text-align: center;
+}
+
+.cloud {
+    position: absolute;
+    background-image: url(../icon/cloud.png);
+    width: 15%;
+    height: 18vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0;
+    animation-name: cloud_flying;
+    animation-duration: var(--duration, 7s);
+    animation-iteration-count: infinite;
+}
+
+#cloud-right-top {
+    --duration: 5s;
+    right: 5vh;
+    top: 25vh;
+}
+
+#cloud-right-bottom {
+    --duration: 10s;
+    right: 9vh;
+    bottom: 20vh;
+}
+
+#cloud-middle {
+    --duration: 8s;
+    left: 25%;
+    top: 50vh;
+}
+
+#cloud-left-bottom {
+    --duration: 6s;
+    left: 5vh;
+    bottom: 35vh;
+}
+
+.two-clouds {
+    position: absolute;
+    background-image: url(../icon/two_clouds.png);
+    width: 25%;
+    height: 20vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0;
+    animation-name: cloud_flying;
+    animation-duration: var(--duration, 7s);
+    --duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#two-clouds-top {
+    --duration: 7s;
+    left: 5%;
+    top: 10vh;
+}
+
+#two-clouds-bottom {
+    --duration: 9s;
+    bottom: 0;
+    left: 35%;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Более темный фон для модального окна */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 0 auto; /* Убираем верхний и нижний отступы */
+    padding: 20px;
+    width: 50%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Фиксированное позиционирование */
+    top: 50%; /* Центрирование по вертикали */
+    left: 50%; /* Центрирование по горизонтали */
+    transform: translate(-50%, -50%); /* Смещение на половину ширины и высоты */
+    z-index: 1000; /* Убедитесь, что модальное окно перекрывает другие элементы */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Обеспечивает расположение footer внизу */
+    height: auto;
+    max-height: 90vh; /* Ограничение максимальной высоты для адаптивности */
+    overflow-y: auto; /* Позволяет прокручивать контент, если его слишком много */
+}
+
+.close {
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+.modal-header, .modal-body {
+    margin-bottom: 20px;
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-title-container {
+    flex: 2;
+}
+
+.modal-title-container h2, 
+.modal-title-container h3 {
+    margin: 5px 0;
+}
+
+#course-modal-icon {
+    flex: 1;
+    max-width: 100px; /* Ограничение размера иконки */
+    margin: 0 20px;
+}
+
+#course-modal-title {
+    text-align: right;
+    font-size: 1.6vw;
+}
+
+#course-modal-subtitle {
+    color: rgb(44, 44, 44);
+    text-align: right;
+}
+
+#course-modal-description {
+    flex: 3;
+    margin: 0;
+    text-align: left;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: #F3F3F3;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.images-container {
+    flex: 1.8;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.course-image img {
+    max-width: 100%;
+    border: 2px solid rgb(78, 78, 78);
+}
+
+.course-image {
+    width: 100%;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+.course-details {
+    flex: 1;
+    margin-left: 50px;
+}
+
+.course-details li {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.apply-button {
+    background-color: #f7873d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: #d96d2c;
+}
+
+@keyframes flying {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bright {
+    0% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.4);
+    }
+
+    100% {
+        filter: brightness(1);
+    }
+}

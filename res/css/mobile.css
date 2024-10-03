@@ -1,0 +1,445 @@
+@import url(mobile-squares.css);
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+}
+
+#logo-link {
+    width: 35vw;
+}
+
+.menu {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu.open {
+    display: block;
+}
+
+.menu a {
+    margin: 5px 0;
+}
+
+#open-menu-btn {
+    width: 8vw;
+    height: 50%;
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    background-image: url(../icon/open_mobile_menu_btn.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+#ground {
+    height: 3vh;
+}
+
+#start-section {
+    height: 85vh;
+}
+
+#stars {
+    top: 2vh;
+}
+
+#hearts {
+    top: 2vh;
+}
+
+.top-decor-about .top-decor-courses {
+    height: 13vh;
+    background-size: cover;
+}
+
+#top-decor-faq {
+    margin-top: -0.8vh;
+    z-index: 0;
+    height: 7vh;
+    background-size: cover;
+}
+
+.bottom-decor-about {
+    height: 13vh;
+    background-size: cover;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+}
+
+.left {
+    background: none;
+    margin: 0;
+}
+
+.left h2 {
+    font-size: 6vw;
+    color: #4f3069;
+}
+
+.left p {
+    font-size: 4vw;
+    color: #333;
+    text-align: justify;
+}
+
+.right {
+    background: none;
+}
+
+.right img {
+    width: 100%;
+    margin-top: 10vh;
+}
+
+#questions-section {
+    min-height: 80vh;
+}
+
+#fabs {
+    width: 80%;
+    margin-top: 2vh;
+    display: contents;
+}
+
+#questions-content h2 {
+    font-size: 6vw;
+    text-align: center;
+}
+
+.faq-left,
+.faq-right {
+    display: contents;
+}
+
+#questions-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.faq {
+    width: 85%;
+    padding: 0.5vh auto;
+    margin: 1vh auto;
+}
+
+#between-decor-purple {
+    height: 20vh;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#between-decor-purple h3 {
+    font-size: 6vw;
+}
+
+.courses-container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5vh;
+}
+
+.course-card {
+    width: 60%;
+    height: auto;
+    margin: 5%;
+    margin-bottom: 3vh;
+    padding: 10px;
+    box-shadow: 0 1% 1% #410E6A;
+}
+
+.course-card img {
+    max-width: 40%;
+}
+
+.course-card-text {
+    width: 70%;
+    margin: 0 auto;
+    transform: translateY(-35%);
+}
+
+.course-card-text h3 {
+    font-size: 5vw;
+}
+
+.course-card-text p {
+    font-size: 3.5vw;
+}
+
+#students-section {
+    height: 140vh;
+    font-size: 2.5vw;
+    padding-bottom: 0;
+}
+
+#students-section h3 {
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    letter-spacing: 3px;
+    font-size: 6vw;
+    margin-bottom: 3vh;
+}
+
+#students-container {
+    min-height: 24vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 5vh;
+}
+
+.student-card {
+    width: 60%;
+    height: 30vh;
+    margin-bottom: 4vh;
+}
+
+.student-card-photo {
+    width: 90%;
+}
+
+#guide-school-section {
+    height: auto;
+    /* Изменено на автоматическую высоту, чтобы контент мог поместиться */
+    max-height: 40vh;
+}
+
+#guide-school-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+#guide-school-content h3 {
+    font-size: 5vw;
+}
+
+#guide-school-video {
+    width: 100%;
+    /* Изменено на 100%, чтобы видео занимало всю ширину контейнера */
+    max-width: 98%;
+    /* Добавлено максимальное значение ширины для видео */
+    height: auto;
+    /* Изменено на автоматическую высоту, чтобы соотношение сторон оставалось */
+    min-height: 25vh;
+    border: #E769E4 3px solid;
+    border-radius: 7px;
+    z-index: 1;
+}
+
+
+#start-section h2 {
+    font-size: 7vw;
+}
+
+#start-section h1 {
+    font-size: 14vw;
+}
+
+#main-btn {
+    width: 84%;
+}
+
+#select-course-btn-link {
+    display: block;
+    width: 100%;
+}
+
+#select-course {
+    width: 60%;
+}
+
+#mountains {
+    width: 70%;
+    height: 30vh;
+}
+
+#right-tree {
+    width: 17%;
+}
+
+#kodamic {
+    width: 20%;
+}
+
+#left-cloud {
+    width: 30%;
+    height: 15vh;
+    left: 5vw;
+    top: 10vh;
+}
+
+#right-cloud {
+    width: 35%;
+}
+
+.bottom-decor-faq {
+    height: 20vh;
+}
+
+.bottom-decor-faq-bg {
+    height: 3vh;
+}
+
+.bottom-decor-faq-bg-transparent {
+    height: 10vh;
+}
+
+.courses-content {
+    padding-top: 10vh;
+    padding-bottom: 0;
+}
+
+/*courses modal section */
+.modal-content {
+    width: 95%;
+    max-height: 70vh;
+    top: 45vh;
+}
+
+.close {
+    right: 20px;
+    top: 5px;
+}
+
+.modal-header {
+    flex-direction: column;
+}
+
+#course-modal-title {
+    font-size: 6vw;
+    text-align: center;
+}
+
+#course-modal-subtitle {
+    font-size: 5vw;
+    text-align: center;
+}
+
+#course-modal-icon {
+    margin: 10px;
+}
+
+.modal-body {
+    flex-direction: column;
+}
+
+.images-container {
+    flex-direction: column;
+}
+
+#course-modal-icon {
+    max-height: 15vh;
+}
+
+.course-image {
+    max-height: 30vh;
+}
+
+.course-details {
+    margin-left: 20px;
+}
+
+/*submit app section */
+#submit-app-section {
+    height: auto;
+    /* Автоматическая высота для лучшего масштабирования */
+    padding: 10vh 0;
+    /* Добавляем внешние отступы сверху и снизу */
+}
+
+#submit-app-content {
+    flex-direction: column-reverse;
+    /* Переворачиваем порядок элементов */
+    width: 80%;
+    /* Уменьшаем ширину контейнера */
+    padding: 20px;
+    /* Добавляем внутренние отступы */
+}
+
+#submit-app-photo {
+    width: 85%;
+    /* Увеличиваем ширину картинки */
+    margin-bottom: 20px;
+    /* Добавляем отступ снизу */
+}
+
+#submit-app-block {
+    width: 100%;
+    /* Увеличиваем ширину формы */
+}
+
+#submit-app-block h3 {
+    font-size: 5vw;
+    text-align: center;
+    /* Увеличиваем размер заголовка */
+}
+
+#submit-app-block input[type="text"],
+#submit-app-block input[type="tel"],
+#submit-app-block input[type="email"],
+#submit-app-block button.submit-app-form__btn {
+    width: 100%;
+    /* Увеличиваем ширину полей ввода и кнопки */
+    font-size: 4vw;
+    /* Увеличиваем размер текста в полях ввода и кнопке */
+    margin-bottom: 10px;
+    /* Добавляем отступы между элементами */
+    padding: 10px;
+    /* Увеличиваем внутренние отступы */
+}
+
+#course-select {
+    width: 100%;
+    /* Увеличиваем ширину элемента выбора курса */
+    font-size: 4vw;
+    /* Увеличиваем размер текста */
+    padding: 10px;
+    /* Увеличиваем внутренние отступы */
+    margin-bottom: 10px;
+    /* Добавляем отступ снизу */
+    border: 1px solid #ccc;
+    /* Добавляем рамку */
+    border-radius: 5px;
+    /* Закругляем углы */
+    background-color: #fff;
+    /* Задаем цвет фона */
+}
+
+#privacy-policy-checkbox {
+    height: 15px;
+    flex: 1.5;
+}
+
+.privacy-policy p {
+    flex: 8.5;
+    font-size: 2vw;
+}

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="res/css/style.css">
+    <link rel="stylesheet" href="res/css/mobile.css" media="screen and (max-width: 768px)">
+    <title>Kodama</title>
+    <link rel="icon" type="image/png" href="res/icon/favicon.ico">
+</head>
+
+<body id="top-site">
+    <header>
+        <a href="#top-site" id="logo-link">
+            <div class="logo"></div>
+        </a>
+        <button id="open-menu-btn"></button>
+        <nav class="menu">
+            <a class="menu-item" href="#about-section">О школе</a>
+            <a class="menu-item" href="#courses-section">Курсы</a>
+            <a class="menu-item" href="#questions-section">Вопросы</a>
+            <a class="menu-item" href="#submit-app-section">Контакты</a>
+        </nav>
+    </header>
+
+    <section id="start-section">
+        <div id="mountains"></div>
+        <div id="right-tree"></div>
+        <div id="left-cloud"></div>
+        <div id="right-cloud"></div>
+        <div id="mashroom"></div>
+        <div id="hearts"></div>
+        <div id="stars"></div>
+        <div id="kodamic"></div>
+        <div class="start-content">
+            <h2>Онлайн-школа программирования</h2>
+            <h1>
+                K<span class="blue-letter">O</span>D<span class="purple-letter">A</span><span
+                    class="blue-letter">M</span>A
+            </h1>
+            <img id="main-btn" src="res/icon/start_red_btn.png">
+
+            <div id="select-course">
+                <a href="#courses-section" id="select-course-btn-link">
+                    <img id="select-course-btn" src="res/icon/select_course_btn.png">
+                </a>
+            </div>
+        </div>
+    </section>
+    <div id="ground"></div>
+
+    <section id="mobile-menu">
+        <button id="close-menu-btn"></button>
+        <a href="#top-site" id="mobile-logo-link">
+            <div class="mobile-logo"></div>
+        </a>
+        <nav id="nav-mobile-menu">
+            <a class="mobile-menu-item" href="#about-section">
+                <img class="mobile-menu-icon" src="res/icon/about_icon.png">
+                О школе
+            </a>
+            <a class="mobile-menu-item" href="#courses-section">
+                <img class="mobile-menu-icon" src="res/icon/courses_icon.png">
+                Курсы
+            </a>
+            <a class="mobile-menu-item" href="#questions-section">
+                <img class="mobile-menu-icon" src="res/icon/feedbacks_icon.png">
+                Вопросы
+            </a>
+            <a class="mobile-menu-item" href="#submit-app-section">
+                <img class="mobile-menu-icon" src="res/icon/contacts_icon.png">
+                Контакты
+            </a>
+        </nav>
+    </section>
+
+    <section id="about-section">
+        <div class="top-decor-about"></div>
+        <div class="about-container">
+            <div class="left">
+                <h2>Добро пожаловать в мир школы программирования Kodama</h2>
+                <p>
+                    Добро пожаловать в Kodama - онлайн-школу программирования, где мы создаем будущее вместе! Мы
+                    предлагаем вам уникальную возможность погрузиться в увлекательный мир программирования и создания
+                    чего-то уникального. Наши курсы разработаны для того, чтобы помочь вам освоить различные языки
+                    программирования, научиться создавать веб-сайты, игры, дизайн и многое другое.
+
+                    У нас вы найдете опытных преподавателей, готовых поддержать вас на каждом шагу обучения.
+                    Мы предлагаем гибкий график занятий, чтобы вы могли учиться в удобное для вас время, а также
+                    возможность работать над реальными проектами, что поможет вам применить полученные навыки на
+                    практике.
+
+                    Присоединяйтесь к нашему сообществу и станьте частью новой волны создателей, готовых изменить мир с
+                    помощью технологий!
+                </p>
+            </div>
+            <div class="right">
+                <img src="res/icon/right_image_about.png">
+            </div>
+        </div>
+        <div class="bottom-decor-about"></div>
+    </section>
+
+    <div id="between-decor-purple">
+        <h3>Знания, приключения и веселье: выбери свой путь</h3>
+    </div>
+
+    <section id="courses-section">
+        <div class="courses-content">
+            <div class="top-decor-courses"></div>
+            <div class="two-clouds" id="two-clouds-top"></div>
+            <div class="two-clouds" id="two-clouds-bottom"></div>
+            <div class="cloud" id="cloud-right-top"></div>
+            <div class="cloud" id="cloud-right-bottom"></div>
+            <div class="cloud" id="cloud-middle"></div>
+            <div class="cloud" id="cloud-left-bottom"></div>
+            <div class="courses-container">
+                <div class="course-card" onclick="openCourseModal('figma')">
+                    <img src="res/icon/figma_logo.png" alt="Figma">
+                    <div class="course-card-text">
+                        <h3>Графический дизайн</h3>
+                        <p>в редакторе Figma</p>
+                    </div>
+                </div>
+                <div class="course-card" onclick="openCourseModal('scratch')">
+                    <img src="res/icon/scratch_logo.png" alt="Scratch">
+                    <div class="course-card-text">
+                        <h3>Создание 2D игр</h3>
+                        <p>на языке Scratch</p>
+                    </div>
+                </div>
+                <div class="course-card" onclick="openCourseModal('computer-literacy')">
+                    <img src="res/icon/comp_lit_logo.png" alt="Computer Literacy">
+                    <div class="course-card-text">
+                        <h3>Компьютерная</h3>
+                        <p>грамотность</p>
+                    </div>
+                </div>
+                <div class="course-card" onclick="openCourseModal('roblox')">
+                    <img src="res/icon/roblox_logo.png" alt="Roblox">
+                    <div class="course-card-text">
+                        <h3>Создание 3D игр</h3>
+                        <p>в Roblox</p>
+                    </div>
+                </div>
+
+                <div id="course-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+
+                        <div class="modal-header">
+                            <div class="modal-title-container">
+                                <h2 id="course-modal-title">Название курса</h2>
+                                <h3 id="course-modal-subtitle">Подзаголовок курса</h3>
+                            </div>
+                            <img id="course-modal-icon" src="" alt="Иконка курса">
+                            <p id="course-modal-description">Описание курса.</p>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="images-container">
+                                <div class="course-image">
+                                    <img src="res/icon/student3.jpg" alt="Скриншот курса" class="course-image"
+                                        id="course-image1">
+                                </div>
+                                <div class="course-image">
+                                    <img src="res/icon/student3.jpg" alt="Скриншот курса" class="course-image"
+                                        id="course-image2">
+                                </div>
+                            </div>
+                            <div class="course-details">
+                                <ul>
+                                    <li id="course-fact1">• Допустимый возраст ребенка: 10-12 лет</li>
+                                    <li id="course-fact2">• Кому идеально подойдет: детям, интересующимся графическим
+                                        дизайном</li>
+                                    <li id="course-fact3">• Длительность курса: 6 месяцев</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="apply-button">Записаться</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+    <section id="students-section">
+        <h3>Лучшие студенты школы</h3>
+        <div id="students-container">
+            <div class="student-card">
+                <div class="student-card-photo student1"></div>
+            </div>
+            <div class="student-card">
+                <div class="student-card-photo student2"></div>
+            </div>
+            <div class="student-card">
+                <div class="student-card-photo student3"></div>
+            </div>
+            <div class="student-card">
+                <div class="student-card-photo student4"></div>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!--
+    <section id="guide-school-section">
+        <div class="square" id="square1" data-speed="3"></div>
+        <div class="square" id="square2" data-speed="2"></div>
+        <div class="square" id="square3" data-speed="3"></div>
+        <div class="square" id="square4" data-speed="3"></div>
+        <div class="square" id="square5" data-speed="2S"></div>
+        <div class="square" id="square6" data-speed="1"></div>
+        <div class="square" id="square7" data-speed="1.1"></div>
+        <div class="square" id="square8" data-speed="1.2"></div>
+        <div class="square" id="square9" data-speed="1.3"></div>
+        <div class="square" id="square10" data-speed="1.4"></div>
+        <div class="square" id="square11" data-speed="1.5"></div>
+        <div class="square" id="square12" data-speed="1.6"></div>
+        <div class="square" id="square13" data-speed="1.7"></div>
+        <div class="square" id="square14" data-speed="1.8"></div>
+        <div class="square" id="square15" data-speed="1.9"></div>
+        <div class="square" id="square16" data-speed="2"></div>
+        <div class="square" id="square17" data-speed="2"></div>
+        <div class="square" id="square18" data-speed="2.2"></div>
+        <div class="square" id="square19" data-speed="2.3"></div>
+        <div class="square" id="square20" data-speed="2.4"></div>
+
+        <div id="guide-school-content">
+            <h3>Путеводитель по нашей школе</h3>
+            <iframe id="guide-school-video" src=""
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; gyroscope; picture-in-picture; web-share" allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+    -->
+
+    <section id="questions-section">
+        <div id="top-decor-faq"></div>
+        <div class="bubble" style="left: 10%; animation-duration: 10s;"></div>
+        <div class="bubble" style="left: 30%; animation-duration: 8s;"></div>
+        <div class="bubble" style="left: 50%; animation-duration: 12s;"></div>
+        <div class="bubble" style="left: 70%; animation-duration: 9s;"></div>
+        <div class="bubble" style="left: 90%; animation-duration: 11s;"></div>
+        <div class="bubble" style="left: 110%; animation-duration: 7s;"></div>
+        <div id="questions-content">
+            <h2>Вопросы, которые могут возникнуть у вас</h2>
+            <div id="fabs">
+                <div class="faq-left">
+                    <div class="faq faq-item" onclick="toggleAnswer('faq-answer1')">
+                        Нужно ли ученику куда-то идти для обучения?
+                    </div>
+                    <div class="faq faq-answer" id="faq-answer1">
+                        Нет, для обучения не требуется выходить из дома. Все занятия проходят в онлайн-формате, и ученик
+                        может участвовать в них прямо из дома, используя свой компьютер.
+                    </div>
+
+                    <div class="faq faq-item" onclick="toggleAnswer('faq-answer2')">
+                        Каким образом проходит обучение?
+                    </div>
+                    <div class="faq faq-answer" id="faq-answer2">
+                        Каждый урок проходит в режиме реального времени с участием вашего преподавателя. Преподаватель
+                        будет активно взаимодействовать с учеником, помогая ему на протяжении всего занятия. Для этого
+                        используется программа, которая позволяет преподавателю видеть экран ученика, чтобы лучше
+                        понимать его текущие действия. Это обеспечивает персонализированный подход к обучению и
+                        позволяет преподавателю направлять ученика, отвечать на вопросы и помогать в процессе работы.
+                    </div>
+
+                    <div class="faq faq-item" onclick="toggleAnswer('faq-answer3')">
+                        Обучение индивидуальное или групповое?
+                    </div>
+                    <div class="faq faq-answer" id="faq-answer3">
+                        Обучение проводится индивидуально. Мы подберем преподавателя, который лучше всего подойдет
+                        вашему ребенку.
+                    </div>
+
+                    <div class="faq faq-item" onclick="toggleAnswer('faq-answer8')">
+                        Какова стоимость занятий?
+                    </div>
+
+                    <div class="faq faq-answer" id="faq-answer8">
+                        Стоимость одного занятия составляет 1000 рублей. Вы можете приобрести пакет из 5, 10, 15 и более
+                        уроков. Уроки списываются с вашего баланса только по факту их проведения, что позволяет гибко
+                        планировать обучение и оплачивать только за реально проведенные занятия.
+                    </div>
+                </div>
+
+                <div class="faq-right">
+                    <div class="faq faq-item" onclick="toggleAnswer('faq-answer4')">Какие навыки мой ребенок приобретет?
+                    </div>
+
+                    <div class="faq faq-answer" id="faq-answer4">
+                        Все зависит от выбранного курса. Ваш ребенок может научиться основам программирования, развить
+                        логическое и креативное мышление, освоить графический дизайн, работу с текстовыми редакторами и
+                        презентациями, безопасное поведение в интернете, а также приобретет навыки работы в 3D-редакторе
+                        и создания собственных игр.
+                    </div>
+
+                    <div class="faq faq-item" onclick="toggleAnswer('faq-answer5')">Сколько длится курс?</div>
+                    <div class="faq faq-answer" id="faq-answer5">
+                        Продолжительность курса зависит от программы и может составлять от 6 месяцев до 2 лет. Мы
+                        предлагаем гибкие программы, которые подстраиваются под темп обучения каждого ребёнка. Так же
+                        это зависит от количества занятий в неделю.
+                    </div>
+
+                    <div class="faq faq-item" onclick="toggleAnswer('faq-answer6')">
+                        Сколько времени длится занятие?
+                    </div>
+
+                    <div class="faq faq-answer" id="faq-answer6">
+                        В нашей школе каждое занятие длится 55 минут и начинается в начале часа.
+                    </div>
+
+                    <div class="faq faq-item" onclick="toggleAnswer('faq-answer7')">
+                        Сколько раз можно заниматься в неделю?
+                    </div>
+
+                    <div class="faq faq-answer" id="faq-answer7">
+                        Вы можете выбирать удобное количество занятий: 1, 2, 3 раза в неделю или больше. Мы подстроим
+                        расписание под ваши предпочтения, чтобы обеспечить оптимальный темп обучения.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-decor-faq-bg"></div>
+        <div class="bottom-decor-faq-bg-transparent"></div>
+        <div class="bottom-decor-faq"></div>
+    </section>
+
+    <section id="submit-app-section">
+        <div id="submit-app-content">
+            <img id="submit-app-photo" src="res/icon/figma_submit.png">
+            <div id="submit-app-block">
+                <h3 id="submit-app-title">Запишитесь на первый урок</h3>
+                <form id="submit-app-form">
+                    <select id="course-select">
+                        <option value="" selected disabled hidden>Выберите курс</option>
+                        <option value="figma">Figma</option>
+                        <option value="computer-literacy">Компьютерная грамотность</option>
+                        <option value="scratch">Scratch</option>
+                        <option value="roblox">Roblox</option>
+                        <option value="dont_know">Не могу определиться</option>
+                    </select>
+                    <input id="lead-title" type="text" name="fields[TITLE]" placeholder="Заголовок лида"
+                        value="Заявка с сайта" hidden>
+                    <input type="text" name="fields[NAME]" id="name" placeholder="Ваше имя" required>
+                    <input type="tel" id="phone" name="fields[PHONE][0][VALUE]" placeholder="Ваш телефон" required
+                        pattern="[0-9]{10,15}" title="Введите номер телефона (только цифры, 10-15 символов)">
+                    <input type="text" name="fields[PHONE][0][VALUE_TYPE]" value="WORK" hidden>
+                    <input type="email" id="email" name="fields[EMAIL][0][VALUE]" placeholder="Ваша почта" required>
+                    <input type="text" name="fields[EMAIL][0][VALUE_TYPE]" value="WORK" hidden>
+
+                    <label class="privacy-policy">
+                        <input type="checkbox" id="privacy-policy-checkbox" class="styled-checkbox" required>
+                        <p>Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных,
+                            в соответствии с Федеральным законом №152-ФЗ «О персональных данных», на условиях и для
+                            целей,
+                            определенных в <a href="#" id="show-privacy-policy">Согласии на обработку персональных
+                                данных</a>.</p>
+                    </label>
+
+                    <button class="submit-app-form__btn" id="submit-btn" type="">Отправить</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="submit-app-modal">
+            <div id="submit-app-modal-content">
+                <p id="submit-app-modal-message"></p>
+                <button onclick="closeSubmitAppModal()">Закрыть</button>
+            </div>
+        </div>
+
+        <div id="privacy-policy-modal"
+            style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; max-width: 600px; background-color: white; padding: 20px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); z-index: 1000;">
+            <div>
+                <h2>Согласие на обработку персональных данных</h2>
+                <p>
+                    Настоящим в соответствии с Федеральным законом № 152-ФЗ «О персональных данных» от 27.07.2006 года
+                    выражаю свое безусловное согласие на обработку моих персональных данных <strong>Оператором</strong>.
+                </p>
+                <!-- Текст соглашения -->
+                <p>Согласие дается на обработку следующих данных: Имя, Фамилия, Телефон, E-mail и Комментарий.</p>
+                <p>Оператор может совершать следующие действия: сбор, запись, хранение, уточнение, использование, и т.д.
+                </p>
+                <p>Настоящее согласие действует до момента его отзыва путем отправки запроса на электронный адрес
+                    <strong>kodama.edu@gmail.com</strong>.</p>
+                <div style="text-align: right;">
+                    <button id="accept-privacy-policy" style="margin-right: 10px;">Принимаю</button>
+                    <button id="decline-privacy-policy">Не принимаю</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Kodama. Все права защищены.</p>
+        <p>Свяжитесь с нами: <a href="mailto:kodama.edu@gmail.com"
+                style="color: #A4FFDE; text-decoration: underline;">kodama.edu@gmail.com</a></p>
+    </footer>
+
+    <script type="module" src="script.js" defer></script>
+    <script type="module">
+        (function (w, d, u) {
+            var s = d.createElement('script'); s.async = true; s.src = u + '?' + (Date.now() / 60000 | 0);
+            var h = d.getElementsByTagName('script')[0]; h.parentNode.insertBefore(s, h);
+        })(window, document, 'https://cdn-ru.bitrix24.ru/b30468202/crm/site_button/loader_2_q99zpy.js');
+    </script>
+</body>
+
+</html>
