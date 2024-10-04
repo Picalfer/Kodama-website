@@ -16,14 +16,17 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
+    - name: List all files
+      run: ls -R
+
     # Замена значения BITRIX_TOKEN в файле script.js
     - name: Replace BITRIX_TOKEN in script.js
       run: |
-        sed -i 's/const BITRIX_TOKEN = .*/const BITRIX_TOKEN = "${{ secrets.BITRIX_TOKEN }}";/' ./src/script.js
+        sed -i 's/const BITRIX_TOKEN = .*/const BITRIX_TOKEN = "${{ secrets.BITRIX_TOKEN }}";/' ./script.js
 
     # Проверка, что замена прошла успешно
     - name: Show script.js content
-      run: cat ./src/script.js
+      run: cat ./script.js
 
     # Деплой на GitHub Pages
     - name: Deploy to GitHub Pages
