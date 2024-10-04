@@ -1,4 +1,4 @@
-import { BITRIX_TOKEN } from "./api_constants.js";
+const BITRIX_TOKEN = "6776059462:AAGBGSjQ0y9n4sf3OGRFfPFB7rCjCIF7sok";
 
 const menuButtons = document.querySelectorAll('.menu-item');
 const mobileMenuButtons = document.querySelectorAll('.mobile-menu-item');
