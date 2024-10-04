@@ -1,5 +1,6 @@
 const BITRIX_TOKEN = ''
 
+
 const menuButtons = document.querySelectorAll('.menu-item');
 const mobileMenuButtons = document.querySelectorAll('.mobile-menu-item');
 const selectCourseButton = document.getElementById('select-course-btn');
