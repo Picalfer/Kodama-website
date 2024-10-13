@@ -21,15 +21,17 @@ templates = Jinja2Templates(directory=settings.root_directory)
 def make_up():
     app = FastAPI()
 
+     # Монтируем папку res по пути /res
     path_for_static = settings.root_directory / "res"
     app.mount(
-        str(path_for_static), StaticFiles(directory=str(path_for_static)), name="static"
+        "/res", StaticFiles(directory=str(path_for_static)), name="static"
     )
+    
+     # Монтируем корневую директорию как root
     app.mount(
-        str(settings.root_directory),
-        StaticFiles(directory=str(settings.root_directory)),
-        name="root",
+        "/root", StaticFiles(directory=str(settings.root_directory)), name="root",
     )
+    
     app.add_middleware(
         CORSMiddleware,
         allow_origins=["*"],
@@ -40,7 +42,7 @@ def make_up():
 
     @app.get("/")
     async def index(request: Request):
-        return templates.TemplateResponse("base.html", {"request": request})
+        return templates.TemplateResponse("index.html", {"request": request})
 
     # хендлер добавляющий запись в sheet Request
     @app.post("/request/")

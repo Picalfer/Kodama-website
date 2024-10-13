@@ -12,6 +12,7 @@ COPY res ./res/
 COPY src ./src/
 COPY templates ./templates/
 COPY base.html script.js ./
+COPY index.html ./
 
 COPY .env ./src/.env
 COPY .env.api ./src/.env.api

@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="res/css/style.css">
-    <link rel="stylesheet" href="res/css/mobile.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/mobile.css') }}" media="screen and (max-width: 768px)">
     <title>Kodama</title>
-    <link rel="icon" type="image/png" href="res/icon/favicon.ico">
+    <link rel="icon" type="image/png" href="{{ url_for('static', path='/icon/favicon.ico') }}">
 </head>
 
 <body id="top-site">
@@ -39,11 +39,11 @@
                 K<span class="blue-letter">O</span>D<span class="purple-letter">A</span><span
                     class="blue-letter">M</span>A
             </h1>
-            <img id="main-btn" src="res/icon/start_red_btn.png">
+            <img id="main-btn" src="{{ url_for('static', path='/icon/start_red_btn.png') }}">
 
             <div id="select-course">
                 <a href="#courses-section" id="select-course-btn-link">
-                    <img id="select-course-btn" src="res/icon/select_course_btn.png">
+                    <img id="select-course-btn" src="{{ url_for('static', path='/icon/select_course_btn.png') }}">
                 </a>
             </div>
         </div>
@@ -96,7 +96,7 @@
                 </p>
             </div>
             <div class="right">
-                <img src="res/icon/right_image_about.png">
+                <img src="{{ url_for('static', path='/icon/right_image_about.png') }}">
             </div>
         </div>
         <div class="bottom-decor-about"></div>
@@ -117,28 +117,28 @@
             <div class="cloud" id="cloud-left-bottom"></div>
             <div class="courses-container">
                 <div class="course-card" onclick="openCourseModal('figma')">
-                    <img src="res/icon/figma_logo.png" alt="Figma">
+                    <img src="{{ url_for('static', path='/icon/figma_logo.png') }}" alt="Figma">
                     <div class="course-card-text">
                         <h3>Графический дизайн</h3>
                         <p>в редакторе Figma</p>
                     </div>
                 </div>
                 <div class="course-card" onclick="openCourseModal('scratch')">
-                    <img src="res/icon/scratch_logo.png" alt="Scratch">
+                    <img src="{{ url_for('static', path='/icon/scratch_logo.png') }}" alt="Scratch">
                     <div class="course-card-text">
                         <h3>Создание 2D игр</h3>
                         <p>на языке Scratch</p>
                     </div>
                 </div>
                 <div class="course-card" onclick="openCourseModal('computer-literacy')">
-                    <img src="res/icon/comp_lit_logo.png" alt="Computer Literacy">
+                    <img src="{{ url_for('static', path='/icon/comp_lit_logo.png') }}" alt="Computer Literacy">
                     <div class="course-card-text">
                         <h3>Компьютерная</h3>
                         <p>грамотность</p>
                     </div>
                 </div>
                 <div class="course-card" onclick="openCourseModal('roblox')">
-                    <img src="res/icon/roblox_logo.png" alt="Roblox">
+                    <img src="{{ url_for('static', path='/icon/roblox_logo.png') }}" alt="Roblox">
                     <div class="course-card-text">
                         <h3>Создание 3D игр</h3>
                         <p>в Roblox</p>
@@ -335,10 +335,10 @@
 
     <section id="submit-app-section">
         <div id="submit-app-content">
-            <img id="submit-app-photo" src="res/icon/figma_submit.png">
+            <img id="submit-app-photo" src="{{ url_for('static', path='/icon/figma_submit.png') }}">
             <div id="submit-app-block">
                 <h3 id="submit-app-title">Запишитесь на первый урок</h3>
-                <form id="submit-app-form">
+                <form id="submit-app-form" action="/request" method="post">
                     <select id="course-select">
                         <option value="" selected disabled hidden>Выберите курс</option>
                         <option value="figma">Figma</option>
@@ -390,7 +390,8 @@
                 <p>Оператор может совершать следующие действия: сбор, запись, хранение, уточнение, использование, и т.д.
                 </p>
                 <p>Настоящее согласие действует до момента его отзыва путем отправки запроса на электронный адрес
-                    <strong>kodama.edu@gmail.com</strong>.</p>
+                    <strong>kodama.edu@gmail.com</strong>.
+                </p>
                 <div style="text-align: right;">
                     <button id="accept-privacy-policy" style="margin-right: 10px;">Принимаю</button>
                     <button id="decline-privacy-policy">Не принимаю</button>
@@ -405,7 +406,25 @@
                 style="color: #A4FFDE; text-decoration: underline;">kodama.edu@gmail.com</a></p>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script>
+        const figmaLogoPath = "{{ url_for('static', path='/icon/figma-logo.png') }}";
+        const figmaImage1Path = "{{ url_for('static', path='/icon/course-figma1.png') }}";
+        const figmaImage2Path = "{{ url_for('static', path='/icon/course-figma2.png') }}";
+
+        const scratchLogoPath = "{{ url_for('static', path='/icon/scratch_logo.png') }}";
+        const scratchImage1Path = "{{ url_for('static', path='/icon/course-scratch1.png') }}";
+        const scratchImage2Path = "{{ url_for('static', path='/icon/course-scratch2.png') }}";
+
+        const compLitLogoPath = "{{ url_for('static', path='/icon/comp_lit_logo.png') }}";
+        const compLitImage1Path = "{{ url_for('static', path='/icon/course-comp-lit1.png') }}";
+        const compLitImage2Path = "{{ url_for('static', path='/icon/course-comp-lit2.png') }}";
+
+        const robloxLogoPath = "{{ url_for('static', path='/icon/roblox_logo.png') }}";
+        const robloxImage1Path = "{{ url_for('static', path='/icon/course-roblox1.png') }}";
+        const robloxImage2Path = "{{ url_for('static', path='/icon/course-roblox2.png') }}";
+    </script>
+
+    <script src="{{ url_for('root', path='/script.js') }}" defer></script>
     <script type="module">
         (function (w, d, u) {
             var s = d.createElement('script'); s.async = true; s.src = u + '?' + (Date.now() / 60000 | 0);
