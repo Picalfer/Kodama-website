@@ -18,7 +18,7 @@ cd Kodama-website
 ```
 2. Установите зависимости через Poetry:
 ```bash
-poetry install
+pip install poetry
 ```
 3. Активируйте оболочку Poetry
 ```bash
@@ -42,5 +42,9 @@ python src/main.py
 ```
 Открыть докер
 запустить docker build .
-далее docker run -d -p 5050:5050 b389bf где последние 6 символов это первые 6 от "writing image sha256:65d7450f6188e08edf954a11c8d8..."
+далее 
+docker run -d -p 5050:5050 b389bf где последние 6 символов это первые 6 от "writing image sha256:65d7450f6188e08edf954a11c8d8..."
 Сервер запустится на http://localhost:5050/.
+
+Упрощенный способ:
+Запустить docker_run.bat
